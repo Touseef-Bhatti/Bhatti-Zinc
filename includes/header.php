@@ -69,19 +69,20 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                             <div class="mega-col">
                                 <span class="mega-group">Primary &amp; Imported Metals</span>
                                 <a href="product.php?p=shg-zinc-ingots">SHG Zinc Ingots</a>
-                                <a href="product.php?p=secondary-zinc-ingots">Secondary Zinc Ingots</a>
+                                
                                 <a href="product.php?p=iranian-zinc-ingots">Iranian Zinc Ingots</a>
                             </div>
                             <div class="mega-col">
                                 <span class="mega-group">Alloys &amp; Chemicals</span>
-                                <a href="product.php?p=zinc-alloy-92-94">Zinc Alloy (92–94% Zn)</a>
+                                <a href="product.php?p=zinc-alloy-92-94">Zinc Alloy </a>
+                                <a href="product.php?p=secondary-zinc-ingots">Secondary Zinc Ingots</a>
                                 <a href="product.php?p=zinc-oxide-99-99">Zinc Oxide</a>
                             </div>
                             <div class="mega-col">
                                 <span class="mega-group">Recycling &amp; Scrap</span>
-                                <a href="product.php?p=zinc-ash-65-70">Zinc Ash (65–70% Zn)</a>
-                                <a href="product.php?p=low-grade-zinc-ash-30-40">Low-Grade Zinc Ash (30–40% Zn)</a>
-                                <a href="product.php?p=apcd-zinc-ash-50-60">APCD Zinc Ash (50–60% Zn)</a>
+                                <a href="product.php?p=zinc-ash-65-70">Zinc Ash </a>
+                                <a href="product.php?p=low-grade-zinc-ash-30-40">Low-Grade Zinc Ash </a>
+                                <a href="product.php?p=apcd-zinc-ash-50-60">APCD Zinc Ash </a>
                                 <a href="product.php?p=zinc-dross-94-97">Zinc Dross</a>
                                 <a href="product.php?p=zinc-die-cast-scrap">Zinc Die Cast Scrap</a>
                             </div>
@@ -91,19 +92,39 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                 <li class="<?php echo $current_page === 'trade' ? 'active' : ''; ?>">
                     <a href="trade.php">Trade &amp; Export</a>
                 </li>
-                <li class="<?php echo $current_page === 'quality' ? 'active' : ''; ?>">
-                    <a href="quality.php">Quality</a>
+                <li class="has-dropdown <?php echo $current_page === 'quality' ? 'active' : ''; ?>">
+                    <a href="quality.php" aria-haspopup="true">Manufacturing <span class="nav-arrow">&#8964;</span></a>
+                    <div class="mega-dropdown mega-dropdown--compact" role="menu">
+                        <div class="mega-inner mega-inner--compact">
+                            <div class="mega-col mega-col--label">
+                                <span class="mega-label">Recycling &amp; Manufacturing</span>
+                                <p class="mega-sub">Zinc recovery, oxide production, and controlled release for industrial supply</p>
+                                <a href="quality.php" class="mega-all-link ">View Overview &rarr;</a>
+                            </div>
+                            <div class="mega-col">
+                                <span class="mega-group">Core Sections</span>
+                                <a href="quality.php#zinc-metal-ash-recycling">Zinc Metal &amp; Ash Recycling</a>
+                                <a href="quality.php#zinc-oxide-manufacturing">Zinc Oxide Manufacturing</a>
+                                <a href="quality.php#quality-control">Quality Control</a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="<?php echo $current_page === 'contact' ? 'active' : ''; ?>">
                     <a href="contact.php">Contact</a>
+                </li>
+                <li class="<?php echo $current_page === 'careers' ? 'active' : ''; ?>">
+                    <a href="careers.php">Careers</a>
                 </li>
             </ul>
         </nav>
 
         <div class="header-actions">
-            <div class="req-quote">
-                <a href="contact.php" class="btn btn--luxury-outline">Request Quote</a>
-            </div>
+            <a href="tel:+923094530100" class="btn-call-now" id="btn-call-header">
+                <span class="call-pulse"></span>
+                <svg class="call-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span class="call-text">Call Now &nbsp;+92 309 4530100</span>
+            </a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-overlay">
                 <span></span><span></span><span></span>
             </button>
@@ -136,11 +157,24 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                 </ul>
             </li>
             <li><a href="trade.php">Trade &amp; Export</a></li>
-            <li><a href="quality.php">Quality</a></li>
+            <li class="mobile-has-sub">
+                <button class="mobile-sub-toggle" aria-expanded="false">Manufacturing <span aria-hidden="true">+</span></button>
+                <ul class="mobile-sub" aria-label="Manufacturing submenu">
+                    <li><a href="quality.php">Overview</a></li>
+                    <li><a href="quality.php#zinc-metal-ash-recycling">Zinc Metal &amp; Ash Recycling</a></li>
+                    <li><a href="quality.php#zinc-oxide-manufacturing">Zinc Oxide Manufacturing</a></li>
+                    <li><a href="quality.php#quality-control">Quality Control</a></li>
+                </ul>
+            </li>
             <li><a href="contact.php">Contact</a></li>
+            <li><a href="careers.php">Careers</a></li>
         </ul>
         <div class="mobile-nav-footer">
-            <a href="contact.php" class="btn btn--zinc btn--full">Request a Quote</a>
+            <a href="tel:+923094530100" class="btn-call-now btn-call-now--mobile" id="btn-call-mobile">
+                <span class="call-pulse"></span>
+                <svg class="call-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span class="call-text">Call Now &nbsp;+92 309 4530100</span>
+            </a>
         </div>
     </div>
 </div>

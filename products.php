@@ -1,6 +1,7 @@
 <?php
 $page_title = 'Products';
 require_once 'includes/products-data.php';
+$heroProducts = getHeroProducts($products);
 include 'includes/header.php';
 ?>
 
@@ -17,6 +18,55 @@ include 'includes/header.php';
             <p class="page-hero-sub">Ten families of zinc products — from 99.995% SHG ingots to recycled ash and die-cast scrap — supplied to industrial and recycling markets.</p>
         </div>
     </div>
+
+    <?php if (!empty($heroProducts) && count($heroProducts) >= 3): ?>
+    <div class="hero-carousel products-hero-carousel" id="hero-carousel"
+         data-products='<?php echo htmlspecialchars(json_encode(array_map(function($p) {
+             return [
+                 'slug' => $p['slug'],
+                 'name' => $p['name'],
+                 'grade' => $p['grade'],
+                 'image' => $p['image'],
+                 'short_name' => $p['short_name'],
+             ];
+         }, $heroProducts)), ENT_QUOTES); ?>'>
+
+        <a class="hero-product-card hero-product-card--left" id="hero-card-left" href="#">
+            <div class="hero-product-img"><img src="" alt="" loading="lazy"></div>
+            <div class="hero-product-label">
+                <span class="hero-product-name"></span>
+                <span class="hero-product-grade"></span>
+            </div>
+        </a>
+        <a class="hero-product-card hero-product-card--top" id="hero-card-top" href="#">
+            <div class="hero-product-img"><img src="" alt="" loading="lazy"></div>
+            <div class="hero-product-label">
+                <span class="hero-product-name"></span>
+                <span class="hero-product-grade"></span>
+            </div>
+        </a>
+        <a class="hero-product-card hero-product-card--right" id="hero-card-right" href="#">
+            <div class="hero-product-img"><img src="" alt="" loading="lazy"></div>
+            <div class="hero-product-label">
+                <span class="hero-product-name"></span>
+                <span class="hero-product-grade"></span>
+            </div>
+        </a>
+
+        <button class="hero-carousel-arrow hero-carousel-arrow--prev" id="hero-arrow-prev" aria-label="Previous product">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="hero-carousel-arrow hero-carousel-arrow--next" id="hero-arrow-next" aria-label="Next product">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+
+        <div class="hero-carousel-dots" id="hero-dots">
+            <?php foreach ($heroProducts as $idx => $hp): ?>
+            <button class="hero-carousel-dot<?php echo $idx === 0 ? ' active' : ''; ?>" data-slide="<?php echo $idx; ?>"></button>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <?php endif; ?>
 </section>
 
 <!-- CATEGORY OVERVIEW -->
@@ -71,12 +121,11 @@ include 'includes/header.php';
                     <?php else: ?>
                     <div class="product-placeholder" data-abbr="<?php echo htmlspecialchars(strtoupper(substr(str_replace(' ','',$product['short_name']),0,3))); ?>"></div>
                     <?php endif; ?>
-                    <span class="product-card-grade"><?php echo htmlspecialchars($product['grade']); ?></span>
                 </div>
                 <div class="product-card-body">
                     <div class="product-card-cat"><?php echo htmlspecialchars($product['category']); ?></div>
                     <div class="product-card-name"><?php echo htmlspecialchars($product['name']); ?></div>
-                    <p class="product-card-desc"><?php echo htmlspecialchars($product['description']); ?></p>
+                    <p class="product-card-desc"><?php echo preg_replace('/(\d[\d.,–\-]*%)/u', '<strong>$1</strong>', htmlspecialchars($product['description'])); ?></p>
                     <div style="margin-bottom:16px;">
                         <div style="font-family:var(--font-label);font-size:0.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-xs);margin-bottom:6px;">Standard</div>
                         <div style="font-size:0.8rem;color:var(--text-mid);"><?php echo htmlspecialchars($product['standard']); ?></div>

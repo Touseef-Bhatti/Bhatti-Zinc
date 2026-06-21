@@ -55,7 +55,7 @@ include 'includes/header.php';
                 <div class="eyebrow reveal">
                     <span class="label">Our Story</span>
                 </div>
-                <h2 class="reveal" style="margin-bottom:2rem;">From Gujranwala to<br>the world</h2>
+                <h2 class="reveal" style="margin-bottom:2rem;">From Pakistan to<br>the world</h2>
 
                 <div class="about-story-text reveal">
                     <p>Building strength in the zinc industry since 1998, BhattiZinc began as a local trading business in Gujranwala and has since transformed into a trusted manufacturer, importer, exporter, and supplier of premium zinc products for national and international markets.</p>

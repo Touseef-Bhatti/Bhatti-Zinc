@@ -22,6 +22,7 @@ $products = [
         'packaging' => 'Wooden pallets, shrink-wrapped. 18–20 MT per 20ft container.',
         'certificates' => ['LME Registered','ISO 9001:2015'],
         'featured' => true,
+        'hero_order' => 1,
     ],
     [
         'id' => 'secondary-zinc',
@@ -31,7 +32,7 @@ $products = [
         'grade' => '95–98% Zn',
         'category' => 'Secondary Metals',
         'tagline' => 'Economical recycled zinc ingots',
-        'image' => 'assets/images/products/zinc-ingots.svg',
+        'image' => 'assets/images/products/secondry-zinc-ingot.png',
         'thumb' => 'assets/images/products/zinc-ingots.svg',
         'lab_report_image' => 'assets/images/lab-reports/secondary-zinc-ingots.jpg',
         'description' => 'Secondary zinc ingots produced through recycling and smelting with typical zinc content of 95–98%, offering a cost-effective raw material for industrial use.',
@@ -45,6 +46,7 @@ $products = [
         'packaging' => 'Palletised bundles. Bulk shipments available.',
         'certificates' => ['ISO 9001:2015'],
         'featured' => false,
+        'hero_order' => 0,
     ],
     [
         'id' => 'zinc-alloy',
@@ -54,7 +56,7 @@ $products = [
         'grade' => '92–94% Zn',
         'category' => 'Alloys',
         'tagline' => 'Premium zinc alloys for die casting',
-        'image' => 'assets/images/products/ZincAlloy.jpg',
+        'image' => 'assets/images/products/zinc-alloy.jpg',
         'thumb' => 'assets/images/products/zinc-alloys.svg',
         'lab_report_image' => 'assets/images/lab-reports/zinc-alloy-92-94.jpg',
         'description' => 'High-quality zinc alloys (92–94% Zn) engineered for die casting, hardware and automotive components.',
@@ -68,6 +70,7 @@ $products = [
         'packaging' => 'Timber pallets. Containerised shipments.',
         'certificates' => ['ISO 9001:2015'],
         'featured' => false,
+        'hero_order' => 3,
     ],
     [
         'id' => 'iranian-zinc',
@@ -91,6 +94,7 @@ $products = [
         'packaging' => 'Standard export packaging.',
         'certificates' => ['Export Documentation'],
         'featured' => false,
+        'hero_order' => 0,
     ],
     [
         'id' => 'zinc-oxide',
@@ -114,11 +118,13 @@ $products = [
         'packaging' => '25 kg paper bags on pallets. 20 MT per 20ft container.',
         'certificates' => ['ISO 9001:2015','REACH Compliant'],
         'featured' => true,
+        'hero_order' => 2,
     ],
+    
     [
         'id' => 'zinc-ash-high',
         'slug' => 'zinc-ash-65-70',
-        'name' => 'Zinc Ash (65–70% Zn)',
+        'name' => 'Zinc Ash',
         'short_name' => 'Zinc Ash',
         'grade' => '65–70% Zn',
         'category' => 'Recycling & By-Products',
@@ -137,21 +143,22 @@ $products = [
         'packaging' => 'Bulk / Big bags.',
         'certificates' => ['Export Quality'],
         'featured' => true,
+        'hero_order' => 4,
     ],
     [
         'id' => 'zinc-ash-low',
-        'slug' => 'low-grade-zinc-ash-30-40',
-        'name' => 'Low-Grade Zinc Ash (30–40% Zn)',
-        'short_name' => 'Low-Grade Ash',
+        'slug' => 'zinc-skimming-30-40',
+        'name' => 'Zinc Skimming',
+        'short_name' => 'Zinc Skimming',
         'grade' => '30–40% Zn',
         'category' => 'Recycling & By-Products',
-        'tagline' => 'Cost-effective zinc ash for recovery operations',
-        'image' => 'assets/images/products/ZincAshFine.jpg',
+        'tagline' => 'Cost-effective zinc skimming for recovery operations',
+        'image' => 'assets/images/products/zinc-skimming.jpeg',
         'thumb' => 'assets/images/products/zinc-dust.svg',
         'lab_report_image' => 'assets/images/lab-reports/low-grade-zinc-ash-30-40.jpg',
-        'description' => 'Low-grade zinc ash suitable for large-scale recovery processes and recycling operations.',
+        'description' => 'Zinc skimming suitable for large-scale Zinc recovery processes and recycling operations.',
         'long_desc' => 'Economical raw material for metal recovery plants and recyclers seeking cost-effective feedstock.',
-        'purity' => '30–40% Zn',
+        'purity' => '70–80% Zn',
         'form' => 'Loose / Bulk',
         'weight' => 'Bulk quantities',
         'standard' => 'Recycling Grade',
@@ -160,11 +167,12 @@ $products = [
         'packaging' => 'Bulk shipments / Big bags.',
         'certificates' => ['Export Quality'],
         'featured' => false,
+        'hero_order' => 0,
     ],
     [
         'id' => 'apcd-ash',
         'slug' => 'apcd-zinc-ash-50-60',
-        'name' => 'APCD Zinc Ash (50–60% Zn)',
+        'name' => 'APCD Zinc Ash',
         'short_name' => 'APCD Ash',
         'grade' => '50–60% Zn',
         'category' => 'Recycling & By-Products',
@@ -172,7 +180,7 @@ $products = [
         'image' => 'assets/images/products/ZincDust.jpg',
         'thumb' => 'assets/images/products/zinc-dust.svg',
         'lab_report_image' => 'assets/images/lab-reports/apcd-zinc-ash-50-60.jpg',
-        'description' => 'APCD (steel mill dust) containing 50–60% zinc recovered from air pollution control systems, valuable for recycling.',
+        'description' => 'Air Pollution Control Dust (steel mill dust) containing 50–60% zinc recovered from air pollution control systems, valuable for recycling.',
         'long_desc' => 'Collected from modern steel mill APC systems, this material is an environmentally sustainable source of zinc for recovery processes.',
         'purity' => '50–60% Zn',
         'form' => 'Dust / Bulk',
@@ -183,6 +191,7 @@ $products = [
         'packaging' => 'Bulk / Big bags.',
         'certificates' => ['Export Quality'],
         'featured' => true,
+        'hero_order' => 6,
     ],
     [
         'id' => 'zinc-dross',
@@ -206,6 +215,7 @@ $products = [
         'packaging' => 'Bulk / Bags as required.',
         'certificates' => ['Export Quality'],
         'featured' => false,
+        'hero_order' => 5,
     ],
     [
         'id' => 'die-cast-scrap',
@@ -215,7 +225,7 @@ $products = [
         'grade' => 'Varies',
         'category' => 'Scrap & Recycling',
         'tagline' => 'Zinc die cast scrap for recycling and remelting',
-        'image' => 'assets/images/products/ZincDust.jpg',
+        'image' => 'assets/images/products/zinc-die-cast.png',
         'thumb' => 'assets/images/products/zinc-dust.svg',
         'lab_report_image' => 'assets/images/lab-reports/zinc-die-cast-scrap.jpg',
         'description' => 'Imported and locally sourced zinc die cast scrap, prepared for recycling and remelting in secondary operations.',
@@ -229,6 +239,7 @@ $products = [
         'packaging' => 'Bulk / Containers',
         'certificates' => ['Export Documentation'],
         'featured' => false,
+        'hero_order' => 0,
     ],
 ];
 
@@ -343,6 +354,28 @@ $productSeoContent = [
             ],
         ],
     ],
+    'zinc-sulphate' => [
+        'meta_description' => 'Zinc sulphate for fertilizer, agriculture, animal feed, chemical processing, electroplating and industrial zinc compound applications.',
+        'seo_keywords' => ['zinc sulphate supplier', 'zinc sulfate', 'zinc sulphate fertilizer', 'zinc sulphate agriculture', 'zinc sulphate animal feed', 'zinc chemicals Pakistan'],
+        'hero_seo' => [
+            'title' => 'Zinc Sulphate for Agriculture, Feed and Industrial Applications',
+            'body' => 'BhattiZinc supplies zinc sulphate for buyers who need a practical zinc chemical for fertilizer blending, agriculture, animal feed, chemical processing and selected industrial uses. Packing, grade and documentation can be aligned with the customer application and shipment requirements.',
+            'highlights' => ['Zinc sulphate', 'Agriculture grade', 'Feed and fertilizer', 'Industrial chemical'],
+        ],
+        'seo_blog' => [
+            'title' => 'Zinc Sulphate Supply for Agriculture and Industrial Buyers',
+            'intro' => 'Zinc sulphate is used where manufacturers and agricultural buyers need a soluble zinc source with clear grade details, stable packing and dependable supply.',
+            'sections' => [
+                ['heading' => 'Use in fertilizer and agriculture', 'body' => 'Zinc sulphate is commonly used in fertilizer blends and soil nutrition programs where zinc availability is required. Buyers should match the supplied grade and zinc percentage to the intended application.'],
+                ['heading' => 'Industrial and chemical applications', 'body' => 'Chemical processors may use zinc sulphate as a zinc source for downstream compounds, electroplating support and other industrial formulations where batch consistency matters.'],
+                ['heading' => 'What buyers should confirm', 'body' => 'Before ordering, confirm the form, zinc content, moisture, packing size, labeling, safety documentation and shipment quantity so the material matches receiving and production needs.'],
+            ],
+            'faq' => [
+                ['question' => 'What is zinc sulphate used for?', 'answer' => 'Zinc sulphate is used in fertilizer, agriculture, animal feed, chemical processing, electroplating and other industrial applications.'],
+                ['question' => 'Is zinc sulphate supplied in different grades?', 'answer' => 'Yes, zinc sulphate can be supplied in different forms and grades, so buyers should confirm zinc content, packing and application requirements before ordering.'],
+            ],
+        ],
+    ],
     'zinc-ash-65-70' => [
         'meta_description' => 'Zinc ash 65-70% Zn for zinc recovery, smelting, recycling and secondary zinc production from BhattiZinc.',
         'seo_keywords' => ['zinc ash supplier', '65 70 zinc ash', 'zinc ash for recovery', 'zinc recycling feedstock', 'galvanizing zinc ash', 'zinc ash Pakistan'],
@@ -365,25 +398,25 @@ $productSeoContent = [
             ],
         ],
     ],
-    'low-grade-zinc-ash-30-40' => [
-        'meta_description' => 'Low-grade zinc ash 30-40% Zn for large-scale zinc recovery, industrial recycling and economical smelting feedstock.',
-        'seo_keywords' => ['low grade zinc ash', '30 40 zinc ash', 'zinc ash recovery', 'zinc recycling material', 'zinc ash for smelting', 'cheap zinc ash supplier'],
+    'zinc-skimming-30-40' => [
+        'meta_description' => 'Zinc skimming 30-40% Zn for large-scale zinc recovery, industrial recycling and economical smelting feedstock.',
+        'seo_keywords' => ['zinc skimming', '30 40 zinc skimming', 'zinc skimming recovery', 'zinc recycling material', 'zinc skimming for smelting', 'zinc skimming supplier'],
         'hero_seo' => [
-            'title' => 'Low-Grade Zinc Ash for Economical Zinc Recovery Operations',
-            'body' => 'BhattiZinc supplies low-grade zinc ash with 30-40% typical zinc content for recovery plants, recyclers and smelters that process larger volumes of economical zinc-bearing feedstock. It is a practical option for industrial recycling programs focused on cost per recoverable zinc unit.',
-            'highlights' => ['Low-grade zinc ash', '30-40% Zn', 'Bulk recovery feedstock', 'Industrial recycling'],
+            'title' => 'Zinc Skimming for Economical Zinc Recovery Operations',
+            'body' => 'BhattiZinc supplies zinc skimming with 30-40% typical zinc content for recovery plants, recyclers and smelters that process larger volumes of economical zinc-bearing feedstock. It is a practical option for industrial recycling programs focused on cost per recoverable zinc unit.',
+            'highlights' => ['Zinc skimming', '30-40% Zn', 'Bulk recovery feedstock', 'Industrial recycling'],
         ],
         'seo_blog' => [
-            'title' => 'How Low-Grade Zinc Ash Can Work in Large-Scale Recovery Plants',
-            'intro' => 'Low-grade zinc ash is searched by buyers who need affordable zinc-bearing material for recovery. The grade is lower than premium ash, but it can still be commercially useful when processing costs and recovery yield are balanced.',
+            'title' => 'How Zinc Skimming Can Work in Large-Scale  Recovery Plants',
+            'intro' => 'Zinc skimming is searched by buyers who need affordable zinc-bearing material for recovery. The grade is lower than premium ash, but it can still be commercially useful when processing costs and recovery yield are balanced.',
             'sections' => [
-                ['heading' => 'Best use case for 30-40% zinc ash', 'body' => 'This material suits processors with equipment designed for bulk, lower-grade feedstock. It can support zinc recovery, industrial recycling and blending strategies where cost control matters.'],
+                ['heading' => 'Best use case for 30-40% zinc skimming', 'body' => 'This material suits processors with equipment designed for bulk, lower-grade feedstock. It can support zinc recovery, industrial recycling and blending strategies where cost control matters.'],
                 ['heading' => 'Why sampling is essential', 'body' => 'Lower-grade ash can vary more than refined products. Buyers should confirm zinc percentage, moisture, non-metallic content and impurities before committing to large shipments.'],
-                ['heading' => 'Commercial buying context', 'body' => 'Industrial buyers often evaluate low-grade zinc ash by zinc content, recovery route, shipment volume and landed cost. Clear material details help recovery plants compare feedstock options before committing to bulk supply.'],
+                ['heading' => 'Commercial buying context', 'body' => 'Industrial buyers often evaluate zinc skimming by zinc content, recovery route, shipment volume and landed cost. Clear material details help recovery plants compare feedstock options before committing to bulk supply.'],
             ],
             'faq' => [
-                ['question' => 'Can low-grade zinc ash be recycled?', 'answer' => 'Yes, it can be processed by suitable recovery plants and smelters to reclaim zinc value.'],
-                ['question' => 'Who buys 30-40% zinc ash?', 'answer' => 'Typical buyers include recyclers, metal recovery plants and secondary zinc processors handling bulk feedstock.'],
+                ['question' => 'Can zinc skimming be recycled?', 'answer' => 'Yes, it can be processed by suitable recovery plants and smelters to reclaim zinc value.'],
+                ['question' => 'Who buys 30-40% zinc skimming?', 'answer' => 'Typical buyers include recyclers, metal recovery plants and secondary zinc processors handling bulk feedstock.'],
             ],
         ],
     ],
@@ -471,6 +504,12 @@ function getProductBySlug($slug, $products) {
 
 function getFeaturedProducts($products) {
     return array_filter($products, fn($p) => $p['featured']);
+}
+
+function getHeroProducts($products) {
+    $hero = array_filter($products, fn($p) => isset($p['hero_order']) && $p['hero_order'] > 0);
+    usort($hero, fn($a, $b) => $a['hero_order'] - $b['hero_order']);
+    return $hero;
 }
 
 function getProductsByCategory($category, $products) {

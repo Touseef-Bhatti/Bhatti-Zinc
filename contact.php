@@ -28,20 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include 'includes/header.php';
 ?>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-    <div class="container">
-        <div class="page-hero-inner">
-            <div class="page-hero-breadcrumb">
-                <a href="index.php" class="breadcrumb-item">Home</a>
-                <span class="breadcrumb-sep">/</span>
-                <span class="breadcrumb-item current">Contact</span>
-            </div>
-            <h1 class="page-hero-title">Let's discuss<br>your zinc needs</h1>
-            <p class="page-hero-sub">Our trade and technical team is ready to assist with quotations, product specifications, samples, and logistical questions. We respond within one business day.</p>
-        </div>
-    </div>
-</section>
+
+<br>
 
 <!-- CONTACT MAIN -->
 <section class="contact-section" id="inquiry">
@@ -50,54 +38,66 @@ include 'includes/header.php';
 
             <!-- Info -->
             <div class="reveal">
-                <h2 class="contact-info-title">Get in touch</h2>
+                <h2 class="label">Get in touch</h2>
                 <p class="contact-info-sub">Whether you are a first-time buyer or a long-standing partner, use the form to reach us. We also welcome direct calls and emails to the contacts below.</p>
 
-                <!-- Head Office -->
-                <div class="contact-office">
-                    <div class="contact-office-name">Head Office &amp; Factory — Gujranwala</div>
-                    <address class="contact-office-address">
-                        BhattiZinc Industries (Pvt) Ltd.<br>
-                        Plot 14-B, Industrial Estate, Main G.T Road<br>
-                        Gujranwala, Punjab 54000 — Pakistan
-                    </address>
-                        <div class="contact-office-contact">
-                            <a href="tel:+923094530100">+92 309 4530100 — Call / WhatsApp</a>
-                            <a href="mailto:info@bhattizinc.com">info@bhattizinc.com</a>
+                <div style="display:flex;flex-direction:column;gap:20px;margin-bottom:32px;">
+                 <!-- Phone -->
+                    <div style="display:flex;align-items:flex-start;gap:20px;background:var(--white);border:1px solid var(--border-light);padding:24px;border-radius:var(--radius-lg);transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.05)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+                        <div style="width:64px;height:64px;background:var(--zinc-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--zinc);">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         </div>
-                </div>
-
-                <!-- Dubai Office -->
-                <div class="contact-office">
-                    <div class="contact-office-name">Representative Office — Dubai, UAE</div>
-                    <address class="contact-office-address">
-                        BhattiZinc Middle East<br>
-                        Office 412, Business Bay,<br>
-                        Dubai — United Arab Emirates
-                    </address>
-                    <div class="contact-office-contact">
-                        <a href="tel:+97143001234">+971 4 300 1234</a>
-                        <a href="mailto:middleeast@bhattizinc.com">middleeast@bhattizinc.com</a>
-                    </div>
-                </div>
-
-                <!-- Working Hours -->
-                <div style="padding:24px;background:var(--cream);border-radius:var(--radius);border:1px solid var(--border-light);margin-bottom:0;">
-                    <div class="contact-office-name">Business Hours</div>
-                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
-                        <?php
-                        $hours = [
-                            ['Monday – Saturday', '09:00 – 18:00'],
-                            ['Sunday', 'Closed (Appointments available on request)'],
-                        ];
-                        foreach($hours as $h): ?>
-                        <div style="display:flex;justify-content:space-between;align-items:center;font-size:.85rem;padding:8px 0;border-bottom:1px solid var(--border-light);">
-                            <span style="color:var(--text-mid);"><?php echo $h[0]; ?></span>
-                            <span style="font-family:var(--font-label);font-size:.72rem;font-weight:600;letter-spacing:.08em;color:var(--text);"><?php echo $h[1]; ?></span>
+                        <div>
+                            <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--black);margin-bottom:12px;">Direct Phone</div>
+                            <div style="display:flex;flex-direction:column;gap:8px;">
+                                <a href="tel:+923094530100" style="font-size:1rem;color:var(--text-mid);transition:color .2s;text-decoration:none;" onmouseover="this.style.color='var(--zinc)'" onmouseout="this.style.color='var(--text-mid)'">
+                                    <strong style="color:var(--black);font-weight:500;">Pakistan (Call / WhatsApp):</strong> <br>+92 309 4530100
+                                </a>
+                                
+                            </div>
                         </div>
-                        <?php endforeach; ?>
                     </div>
-                    <p style="font-size:.75rem;color:var(--text-xs);margin-top:12px;line-height:1.6;">Enquiries received outside business hours are actioned the following morning. Urgent shipment matters: please call the export desk directly.</p>
+
+                    <!-- Email -->
+                    <div style="display:flex;align-items:flex-start;gap:20px;background:var(--white);border:1px solid var(--border-light);padding:24px;border-radius:var(--radius-lg);transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.05)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+                        <div style="width:64px;height:64px;background:var(--zinc-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--zinc);">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div>
+                            <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--black);margin-bottom:12px;">Email Us</div>
+                            <div style="display:flex;flex-direction:column;gap:8px;">
+                                <a href="mailto:info@bhattizinc.com" style="font-size:1rem;color:var(--text-mid);transition:color .2s;text-decoration:none;" onmouseover="this.style.color='var(--zinc)'" onmouseout="this.style.color='var(--text-mid)'">
+                                    <strong style="color:var(--black);font-weight:500;">General Inquiries:</strong> <br>info@bhattizinc.com
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>  
+                
+                <!-- Location -->
+                    <div style="display:flex;align-items:flex-start;gap:20px;background:var(--white);border:1px solid var(--border-light);padding:24px;border-radius:var(--radius-lg);transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.05)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+                        <div style="width:64px;height:64px;background:var(--zinc-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--zinc);">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div>
+                            <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--black);margin-bottom:12px;">Our Locations</div>
+                            
+                            <div style="margin-bottom:12px;">
+                                <div style="font-family:var(--font-label);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--zinc);margin-bottom:4px;">Head Office &amp; Factory — Pakistan</div>
+                                <address style="font-size:.9rem;color:var(--text-mid);line-height:1.6;font-style:normal;">
+                                    BhattiZinc Industries (Pvt) Ltd.<br>
+                                     Industrial Estate, Main G.T Road<br>
+                                    Gujranwala, Punjab , Pakistan
+                                </address>
+                            </div>
+                            
+                            <div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                   
                 </div>
             </div>
 
@@ -127,7 +127,7 @@ include 'includes/header.php';
                         <p style="font-size:.82rem;color:var(--text-sm);">For quotations, samples, trade terms, and general questions. Fields marked <span style="color:var(--gold);">*</span> are required.</p>
                     </div>
 
-                    <form method="POST" action="contact.php#inquiry" data-validate id="contact-form">
+                    <form method="POST" action="contact.php#inquiry" data-validate data-whatsapp-form id="contact-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" for="name">Full Name <span style="color:var(--gold);">*</span></label>
@@ -194,7 +194,7 @@ include 'includes/header.php';
                         </div>
                         <div class="form-submit-row">
                             <span class="form-disclaimer">Your information is kept strictly confidential and used only to respond to your enquiry. We do not share data with third parties.</span>
-                            <button type="submit" class="btn btn--gold">Send Enquiry</button>
+                            <button type="submit" class="btn btn--luxury-solid">Send Enquiry</button>
                         </div>
                     </form>
                 </div>
@@ -205,41 +205,7 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- QUICK CONTACT STRIP -->
-<section style="padding:0;background:var(--warm-white);border-top:1px solid var(--border);">
-    <div class="container">
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--border);" class="reveal">
-            <?php
-            $quickContacts = [
-                ['Export Sales','For pricing, quotations and new order placement.','export@bhattizinc.com','+92 309 4530100'],
-                ['Technical','Product specifications, CoA requests and grade selection.','technical@bhattizinc.com','+92 309 4530100'],
-                ['Logistics','Shipping schedules, documentation and tracking.','logistics@bhattizinc.com','+92 309 4530100'],
-                ['Finance','Payment terms, L/C, and trade finance queries.','finance@bhattizinc.com','+92 309 4530100'],
-            ];
-            foreach($quickContacts as $i=>$qc): ?>
-            <div style="background:var(--white);padding:36px 28px;border-right:1px solid var(--border-light);">
-                <div style="font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;"><?php echo $qc[0]; ?></div>
-                <p style="font-size:.8rem;color:var(--text-sm);line-height:1.6;margin-bottom:14px;"><?php echo $qc[1]; ?></p>
-                <a href="mailto:<?php echo $qc[2]; ?>" style="display:block;font-size:.82rem;color:var(--text);margin-bottom:4px;transition:color .15s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text)'"><?php echo $qc[2]; ?></a>
-                <a href="tel:<?php echo preg_replace('/\s/','',$qc[3]); ?>" style="font-family:var(--font-label);font-size:.72rem;letter-spacing:.08em;color:var(--text-sm);transition:color .15s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-sm)'"><?php echo $qc[3]; ?></a>
-            </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
 
-<!-- MAP PLACEHOLDER -->
-<section style="padding:80px 0 120px;background:var(--white);">
-    <div class="container">
-        <div class="reveal" style="margin-bottom:32px;">
-            <div class="eyebrow"><span class="label">Find Us</span></div>
-            <h3 style="font-size:2rem;font-weight:400;">Our Location</h3>
-        </div>
-        <div style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);height:400px;background:var(--surface);position:relative;" class="reveal">
-            <iframe src="https://maps.google.com/maps?q=BhattiZinc+Industries,+Plot+14-B,+Industrial+Estate,+Main+G.T+Road,+Gujranwala,+Punjab+54000,+Pakistan&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
-</section>
 
 <!-- FAQ QUICK -->
 <section style="padding:80px 0;background:var(--cream);border-top:1px solid var(--border);">

@@ -1,58 +1,93 @@
 (function() {
     'use strict';
 
-    const contactForm = document.getElementById('contact-form');
-    if (!contactForm) return;
+    const whatsappForms = document.querySelectorAll('form[data-whatsapp-form]');
+    if (!whatsappForms.length) return;
 
-    contactForm.addEventListener('submit', function(event) {
-        if (!contactForm.checkValidity()) {
-            return;
-        }
+    whatsappForms.forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
 
-        event.preventDefault();
+            const values = {
+                name: (form.querySelector('[name="name"]')?.value || '').trim(),
+                company: (form.querySelector('[name="company"]')?.value || '').trim(),
+                email: (form.querySelector('[name="email"]')?.value || '').trim(),
+                phone: (form.querySelector('[name="phone"]')?.value || '').trim(),
+                product: (form.querySelector('[name="product"]')?.value || '').trim(),
+                quantity: (form.querySelector('[name="quantity"]')?.value || '').trim(),
+                position: (form.querySelector('[name="position"]')?.value || '').trim(),
+                location: (form.querySelector('[name="location"]')?.value || '').trim(),
+                linkedin: (form.querySelector('[name="linkedin"]')?.value || '').trim(),
+                message: (form.querySelector('[name="message"]')?.value || '').trim(),
+            };
 
-        const values = {
-            name: (contactForm.querySelector('[name="name"]')?.value || '').trim(),
-            company: (contactForm.querySelector('[name="company"]')?.value || '').trim(),
-            email: (contactForm.querySelector('[name="email"]')?.value || '').trim(),
-            phone: (contactForm.querySelector('[name="phone"]')?.value || '').trim(),
-            product: (contactForm.querySelector('[name="product"]')?.value || '').trim(),
-            quantity: (contactForm.querySelector('[name="quantity"]')?.value || '').trim(),
-            message: (contactForm.querySelector('[name="message"]')?.value || '').trim(),
-        };
+            let whatsappMessage = [];
+            if (form.id === 'career-form') {
+                whatsappMessage = [
+                    ' NEW CAREER APPLICATION',
+                    '',
+                    '━━━━━━━━━━━━',
+                    ' Candidate Information',
+                    '━━━━━━━━━━━━',
+                    '',
+                    'Name: ' + values.name,
+                    'Email: ' + values.email,
+                    'Phone: ' + values.phone,
+                    'Location: ' + values.location,
+                    'Position: ' + values.position,
+                    'Current Company: ' + values.company,
+                    'LinkedIn / Portfolio: ' + values.linkedin,
+                    '',
+                    '━━━━━━━━━━━━',
+                    ' Application Message',
+                    '━━━━━━━━━━━━',
+                    '',
+                    values.message,
+                    '',
+                    '━━━━━━━━━━━━',
+                    'Sent from BhattiZinc Website Careers Page',
+                    '━━━━━━━━━━━━',
+                ].join('\n');
+            } else {
+                whatsappMessage = [
+                    ' NEW QUOTE REQUEST',
+                    '',
+                    '━━━━━━━━━━━━',
+                    ' Customer Information',
+                    '━━━━━━━━━━━━',
+                    '',
+                    'Name: ' + values.name,
+                    'Company: ' + values.company,
+                    'Email: ' + values.email,
+                    'Phone: ' + values.phone,
+                    '',
+                    '━━━━━━━━━━━━',
+                    ' Product Details',
+                    '━━━━━━━━━━━━',
+                    '',
+                    'Product: ' + values.product,
+                    'Quantity: ' + values.quantity,
+                    '',
+                    '━━━━━━━━━━━━',
+                    ' Additional Requirements',
+                    '━━━━━━━━━━━━',
+                    '',
+                    values.message,
+                    '',
+                    '━━━━━━━━━━━━',
+                    'Sent from BhattiZinc Website',
+                    '━━━━━━━━━━━━',
+                ].join('\n');
+            }
 
-        const whatsappMessage = [
-            ' NEW QUOTE REQUEST',
-            '',
-            '━━━━━━━━━━━━',
-            ' Customer Information',
-            '━━━━━━━━━━━━',
-            '',
-            'Name: ' + values.name,
-            'Company: ' + values.company,
-            'Email: ' + values.email,
-            'Phone: ' + values.phone,
-            '',
-            '━━━━━━━━━━━━',
-            ' Product Details',
-            '━━━━━━━━━━━━',
-            '',
-            'Product: ' + values.product,
-            'Quantity: ' + values.quantity,
-            '',
-            '━━━━━━━━━━━━',
-            ' Additional Requirements',
-            '━━━━━━━━━━━━',
-            '',
-            values.message,
-            '',
-            '━━━━━━━━━━━━',
-            'Sent from BhattiZinc Website',
-            '━━━━━━━━━━━━',
-        ].join('\n');
-
-        const phone = '923206472460';
-        const url = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(whatsappMessage);
-        window.open(url, '_blank');
+            const email = 'info@bhattizinc.com';
+            const subject = form.id === 'career-form' ? 'New Career Application' : 'New Quote Request';
+            const url = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(whatsappMessage);
+            window.location.href = url;
+        });
     });
 })();

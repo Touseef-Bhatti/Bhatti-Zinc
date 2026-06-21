@@ -140,10 +140,6 @@ include 'includes/header.php';
                 <h1 class="product-detail-name"><?php echo htmlspecialchars($product['name']); ?></h1>
                 <div class="product-detail-tagline"><?php echo htmlspecialchars($product['tagline']); ?></div>
 
-                <div class="product-detail-grade">
-                    <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0;"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    <?php echo htmlspecialchars($product['grade']); ?>
-                </div>
 
                 <p class="product-detail-desc"><?php echo htmlspecialchars($product['long_desc']); ?></p>
 
@@ -342,7 +338,7 @@ include 'includes/header.php';
                     <?php else: ?>
                     <div class="product-placeholder" data-abbr="<?php echo htmlspecialchars(strtoupper(substr(str_replace(' ','',$rp['short_name']),0,3))); ?>"></div>
                     <?php endif; ?>
-                    <span class="product-card-grade"><?php echo htmlspecialchars($rp['grade']); ?></span>
+
                 </div>
                 <div class="product-card-body">
                     <div class="product-card-cat"><?php echo htmlspecialchars($rp['category']); ?></div>

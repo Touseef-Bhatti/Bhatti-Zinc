@@ -321,4 +321,167 @@
         }, { passive: true });
     }
 
+    /* ----------------------------------------
+       Hero Product Carousel (hover-swap)
+    ---------------------------------------- */
+    var heroCarousel = document.getElementById('hero-carousel');
+    if (heroCarousel) {
+        var products = [];
+        try { products = JSON.parse(heroCarousel.getAttribute('data-products')); } catch(e) {}
+        if (products.length < 3) return;
+
+        var cardLeft  = document.getElementById('hero-card-left');
+        var cardTop   = document.getElementById('hero-card-top');
+        var cardRight = document.getElementById('hero-card-right');
+        var dots      = heroCarousel.querySelectorAll('.hero-carousel-dot');
+        var total     = products.length;
+        var current   = 0; // index of the TOP (center) product
+        var hoverLock = false;
+        var autoTimer = null;
+        var autoDelay = 5000;
+
+        // Populate a card element with product data
+        function fillCard(el, product) {
+            if (!el || !product) return;
+            var img = el.querySelector('.hero-product-img img');
+            var nameEl = el.querySelector('.hero-product-name');
+            var gradeEl = el.querySelector('.hero-product-grade');
+            if (img) { img.src = product.image; img.alt = product.name; }
+            if (nameEl) nameEl.textContent = product.name;
+            if (gradeEl) gradeEl.textContent = product.grade;
+            el.href = 'product.php?p=' + encodeURIComponent(product.slug);
+        }
+
+        // Render the 3 cards based on current index
+        function render() {
+            var leftIdx  = (current - 1 + total) % total;
+            var rightIdx = (current + 1) % total;
+            fillCard(cardLeft,  products[leftIdx]);
+            fillCard(cardTop,   products[current]);
+            fillCard(cardRight, products[rightIdx]);
+
+            // Update dots
+            dots.forEach(function(d, i) {
+                d.classList.toggle('active', i === current);
+            });
+        }
+
+        // Go to a specific index (set as top/center)
+        function goTo(index) {
+            current = ((index % total) + total) % total;
+            render();
+        }
+
+        // Move forward (right card becomes top)
+        function next() { goTo(current + 1); }
+
+        // Move backward (left card becomes top)
+        function prev() { goTo(current - 1); }
+
+        // Initial render
+        render();
+
+        // ---- HOVER + CLICK SWAP (left/right → move to top, no redirect) ----
+        var hoverTimer = null;
+        var swapLock = false;
+
+        function setupSideCard(card, action) {
+            if (!card) return;
+            // Hover: swap after short delay
+            card.addEventListener('mouseenter', function() {
+                if (swapLock) return;
+                hoverTimer = setTimeout(function() {
+                    swapLock = true;
+                    action();
+                    resetAuto();
+                    setTimeout(function() { swapLock = false; }, 500);
+                }, 300);
+            });
+            card.addEventListener('mouseleave', function() {
+                clearTimeout(hoverTimer);
+            });
+            // Click: swap immediately, no redirect
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                clearTimeout(hoverTimer);
+                if (!swapLock) {
+                    swapLock = true;
+                    action();
+                    resetAuto();
+                    setTimeout(function() { swapLock = false; }, 500);
+                }
+            });
+        }
+
+        setupSideCard(cardLeft, prev);
+        setupSideCard(cardRight, next);
+
+        // ---- DOT CLICK ----
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                var idx = parseInt(this.getAttribute('data-slide'), 10);
+                goTo(idx);
+                resetAuto();
+            });
+        });
+
+        // ---- ARROW BUTTON CLICK ----
+        var arrowPrev = document.getElementById('hero-arrow-prev');
+        var arrowNext = document.getElementById('hero-arrow-next');
+        if (arrowPrev) {
+            arrowPrev.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                prev();
+                resetAuto();
+            });
+        }
+        if (arrowNext) {
+            arrowNext.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                next();
+                resetAuto();
+            });
+        }
+
+        // ---- SWIPE / TOUCH ----
+        var sx = 0, sy = 0, ex = 0, dragging = false;
+        heroCarousel.addEventListener('pointerdown', function(e) {
+            if (e.target.closest('.hero-carousel-dot') || e.target.closest('.hero-carousel-arrow')) return;
+            sx = ex = e.clientX; sy = e.clientY;
+            dragging = true;
+        });
+        heroCarousel.addEventListener('pointermove', function(e) {
+            if (dragging) ex = e.clientX;
+        });
+        heroCarousel.addEventListener('pointerup', function(e) {
+            if (!dragging) return;
+            dragging = false;
+            var dx = sx - ex, dy = Math.abs(sy - e.clientY);
+            if (Math.abs(dx) > 30 && dy < Math.abs(dx) * 1.5) {
+                if (dx > 0) next(); else prev();
+                resetAuto();
+            }
+        });
+        heroCarousel.addEventListener('pointercancel', function() { dragging = false; });
+
+        // ---- AUTO-PLAY ----
+        function startAuto() { stopAuto(); autoTimer = setInterval(next, autoDelay); }
+        function stopAuto()  { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+        function resetAuto() { stopAuto(); startAuto(); }
+
+        heroCarousel.addEventListener('mouseenter', stopAuto);
+        heroCarousel.addEventListener('mouseleave', startAuto);
+
+        // ---- KEYBOARD ----
+        heroCarousel.setAttribute('tabindex', '0');
+        heroCarousel.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft')  { prev(); resetAuto(); }
+            if (e.key === 'ArrowRight') { next(); resetAuto(); }
+        });
+
+        setTimeout(startAuto, 3000);
+    }
+
 })();

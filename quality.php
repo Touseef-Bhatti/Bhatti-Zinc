@@ -1,5 +1,7 @@
 <?php
-$page_title = 'Quality & Certifications';
+$page_title = 'Recycling & Manufacturing';
+$meta_description = 'BhattiZinc recycling and manufacturing capabilities for zinc metal recovery, zinc ash processing, zinc oxide production, and documented quality control.';
+$meta_keywords = 'zinc recycling Pakistan, zinc ash recycling, zinc metal recycling, zinc oxide manufacturing, BhattiZinc manufacturing';
 include 'includes/header.php';
 ?>
 
@@ -10,67 +12,63 @@ include 'includes/header.php';
             <div class="page-hero-breadcrumb">
                 <a href="index.php" class="breadcrumb-item">Home</a>
                 <span class="breadcrumb-sep">/</span>
-                <span class="breadcrumb-item current">Quality</span>
+                <span class="breadcrumb-item current">Recycling &amp; Manufacturing</span>
             </div>
-            <h1 class="page-hero-title">Quality Without<br>Compromise</h1>
-            <p class="page-hero-sub">From raw material intake to final shipment, every step in our process is governed by documented quality systems, third-party verification, and international standards compliance.</p>
+            <h1 class="page-hero-title">Recycling &amp;<br>Manufacturing</h1>
+            <p class="page-hero-sub">Integrated zinc recovery, refining, oxide manufacturing, and quality control for industrial buyers who need reliable material performance from feedstock to final shipment.</p>
         </div>
     </div>
 </section>
 
-<!-- QUALITY PHILOSOPHY -->
+<!-- OVERVIEW -->
 <section class="quality-page">
     <div class="container">
 
         <div class="quality-philosophy-grid">
             <div class="reveal">
-                <div class="eyebrow"><span class="label">Our Philosophy</span></div>
-                <h2 style="font-size:clamp(2rem,3vw,3rem);margin-bottom:1.5rem;">Quality is our<br>fundamental promise</h2>
-                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.25rem;">At BhattiZinc, quality is not a department — it is a discipline that permeates every level of our organisation. Our Quality Management System is built on the ISO 9001:2015 framework and reinforced by dedicated laboratory infrastructure, trained personnel, and continuous improvement protocols.</p>
-                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.25rem;">We believe that our clients should never have to question what they are receiving. Every shipment is accompanied by a full Certificate of Analysis and, where required, a third-party SGS inspection report — giving buyers complete confidence in specification conformance.</p>
-                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;">Our metallurgical laboratory operates 24 hours per day, testing every production run before release to the finished goods warehouse. No batch leaves our facility without meeting its published specification in full.</p>
+                <div class="eyebrow"><span class="label">Industrial Capability</span></div>
+                <h2 style="font-size:clamp(2rem,3vw,3rem);margin-bottom:1.5rem;">From recovered zinc<br>to controlled output</h2>
+                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.25rem;">BhattiZinc combines zinc-bearing material recycling with dedicated manufacturing lines for refined zinc products and zinc oxide. Our process is built for practical industrial supply: controlled sourcing, careful sorting, monitored processing, batch testing, and clear shipment documentation.</p>
+                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.25rem;">The facility handles zinc metal, zinc ash, zinc dross, secondary ingots, and oxide production with a focus on recovery value, stable chemistry, and repeatable quality. Each lot is reviewed by production and quality teams before release.</p>
+                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;">This page outlines the major operating areas behind our supply: zinc metal and ash recycling, zinc oxide manufacturing, and the quality control system that keeps each shipment aligned with buyer requirements.</p>
             </div>
             <div class="reveal reveal-delay-2" style="background:var(--black);border-radius:var(--radius-lg);padding:48px;position:relative;overflow:hidden;">
                 <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(184,151,43,.12) 0%,transparent 70%);pointer-events:none;"></div>
-                <div class="label" style="color:#ffffff;margin-bottom:32px;">Quality By Numbers</div>
+                <div class="label" style="color:#ffffff;margin-bottom:32px;">Process Areas</div>
                 <?php
-                $qStats = [
-                    ['99.995%','Maximum SHG Zinc purity achieved'],
-                    ['12+','Parameters tested per batch'],
-                    ['100%','Batches with CoA on shipment'],
-                    ['24/7','Laboratory operation hours'],
-                    ['< 0.1%','Non-conformance rate (3-year avg.)'],
-                    ['2003','Year of first SGS partnership'],
+                $capabilities = [
+                    ['01','Zinc metal recovery and refining'],
+                    ['02','Zinc ash and dross processing'],
+                    ['03','Secondary zinc ingot production'],
+                    ['04','Zinc oxide manufacturing'],
+                    ['05','Batch sampling and chemistry checks'],
+                    ['06','Packing, labeling, and export documentation'],
                 ];
-                foreach($qStats as $qs): ?>
-                <div style="display:flex;align-items:center;gap:20px;padding:16px 0;border-bottom:1px solid rgba(255, 0, 0, 0.06);">
-                    <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:300;color:#ffffff;min-width:110px;line-height:1;"><?php echo $qs[0]; ?></div>
-                    <div style="font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.5;"><?php echo $qs[1]; ?></div>
+                foreach($capabilities as $capability): ?>
+                <div style="display:flex;align-items:center;gap:20px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+                    <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:300;color:#ffffff;min-width:56px;line-height:1;"><?php echo $capability[0]; ?></div>
+                    <div style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.5;"><?php echo $capability[1]; ?></div>
                 </div>
                 <?php endforeach; ?>
             </div>
         </div>
 
-        <!-- Quality Process Steps -->
         <div class="reveal" style="margin-bottom:60px;">
-            <div class="eyebrow"><span class="label">Quality Process</span></div>
-            <h3 style="font-size:2rem;font-weight:400;max-width:500px;">Eight stages of quality control</h3>
+            <div class="eyebrow"><span class="label">Operating Flow</span></div>
+            <h3 style="font-size:2rem;font-weight:400;max-width:560px;">A controlled route from incoming material to dispatch-ready product</h3>
         </div>
 
         <div class="quality-process-grid">
             <?php
-            $qSteps = [
-                ['Stage 01','Raw Material Incoming Inspection','All incoming zinc ore, scrap, and secondary feedstock is sampled and tested before acceptance. Non-conforming materials are rejected and returned to supplier.'],
-                ['Stage 02','Pre-Process Verification','Feed composition is verified against target alloy chemistry before furnace charging. Process parameters — temperature, duration, and flux additions — are logged in real time.'],
-                ['Stage 03','In-Process Sampling','Samples are drawn from molten metal at regular intervals during smelting and refining. Spectrometric analysis results are reviewed against process control limits before continuing.'],
-                ['Stage 04','Final Product Analysis','Prior to casting or packing, every production batch is subjected to full spectrometric analysis across all regulated elements. Results are compared against product specification and LME requirements.'],
-                ['Stage 05','Dimensional &amp; Physical Check','Cast ingots, sheets, and wire are checked for dimensional conformance, surface finish, and visual defects. Substandard units are segregated for remelting.'],
-                ['Stage 06','Packing &amp; Labelling Audit','Finished goods packing is audited for correct product identification, weight accuracy, and ISPM-15 compliance. Pallet labels are verified against the Certificate of Analysis.'],
-                ['Stage 07','Pre-Shipment Inspection','For orders requiring SGS inspection, our team coordinates a third-party survey covering quality, quantity, packing, and weight. The SGS report is issued before vessel loading.'],
-                ['Stage 08','Document Quality Review','Before release of shipping documents, our quality team cross-checks all export documents for consistency — ensuring the CoA, invoice, packing list, and BL all describe the same consignment.'],
-                ['Stage 09','Post-Delivery Review','Customer feedback is formally captured on receipt. Any non-conformity claims are investigated within 48 hours, with corrective and preventive actions (CAPA) documented in our QMS.'],
+            $processSteps = [
+                ['Stage 01','Material Receiving','Zinc-bearing material is checked on arrival for source, physical condition, moisture, attachments, and visible contamination before processing.'],
+                ['Stage 02','Sorting &amp; Preparation','Metal, ash, dross, and mixed zinc residues are separated into workable streams so each batch can be processed with the correct recovery route.'],
+                ['Stage 03','Smelting &amp; Recovery','Prepared material is charged under controlled operating conditions to recover usable zinc metal and reduce avoidable process loss.'],
+                ['Stage 04','Refining &amp; Casting','Recovered zinc is refined toward the required chemistry, then cast or prepared for downstream manufacturing depending on buyer specification.'],
+                ['Stage 05','Oxide Production','Selected zinc feed is converted through a dedicated zinc oxide manufacturing route with attention to appearance, purity, and consistency.'],
+                ['Stage 06','Quality Release','Representative samples are reviewed before packing, with batch records and shipment documents aligned to the final product description.'],
             ];
-            foreach($qSteps as $i=>$step): ?>
+            foreach($processSteps as $i=>$step): ?>
             <div class="quality-process-card reveal reveal-delay-<?php echo min($i%3+1,3); ?>">
                 <div class="qp-step"><?php echo $step[0]; ?></div>
                 <div class="qp-title"><?php echo $step[1]; ?></div>
@@ -82,105 +80,79 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- CERTIFICATIONS DETAIL -->
-<section style="padding:80px 0 120px;background:var(--warm-white);border-top:1px solid var(--border);">
+<!-- RECYCLING SECTIONS -->
+<section id="zinc-metal-ash-recycling" style="padding:80px 0 120px;background:var(--warm-white);border-top:1px solid var(--border);">
     <div class="container">
         <div class="text-center reveal" style="margin-bottom:60px;">
-            <div class="eyebrow" style="justify-content:center;"><span class="label">Our Certifications</span></div>
-            <h2 style="max-width:600px;margin:0 auto;">Internationally recognised<br>credentials</h2>
+            <div class="eyebrow" style="justify-content:center;"><span class="label">Zinc Metal &amp; Ash Recycling</span></div>
+            <h2 style="max-width:700px;margin:0 auto;">Recovering zinc value from industrial material streams</h2>
         </div>
 
         <div class="cert-cards-grid">
             <?php
-            $certs = [
+            $recycling = [
                 [
-                    '<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>',
-                    'ISO 9001:2015',
-                    'Quality Management System',
-                    'Certified since 2002. Our QMS covers all production, quality control, customer service, and logistics processes across the entire BhattiZinc facility.'
+                    '<path d="M4 7h16M7 7v10a2 2 0 002 2h6a2 2 0 002-2V7M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/>',
+                    'Zinc Metal Scrap',
+                    'Sorting &amp; Recovery',
+                    'Clean zinc units, die-cast scrap, and remeltable metal are sorted for practical recovery, secondary production, and controlled melting performance.'
                 ],
                 [
-                    '<path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>',
-                    'LME Registered',
-                    'London Metal Exchange',
-                    'BhattiZinc SHG Zinc is a registered brand on the London Metal Exchange, confirming consistent achievement of 99.995% minimum purity and LME specification compliance.'
+                    '<path d="M12 2l4 7H8l4-7zm0 20l-4-7h8l-4 7zM2 12l7-4v8l-7-4zm20 0l-7 4V8l7 4z"/>',
+                    'Zinc Ash',
+                    'Grade-Based Processing',
+                    'Zinc ash is reviewed by grade, zinc content, physical condition, and contamination level before being directed to the correct recycling route.'
                 ],
                 [
-                    '<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>',
-                    'SGS Inspected',
-                    'Third-Party Verification',
-                    'We partner with SGS, the world\'s leading inspection and testing company, for pre-shipment inspection, weight surveys, and independent quality verification.'
+                    '<path d="M5 13l4 4L19 7M5 7h8M5 19h14"/>',
+                    'Dross &amp; Residues',
+                    'Industrial Feedstock',
+                    'Dross and zinc-bearing residues are handled with attention to recovery efficiency, safe preparation, and consistent batch separation.'
                 ],
                 [
-                    '<path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>',
-                    'REACH Compliant',
-                    'EU Chemical Regulation',
-                    'All BhattiZinc products meet EC No 1907/2006 REACH regulation requirements, enabling unrestricted import and sale within the European Economic Area.'
-                ],
-                [
-                    '<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>',
-                    'Halal Certified',
-                    'Islamic Certification',
-                    'BhattiZinc Zinc Oxide and Zinc Sulfate hold Halal certification, enabling supply to pharmaceutical, cosmetic, and food-contact applications in Muslim-majority markets.'
-                ],
-                [
-                    '<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>',
-                    'ASTM / EN Standards',
-                    'Product Standards',
-                    'Products are manufactured to ASTM B6, ASTM B86, EN 988, EN 12844, and ISO 3549, with test reports available confirming compliance on each production run.'
-                ],
-                [
-                    '<path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>',
-                    'ISPM-15 Compliance',
-                    'Phytosanitary Standard',
-                    'All wooden packaging materials used for BhattiZinc exports are treated and marked in accordance with ISPM-15, the international standard for phytosanitary measures.'
-                ],
-                [
-                    '<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>',
-                    'GHS / SDS',
-                    'Safety Data Sheets',
-                    'Safety Data Sheets for all BhattiZinc chemical products are prepared in accordance with the UN Globally Harmonised System (GHS) of Classification and Labelling of Chemicals.'
+                    '<path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/>',
+                    'Secondary Zinc',
+                    'Manufacturing Input',
+                    'Recovered metal can support secondary zinc ingot production and other industrial uses where specification, yield, and supply continuity matter.'
                 ],
             ];
-            foreach($certs as $i=>$cert): ?>
+            foreach($recycling as $i=>$item): ?>
             <div class="cert-full-card reveal reveal-delay-<?php echo min($i%4+1,4); ?>">
                 <div class="cert-full-icon">
-                    <svg viewBox="0 0 24 24"><?php echo $cert[0]; ?></svg>
+                    <svg viewBox="0 0 24 24"><?php echo $item[0]; ?></svg>
                 </div>
-                <div class="cert-full-title"><?php echo $cert[1]; ?></div>
-                <div style="font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;"><?php echo $cert[2]; ?></div>
-                <p class="cert-full-sub"><?php echo $cert[3]; ?></p>
+                <div class="cert-full-title"><?php echo $item[1]; ?></div>
+                <div style="font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;"><?php echo $item[2]; ?></div>
+                <p class="cert-full-sub"><?php echo $item[3]; ?></p>
             </div>
             <?php endforeach; ?>
         </div>
     </div>
 </section>
 
-<!-- LAB CAPABILITIES -->
-<section style="padding:80px 0 120px;background:var(--white);">
+<!-- ZINC OXIDE MANUFACTURING -->
+<section id="zinc-oxide-manufacturing" style="padding:80px 0 120px;background:var(--white);">
     <div class="container">
         <div class="lab-grid">
             <div class="reveal">
-                <div class="eyebrow"><span class="label">Laboratory</span></div>
-                <h3 style="font-size:2rem;font-weight:400;margin-bottom:1.5rem;">State-of-the-art<br>metallurgical testing</h3>
-                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.25rem;">Our ISO-accredited metallurgical laboratory houses an inductively coupled plasma optical emission spectrometer (ICP-OES), X-ray fluorescence (XRF) analyser, and classical wet chemistry equipment for comprehensive elemental analysis.</p>
-                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:2rem;">Testing capabilities include full elemental composition analysis, physical property testing (particle size, apparent density, oil absorption for zinc oxide and dust), and dimensional inspection for rolled products.</p>
-                <a href="contact.php" class="btn btn--luxury-solid">Request a Test Report Sample</a>
+                <div class="eyebrow"><span class="label">Zinc Oxide Manufacturing</span></div>
+                <h3 style="font-size:2rem;font-weight:400;margin-bottom:1.5rem;">Consistent ZnO for industrial applications</h3>
+                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.25rem;">BhattiZinc manufactures zinc oxide for buyers who need stable appearance, reliable chemistry, and dependable lot-to-lot supply. Feed selection, controlled conversion, cooling, handling, and packing are managed to protect product consistency.</p>
+                <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:2rem;">Our zinc oxide is positioned for industrial use in rubber, ceramics, glass, paints, coatings, chemicals, and other applications where controlled zinc content and clean handling are important.</p>
+                <a href="product.php?p=zinc-oxide-99-99" class="btn btn--luxury-solid">View Zinc Oxide</a>
             </div>
             <div class="reveal reveal-delay-1">
-                <div class="label" style="margin-bottom:24px;color:var(--text-xs);">Testing Equipment &amp; Capabilities</div>
+                <div class="label" style="margin-bottom:24px;color:var(--text-xs);">Manufacturing Focus</div>
                 <?php
-                $lab = [
-                    ['ICP-OES Spectrometer','Full elemental analysis to ppb levels for primary metals and chemical products'],
-                    ['XRF Analyser','Rapid non-destructive elemental screening for process control'],
-                    ['Wet Chemistry Suite','Classical titrimetric and gravimetric methods for certification purposes'],
-                    ['Particle Size Analyser','Laser diffraction for zinc dust and oxide particle size distribution (d10, d50, d90)'],
-                    ['Hardness Testing','Brinell and Vickers hardness measurement for alloy products'],
-                    ['Tensile Testing','Tensile strength and elongation for zinc wire per AWS C2.25'],
-                    ['Density Measurement','Apparent density for zinc dust per ASTM D520'],
-                    ['pH &amp; Conductivity','Aqueous solution testing for zinc sulfate and zinc oxide grades'],
+                $oxide = [
+                    ['Feed Selection','Input zinc material is selected for suitability before entering the oxide manufacturing route.'],
+                    ['Controlled Conversion','Operating conditions are monitored to support consistent whiteness, purity, and chemical stability.'],
+                    ['Cooling &amp; Collection','Product handling is managed to reduce contamination risk and protect powder condition.'],
+                    ['Batch Review','Representative samples are checked before release against the agreed product specification.'],
+                    ['Industrial Packing','Packing is selected for clean handling, storage, transport, and export documentation requirements.'],
+                    ['Buyer Alignment','Grades, documents, packing, and shipment terms are coordinated according to buyer application needs.'],
                 ];
-                foreach($lab as $j=>$item): ?>
+                foreach($oxide as $j=>$item): ?>
                 <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border-light);" class="reveal reveal-delay-<?php echo min($j%4+1,4); ?>">
                     <div style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:6px;"></div>
                     <div>
@@ -194,15 +166,44 @@ include 'includes/header.php';
     </div>
 </section>
 
+<!-- QUALITY CONTROL -->
+<section id="quality-control" style="padding:80px 0 120px;background:var(--warm-white);border-top:1px solid var(--border);">
+    <div class="container">
+        <div class="text-center reveal" style="margin-bottom:60px;">
+            <div class="eyebrow" style="justify-content:center;"><span class="label">Quality Control</span></div>
+            <h2 style="max-width:680px;margin:0 auto;">Measured checks before material leaves the facility</h2>
+        </div>
+
+        <div class="quality-process-grid">
+            <?php
+            $qualityChecks = [
+                ['Check 01','Incoming Inspection','Material is visually inspected, weighed, identified, and reviewed before it enters the recycling or manufacturing process.'],
+                ['Check 02','Process Monitoring','Production teams track operating conditions and batch movement so material identity stays clear during processing.'],
+                ['Check 03','Sample Testing','Representative samples are checked for chemistry and physical expectations based on the product being supplied.'],
+                ['Check 04','Packing Audit','Packed product is checked for correct grade, weight, labeling, and buyer documentation before dispatch.'],
+                ['Check 05','Document Review','Certificates, invoices, packing details, and shipment records are aligned before release to the customer.'],
+                ['Check 06','Continuous Improvement','Customer feedback and internal observations are reviewed to improve recovery, consistency, and delivery reliability.'],
+            ];
+            foreach($qualityChecks as $i=>$check): ?>
+            <div class="quality-process-card reveal reveal-delay-<?php echo min($i%3+1,3); ?>">
+                <div class="qp-step"><?php echo $check[0]; ?></div>
+                <div class="qp-title"><?php echo $check[1]; ?></div>
+                <p class="qp-text"><?php echo $check[2]; ?></p>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-banner">
     <div class="container">
         <div class="cta-inner reveal">
-            <div class="eyebrow"><span class="label">Quality Assurance</span></div>
-            <h2 class="cta-title">Every shipment,<br><em>guaranteed quality</em></h2>
-            <p class="cta-sub">Request a copy of our ISO certificate, recent Certificate of Analysis, or SGS inspection report to review our quality credentials before your first order.</p>
+            <div class="eyebrow"><span class="label">Production Enquiry</span></div>
+            <h2 class="cta-title">Discuss your<br><em>zinc material requirement</em></h2>
+            <p class="cta-sub">Share your required grade, quantity, packing, and destination so our team can align recycling, manufacturing, and quality documentation with your order.</p>
             <div class="cta-actions">
-                <a href="contact.php" class="btn btn--luxury-outline ">Request Quality Documents</a>
+                <a href="contact.php" class="btn btn--luxury-outline ">Request Manufacturing Details</a>
                 <a href="products.php" class="btn btn--luxury-solid">View Products</a>
             </div>
         </div>

@@ -9,11 +9,7 @@
                         <span class="logo-name">BhattiZinc</span>
                     </div>
                     <p class="footer-about">BhattiZinc is a premier manufacturer and global exporter of zinc products. Serving industries across four continents with uncompromising quality since 1998.</p>
-                    <div class="footer-socials">
-                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-                        <a href="#" class="social-link" aria-label="Twitter">X</a>
-                        <a href="#" class="social-link" aria-label="WhatsApp">W</a>
-                    </div>
+                    
                 </div>
 
                 <div class="footer-col">
@@ -21,12 +17,12 @@
                     <ul class="footer-links">
                         <li><a href="product.php?p=shg-zinc-ingots">SHG Zinc Ingots</a></li>
                         <li><a href="product.php?p=secondary-zinc-ingots">Secondary Zinc Ingots</a></li>
-                        <li><a href="product.php?p=zinc-alloy-92-94">Zinc Alloy (92–94% Zn)</a></li>
+                        <li><a href="product.php?p=zinc-alloy-92-94">Zinc Alloy </a></li>
                         <li><a href="product.php?p=iranian-zinc-ingots">Iranian Zinc Ingots</a></li>
                         <li><a href="product.php?p=zinc-oxide-99-99">Zinc Oxide</a></li>
-                        <li><a href="product.php?p=zinc-ash-65-70">Zinc Ash (65–70% Zn)</a></li>
-                        <li><a href="product.php?p=low-grade-zinc-ash-30-40">Low-Grade Zinc Ash (30–40% Zn)</a></li>
-                        <li><a href="product.php?p=apcd-zinc-ash-50-60">APCD Zinc Ash (50–60% Zn)</a></li>
+                        <li><a href="product.php?p=zinc-ash-65-70">Zinc Ash </a></li>
+                        <li><a href="product.php?p=low-grade-zinc-ash-30-40">Low-Grade Zinc Ash </a></li>
+                        <li><a href="product.php?p=apcd-zinc-ash-50-60">APCD Zinc Ash </a></li>
                         <li><a href="product.php?p=zinc-dross-94-97">Zinc Dross</a></li>
                         <li><a href="product.php?p=zinc-die-cast-scrap">Zinc Die Cast Scrap</a></li>
                     </ul>
@@ -37,9 +33,10 @@
                     <ul class="footer-links">
                         <li><a href="about.php">About BhattiZinc</a></li>
                         <li><a href="about.php#history">Our History</a></li>
-                        <li><a href="quality.php">Quality &amp; Certifications</a></li>
+                        <li><a href="quality.php">Recycling &amp; Manufacturing</a></li>
                         <li><a href="trade.php">Trade &amp; Export</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
+                        <li><a href="careers.php">Careers</a></li>
                         <li><a href="contact.php#inquiry">Product Inquiry</a></li>
                     </ul>
                 </div>
@@ -72,7 +69,6 @@
                     <span class="cert-badge">LME Registered</span>
                     <span class="cert-badge">SGS Inspected</span>
                     <span class="cert-badge">REACH Compliant</span>
-                    <span class="cert-badge">Halal Certified</span>
                 </div>
             </div>
         </div>
@@ -83,8 +79,8 @@
             <div class="footer-bottom-inner">
                 <p class="footer-copy">&copy; <?php echo date('Y'); ?> BhattiZinc Industries (Pvt) Ltd. All Rights Reserved.</p>
                 <nav class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Sale</a>
+                    <a href="privacy-policy.php">Privacy Policy</a>
+                    <a href="terms-of-sale.php">Terms of Sale</a>
                     <a href="#">Sitemap</a>
                 </nav>
             </div>
