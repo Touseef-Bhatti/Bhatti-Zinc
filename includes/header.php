@@ -1,5 +1,10 @@
 <?php
-$current_page = basename($_SERVER['PHP_SELF'], '.php');
+$current_page = basename($_SERVER['SCRIPT_NAME'] ?? $_SERVER['PHP_SELF'] ?? '', '.php');
+if (!isset($assetBase)) {
+    $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? $_SERVER['PHP_SELF'] ?? '');
+    $basePath = trim(dirname($scriptName), '/');
+    $assetBase = ($basePath === '' || $basePath === '.') ? '/assets/' : '/' . $basePath . '/assets/';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +30,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo str_repeat('../', substr_count($_SERVER['PHP_SELF'], '/', 1) - 1); ?>assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo htmlspecialchars($assetBase); ?>css/main.css">
 </head>
 <body>
 

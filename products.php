@@ -6,7 +6,10 @@ include 'includes/header.php';
 ?>
 
 <!-- PAGE HERO -->
-<section class="page-hero">
+<section class="page-hero products-video-hero">
+    <video class="products-hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/images/products/zinc-ingot-video.mp4" type="video/mp4">
+    </video>
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
@@ -19,7 +22,9 @@ include 'includes/header.php';
         </div>
     </div>
 
-    <?php if (!empty($heroProducts) && count($heroProducts) >= 3): ?>
+    <?php
+    // Carousel is kept here for reuse, but disabled while the products hero uses the background video.
+    if (false && !empty($heroProducts) && count($heroProducts) >= 3): ?>
     <div class="hero-carousel products-hero-carousel" id="hero-carousel"
          data-products='<?php echo htmlspecialchars(json_encode(array_map(function($p) {
              return [

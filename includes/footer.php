@@ -88,7 +88,14 @@
     </div>
 </footer>
 
-<script src="<?php echo str_repeat('../', substr_count($_SERVER['PHP_SELF'], '/', 1) - 1); ?>assets/js/main.js"></script>
-<script src="<?php echo str_repeat('../', substr_count($_SERVER['PHP_SELF'], '/', 1) - 1); ?>assets/js/contact-submit.js"></script>
+<?php
+if (!isset($assetBase)) {
+    $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? $_SERVER['PHP_SELF'] ?? '');
+    $basePath = trim(dirname($scriptName), '/');
+    $assetBase = ($basePath === '' || $basePath === '.') ? '/assets/' : '/' . $basePath . '/assets/';
+}
+?>
+<script src="<?php echo htmlspecialchars($assetBase); ?>js/main.js"></script>
+<script src="<?php echo htmlspecialchars($assetBase); ?>js/contact-submit.js"></script>
 </body>
 </html>

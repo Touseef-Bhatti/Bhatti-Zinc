@@ -69,12 +69,12 @@ include 'includes/header.php';
                     <div class="timeline-item reveal">
                         <div class="timeline-year">1998</div>
                         <div class="timeline-title">Foundation</div>
-                        <p class="timeline-text">BhattiZinc established in Gujranwala, with an initial production capacity of 5,000 MT annually of standard-grade zinc ingots.</p>
+                        <p class="timeline-text">The business began in Gujranwala as Bhatti Traders, a Bhatti family company founded by M Ashraf Bhatti with zinc trading as its first line of work. Bhatti Traders remains the parent company behind BhattiZinc.</p>
                     </div>
                     <div class="timeline-item reveal reveal-delay-1">
                         <div class="timeline-year">2001</div>
                         <div class="timeline-title">Product Expansion</div>
-                        <p class="timeline-text">Launch of zinc oxide and zinc dust production lines, extending the product range beyond primary metals for the first time.</p>
+                        <p class="timeline-text">Added our first zinc smelting furnace, marking the company's first step from zinc trading toward in-house production.</p>
                     </div>
                     <div class="timeline-item reveal reveal-delay-2">
                         <div class="timeline-year">2002</div>
@@ -106,18 +106,9 @@ include 'includes/header.php';
 
             <div class="about-image-stack reveal reveal-delay-2">
                 <div class="about-img-main">
-                    <div class="product-placeholder" data-abbr="" style="width:100%;height:100%;background:linear-gradient(145deg,#2a2620 0%,#1a1714 100%);display:flex;align-items:center;justify-content:center;">
-                        <span style="font-family:var(--font-display);font-size:5rem;font-weight:300;color:rgba(255,255,255,0.06);">BZ</span>
-                    </div>
+                    <img src="assets/images/site/asees.png" alt="Asees Bhatti, Director of BhattiZinc" loading="lazy">
                 </div>
-                <div class="about-img-row">
-                    <div class="about-img-small" style="background:linear-gradient(135deg,#f0ede5,#e2ddd3);display:flex;align-items:center;justify-content:center;">
-                        <span style="font-family:var(--font-display);font-size:2rem;color:var(--border);font-weight:300;">Lab</span>
-                    </div>
-                    <div class="about-img-small" style="background:linear-gradient(135deg,#e8e4da,#d4cfc4);display:flex;align-items:center;justify-content:center;">
-                        <span style="font-family:var(--font-display);font-size:2rem;color:var(--border);font-weight:300;">Plant</span>
-                    </div>
-                </div>
+                <div class="about-img-caption">Asees Bhatti | Director</div>
             </div>
         </div>
     </div>

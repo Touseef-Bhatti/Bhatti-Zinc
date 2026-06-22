@@ -4,6 +4,7 @@ $page_title = 'Contact Us';
 // Handle form submission
 $success = false;
 $errors  = [];
+$mailTo = 'info@bhattizinc.com';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name    = trim($_POST['name'] ?? '');
@@ -17,11 +18,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($name))    $errors[] = 'Full name is required.';
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'A valid email address is required.';
-    if (empty($message)) $errors[] = 'Message is required.';
+    if (empty($message) && empty($product)) $errors[] = 'Message is required.';
 
     if (empty($errors)) {
-        // In production: send email via mail() or SMTP library
-        $success = true;
+        if (empty($message)) {
+            $message = 'No additional message provided.';
+        }
+        $siteHost = preg_replace('/[^a-zA-Z0-9.-]/', '', $_SERVER['HTTP_HOST'] ?? 'bhattizinc.com');
+        $fromHost = $siteHost ?: 'bhattizinc.com';
+        $safeName = trim(preg_replace('/[\r\n]+/', ' ', $name));
+        $safeSubject = 'BhattiZinc Website Enquiry';
+        $mailBody = implode("\n", [
+            'New enquiry from BhattiZinc website',
+            '',
+            'Name: ' . $name,
+            'Company: ' . $company,
+            'Email: ' . $email,
+            'Phone: ' . $phone,
+            'Country: ' . $country,
+            'Product: ' . $product,
+            'Subject: ' . $subject,
+            '',
+            'Message:',
+            $message,
+        ]);
+        $headers = [
+            'From: BhattiZinc Website <noreply@' . $fromHost . '>',
+            'Reply-To: ' . $safeName . ' <' . $email . '>',
+            'Content-Type: text/plain; charset=UTF-8',
+            'X-Mailer: PHP/' . phpversion(),
+        ];
+
+        if (mail($mailTo, $safeSubject, $mailBody, implode("\r\n", $headers))) {
+            $success = true;
+            $_POST = [];
+        } else {
+            $errors[] = 'Your enquiry could not be sent right now. Please email us directly at info@bhattizinc.com.';
+        }
     }
 }
 
@@ -127,7 +160,7 @@ include 'includes/header.php';
                         <p style="font-size:.82rem;color:var(--text-sm);">For quotations, samples, trade terms, and general questions. Fields marked <span style="color:var(--gold);">*</span> are required.</p>
                     </div>
 
-                    <form method="POST" action="contact.php#inquiry" data-validate data-whatsapp-form id="contact-form">
+                    <form method="POST" action="contact.php#inquiry" data-validate id="contact-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" for="name">Full Name <span style="color:var(--gold);">*</span></label>
