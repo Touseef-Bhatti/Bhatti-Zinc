@@ -10,12 +10,6 @@ if (!isset($assetBase)) {
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-    <?php
-    // Load Google Analytics only on production (skip localhost/private networks)
-    $host = $_SERVER['HTTP_HOST'] ?? '';
-    $isLocal = ($host === 'localhost' || $host === '127.0.0.1' || $host === '::1' || 
-                strpos($host, '192.168.') === 0 || strpos($host, '10.') === 0);
-    if (!$isLocal): ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G38KKD9WCS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -23,7 +17,6 @@ if (!isset($assetBase)) {
       gtag('js', new Date());
       gtag('config', 'G-G38KKD9WCS');
     </script>
-    <?php endif; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php if (isset($meta_description)): ?>
