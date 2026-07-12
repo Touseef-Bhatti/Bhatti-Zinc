@@ -40,12 +40,37 @@
     ---------------------------------------- */
     const navToggle = document.getElementById('nav-toggle');
     const mobileOverlay = document.getElementById('mobile-overlay');
+    let navScrollY = 0;
+
+    function lockPageScroll() {
+        navScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + navScrollY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+    }
+
+    function unlockPageScroll() {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        window.scrollTo(0, navScrollY);
+    }
 
     if (navToggle && mobileOverlay) {
         navToggle.addEventListener('click', function() {
             const isOpen = mobileOverlay.classList.toggle('open');
             navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             document.body.classList.toggle('nav-open', isOpen);
+            if (isOpen) {
+                lockPageScroll();
+            } else {
+                unlockPageScroll();
+            }
         });
 
         // Close on overlay click
@@ -65,15 +90,27 @@
             const item = this.closest('.mobile-has-sub');
             const sub = item.querySelector('.mobile-sub');
             const isOpen = sub.classList.toggle('open');
+            this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             const span = this.querySelector('span');
             if (span) span.textContent = isOpen ? '−' : '+';
         });
     });
 
     function closeNav() {
+        const wasOpen = mobileOverlay && mobileOverlay.classList.contains('open');
         if (navToggle) navToggle.classList.remove('active');
+        if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
         if (mobileOverlay) mobileOverlay.classList.remove('open');
         document.body.classList.remove('nav-open');
+        document.querySelectorAll('.mobile-sub.open').forEach(function(sub) {
+            sub.classList.remove('open');
+        });
+        document.querySelectorAll('.mobile-sub-toggle').forEach(function(toggle) {
+            toggle.setAttribute('aria-expanded', 'false');
+            const span = toggle.querySelector('span');
+            if (span) span.textContent = '+';
+        });
+        if (wasOpen) unlockPageScroll();
     }
 
     /* ----------------------------------------
@@ -300,10 +337,17 @@
             const target = document.getElementById(id);
             if (target) {
                 e.preventDefault();
-                const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 80;
-                const y = target.getBoundingClientRect().top + window.scrollY - headerH - 24;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-                closeNav();
+                function scrollToTarget() {
+                    const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 80;
+                    const y = target.getBoundingClientRect().top + window.scrollY - headerH - 24;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+                if (document.body.classList.contains('nav-open')) {
+                    closeNav();
+                    window.requestAnimationFrame(scrollToTarget);
+                } else {
+                    scrollToTarget();
+                }
             }
         });
     });

@@ -79,7 +79,7 @@ include 'includes/header.php';
                     <div class="timeline-item reveal reveal-delay-2">
                         <div class="timeline-year">2002</div>
                         <div class="timeline-title">ISO 9001 Certification</div>
-                        <p class="timeline-text">Achieved ISO 9001 quality management certification, formalising our commitment to documented, measurable quality processes.</p>
+                        <p class="timeline-text">Expanded the business across Pakistan and added more zinc furnaces to support growing customer demand.</p>
                     </div>
                     <div class="timeline-item reveal reveal-delay-3">
                         <div class="timeline-year">2008</div>
