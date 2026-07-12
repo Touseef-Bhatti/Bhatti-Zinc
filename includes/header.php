@@ -9,13 +9,13 @@ if (!isset($assetBase)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php
-    // Only load Google Analytics on production (not localhost)
-    $isLocalhost = in_array($_SERVER['HTTP_HOST'] ?? '', ['localhost', '127.0.0.1', '::1']) || 
-                   strpos($_SERVER['HTTP_HOST'] ?? '', '192.168.') === 0 ||
-                   strpos($_SERVER['HTTP_HOST'] ?? '', '10.') === 0;
-    if (!$isLocalhost): ?>
     <!-- Google tag (gtag.js) -->
+    <?php
+    // Load Google Analytics only on production (skip localhost/private networks)
+    $host = $_SERVER['HTTP_HOST'] ?? '';
+    $isLocal = ($host === 'localhost' || $host === '127.0.0.1' || $host === '::1' || 
+                strpos($host, '192.168.') === 0 || strpos($host, '10.') === 0);
+    if (!$isLocal): ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G38KKD9WCS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
