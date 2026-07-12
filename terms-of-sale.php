@@ -8,7 +8,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
-                <a href="index.php" class="breadcrumb-item">Home</a>
+                <a href="index" class="breadcrumb-item">Home</a>
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-item current">Terms of Sale</span>
             </div>
@@ -51,7 +51,7 @@ include 'includes/header.php';
             <p>These terms are governed by the laws of Pakistan. Any dispute arising under these Terms of Sale will be resolved in the courts of Pakistan unless otherwise agreed in writing.</p>
 
             <h2>Contact</h2>
-            <p>If you have questions about these Terms of Sale, please contact us at <a href="mailto:info@bhattizinc.com">info@bhattizinc.com</a> or through our <a href="contact.php">Contact</a> page.</p>
+            <p>If you have questions about these Terms of Sale, please contact us at <a href="mailto:info@bhattizinc.com">info@bhattizinc.com</a> or through our <a href="contact">Contact</a> page.</p>
         </div>
     </div>
 </section>

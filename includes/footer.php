@@ -15,29 +15,29 @@
                 <div class="footer-col">
                     <h4 class="footer-heading">Products</h4>
                     <ul class="footer-links">
-                        <li><a href="product.php?p=shg-zinc-ingots">SHG Zinc Ingots</a></li>
-                        <li><a href="product.php?p=secondary-zinc-ingots">Secondary Zinc Ingots</a></li>
-                        <li><a href="product.php?p=zinc-alloy-92-94">Zinc Alloy </a></li>
-                        <li><a href="product.php?p=iranian-zinc-ingots">Iranian Zinc Ingots</a></li>
-                        <li><a href="product.php?p=zinc-oxide-99-99">Zinc Oxide</a></li>
-                        <li><a href="product.php?p=zinc-ash-65-70">Zinc Ash </a></li>
-                        <li><a href="product.php?p=low-grade-zinc-ash-30-40">Low-Grade Zinc Ash </a></li>
-                        <li><a href="product.php?p=apcd-zinc-ash-50-60">APCD Zinc Ash </a></li>
-                        <li><a href="product.php?p=zinc-dross-94-97">Zinc Dross</a></li>
-                        <li><a href="product.php?p=zinc-die-cast-scrap">Zinc Die Cast Scrap</a></li>
+                        <li><a href="shg-zinc-ingots">SHG Zinc Ingots</a></li>
+                        <li><a href="secondary-zinc-ingots">Secondary Zinc Ingots</a></li>
+                        <li><a href="zinc-alloy-92-94">Zinc Alloy </a></li>
+                        <li><a href="iranian-zinc-ingots">Iranian Zinc Ingots</a></li>
+                        <li><a href="zinc-oxide-99-99">Zinc Oxide</a></li>
+                        <li><a href="zinc-ash-65-70">Zinc Ash </a></li>
+                        <li><a href="zinc-skimming-30-40">Low-Grade Zinc Ash </a></li>
+                        <li><a href="apcd-zinc-ash-50-60">APCD Zinc Ash </a></li>
+                        <li><a href="zinc-dross-94-97">Zinc Dross</a></li>
+                        <li><a href="zinc-die-cast-scrap">Zinc Die Cast Scrap</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4 class="footer-heading">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.php">About BhattiZinc</a></li>
-                        <li><a href="about.php#history">Our History</a></li>
-                        <li><a href="quality.php">Recycling &amp; Manufacturing</a></li>
-                        <li><a href="trade.php">Trade &amp; Export</a></li>
-                        <li><a href="contact.php">Contact Us</a></li>
-                        <li><a href="careers.php">Careers</a></li>
-                        <li><a href="contact.php#inquiry">Product Inquiry</a></li>
+                        <li><a href="about">About BhattiZinc</a></li>
+                        <li><a href="about#history">Our History</a></li>
+                        <li><a href="quality">Recycling &amp; Manufacturing</a></li>
+                        <li><a href="trade">Trade &amp; Export</a></li>
+                        <li><a href="contact">Contact Us</a></li>
+                        <li><a href="careers">Careers</a></li>
+                        <li><a href="contact#inquiry">Product Inquiry</a></li>
                     </ul>
                 </div>
 
@@ -52,7 +52,7 @@
                     <ul class="footer-contact-list">
                         <li><span class="fc-label">Phone / WhatsApp</span><a href="tel:+923094530100">+92 309 4530100</a></li>
                         <li><span class="fc-label">Email</span><a href="mailto:info@bhattizinc.com">info@bhattizinc.com</a></li>
-                        <li><span class="fc-label">Web</span><a href="index.php">www.bhattizinc.com</a></li>
+                        <li><span class="fc-label">Web</span><a href="index">www.bhattizinc.com</a></li>
                     </ul>
                 </div>
 
@@ -79,8 +79,8 @@
             <div class="footer-bottom-inner">
                 <p class="footer-copy">&copy; <?php echo date('Y'); ?> BhattiZinc Industries (Pvt) Ltd. All Rights Reserved.</p>
                 <nav class="footer-legal">
-                    <a href="privacy-policy.php">Privacy Policy</a>
-                    <a href="terms-of-sale.php">Terms of Sale</a>
+                    <a href="privacy-policy">Privacy Policy</a>
+                    <a href="terms-of-sale">Terms of Sale</a>
                     <a href="#">Sitemap</a>
                 </nav>
             </div>

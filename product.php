@@ -52,9 +52,9 @@ include 'includes/header.php';
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
-                <a href="index.php" class="breadcrumb-item">Home</a>
+                <a href="index" class="breadcrumb-item">Home</a>
                 <span class="breadcrumb-sep">/</span>
-                <a href="products.php" class="breadcrumb-item">Products</a>
+                <a href="products" class="breadcrumb-item">Products</a>
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-item current"><?php echo htmlspecialchars($product['name']); ?></span>
             </div>
@@ -327,7 +327,7 @@ include 'includes/header.php';
                 <div class="eyebrow"><span class="label">Related Products</span></div>
                 <h3 style="font-size:2rem;font-weight:400;">You may also need</h3>
             </div>
-            <a href="products.php" class="btn-arrow">All Products</a>
+            <a href="products" class="btn-arrow">All Products</a>
         </div>
         <div class="products-list-grid" style="margin-top: 0;">
             <?php foreach($related as $rp): ?>
@@ -346,7 +346,7 @@ include 'includes/header.php';
                     <p class="product-card-desc"><?php echo htmlspecialchars(substr($rp['description'],0,100)).'...'; ?></p>
                     <div class="product-card-footer">
                         <span class="product-card-purity"><?php echo htmlspecialchars($rp['purity']); ?></span>
-                        <a href="product.php?p=<?php echo urlencode($rp['slug']); ?>" class="product-card-link">View Details</a>
+                        <a href="<?php echo htmlspecialchars($rp['slug']); ?>" class="product-card-link">View Details</a>
                     </div>
                 </div>
             </div>

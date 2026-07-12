@@ -143,7 +143,7 @@ include 'includes/header.php';
                     </div>
                     <h3 style="font-size:1.8rem;font-weight:400;color:var(--black);margin-bottom:12px;">Inquiry Received</h3>
                     <p style="font-size:.9rem;color:var(--text-mid);line-height:1.8;max-width:420px;margin:0 auto 24px;">Thank you, <?php echo htmlspecialchars($name); ?>. We have received your enquiry and a member of our trade team will respond within one business day.</p>
-                    <a href="index.php" class="btn btn--gold">Return to Homepage</a>
+                    <a href="index" class="btn btn--gold">Return to Homepage</a>
                 </div>
                 <?php else: ?>
                 <div class="form-card">
@@ -160,7 +160,7 @@ include 'includes/header.php';
                         <p style="font-size:.82rem;color:var(--text-sm);">For quotations, samples, trade terms, and general questions. Fields marked <span style="color:var(--gold);">*</span> are required.</p>
                     </div>
 
-                    <form method="POST" action="contact.php#inquiry" data-validate id="contact-form">
+                    <form method="POST" action="contact#inquiry" data-validate id="contact-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" for="name">Full Name <span style="color:var(--gold);">*</span></label>

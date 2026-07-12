@@ -58,8 +58,8 @@ include 'includes/header.php';
         </script>
 
         <div class="hero-cta">
-            <a href="products.php" class="btn btn--luxury-solid">Explore Products</a>
-            <a href="contact.php" class="btn btn--luxury-outline">Request a Quote</a>
+            <a href="products" class="btn btn--luxury-solid">Explore Products</a>
+            <a href="contact" class="btn btn--luxury-outline">Request a Quote</a>
         </div>
     </div>
 
@@ -118,7 +118,7 @@ include 'includes/header.php';
                     Founded in Gujranwala, Pakistan, Bhatti Zinc has grown from a local trading business into a trusted manufacturer, importer, exporter, recycler, and supplier of premium zinc products — backed by consistent quality, competitive pricing, and dependable supply chains.
                 </p>
                 <div style="margin-top:1.5rem;">
-                    <a href="about.php" class="btn btn--luxury-dark">Our Full Story</a>
+                    <a href="about" class="btn btn--luxury-dark">Our Full Story</a>
                 </div>
             </div>
 
@@ -165,7 +165,7 @@ include 'includes/header.php';
                     <p class="product-card-desc"><?php echo preg_replace('/(\d[\d.,–\-]*%)/u', '<strong>$1</strong>', htmlspecialchars($product['description'])); ?></p>
                     <div class="product-card-footer">
                         <span class="product-card-purity"><?php echo htmlspecialchars($product['purity']); ?></span>
-                        <a href="product.php?p=<?php echo urlencode($product['slug']); ?>" class="product-card-link">View Details</a>
+                        <a href="<?php echo htmlspecialchars($product['slug']); ?>" class="product-card-link">View Details</a>
                     </div>
                 </div>
             </div>
@@ -312,27 +312,6 @@ include 'includes/header.php';
                     <div class="global-num"><span data-count="3" data-suffix="">3</span></div>
                     <div class="global-num-label">Manufacturer Importer Exporter</div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA BANNER -->
-<section class="cta-banner cta-banner--light">
-    <div class="container">
-        <div class="cta-inner reveal">
-            <div class="eyebrow">
-                <span class="label">Get Started</span>
-            </div>
-            <h2 class="cta-title">
-                Ready to source<br><em>premium zinc</em>?
-            </h2>
-            <p class="cta-sub">
-                Get pricing, availability, and technical specs from our trade team.
-            </p>
-            <div class="cta-actions">
-                <a href="contact.php" class="btn btn--luxury-outline">Request a Quote</a>
-                <a href="trade.php" class="btn btn--luxury-solid">Trade Information</a>
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
-                <a href="index.php" class="breadcrumb-item">Home</a>
+                <a href="index" class="breadcrumb-item">Home</a>
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-item current">Careers</span>
             </div>
@@ -130,7 +130,7 @@ include 'includes/header.php';
 
             <div class="reveal reveal-delay-1">
                 <div class="form-card">
-                    <form method="POST" action="careers.php#application" id="career-form" data-whatsapp-form>
+                    <form method="POST" action="careers#application" id="career-form" data-whatsapp-form>
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" for="name">Full Name <span style="color:var(--gold);">*</span></label>

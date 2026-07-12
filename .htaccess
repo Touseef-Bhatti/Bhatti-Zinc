@@ -3,6 +3,32 @@ DirectoryIndex index.php
 AddType image/webp .webp
 AddType video/mp4 .mp4
 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block google verification file on localhost
+    RewriteCond %{HTTP_HOST} ^localhost$ [OR]
+    RewriteCond %{HTTP_HOST} ^127\.0\.0\.1$
+    RewriteRule ^google1a3dd3610a73998a\.html$ - [F,L]
+
+    # Redirect old product URLs (product.php?p=slug) to new clean URLs (/slug)
+    RewriteCond %{THE_REQUEST} \s/product\.php\?p=([^\s&]+) [NC]
+    RewriteRule ^ /%1? [R=301,L]
+
+    # Redirect .php URLs to no-extension URLs
+    RewriteCond %{THE_REQUEST} \s/([^\s]+)\.php [NC]
+    RewriteRule ^ /%1? [R=301,L]
+
+    # Rewrite product slugs to product.php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([a-z0-9-]+)$ product.php?p=$1 [L,QSA]
+
+    # Rewrite no-extension URLs to .php files
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^([a-z0-9-]+)$ $1.php [L,QSA]
+</IfModule>
+
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>

@@ -8,7 +8,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
-                <a href="index.php" class="breadcrumb-item">Home</a>
+                <a href="index" class="breadcrumb-item">Home</a>
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-item current">Privacy Policy</span>
             </div>
@@ -56,7 +56,7 @@ include 'includes/header.php';
             <p>We retain personal information only as long as necessary for the purposes described in this policy, unless a longer retention period is required by law.</p>
 
             <h2>Your Rights</h2>
-            <p>Where applicable, you have the right to request access to, correction of, or deletion of your personal information. If you wish to make such a request, please contact us using the details on our <a href="contact.php">Contact</a> page.</p>
+            <p>Where applicable, you have the right to request access to, correction of, or deletion of your personal information. If you wish to make such a request, please contact us using the details on our <a href="contact">Contact</a> page.</p>
 
             <h2>Changes to this Policy</h2>
             <p>BhattiZinc may update this Privacy Policy from time to time. The revised policy will be posted on this page with an updated effective date.</p>

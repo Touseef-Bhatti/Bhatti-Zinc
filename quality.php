@@ -10,7 +10,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
-                <a href="index.php" class="breadcrumb-item">Home</a>
+                <a href="index" class="breadcrumb-item">Home</a>
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-item current">Recycling &amp; Manufacturing</span>
             </div>
@@ -139,7 +139,7 @@ include 'includes/header.php';
                 <h3 style="font-size:2rem;font-weight:400;margin-bottom:1.5rem;">Consistent ZnO for industrial applications</h3>
                 <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.25rem;">BhattiZinc manufactures zinc oxide for buyers who need stable appearance, reliable chemistry, and dependable lot-to-lot supply. Feed selection, controlled conversion, cooling, handling, and packing are managed to protect product consistency.</p>
                 <p style="font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:2rem;">Our zinc oxide is positioned for industrial use in rubber, ceramics, glass, paints, coatings, chemicals, and other applications where controlled zinc content and clean handling are important.</p>
-                <a href="product.php?p=zinc-oxide-99-99" class="btn btn--luxury-solid">View Zinc Oxide</a>
+                <a href="zinc-oxide-99-99" class="btn btn--luxury-solid">View Zinc Oxide</a>
             </div>
             <div class="reveal reveal-delay-1">
                 <div class="label" style="margin-bottom:24px;color:var(--text-xs);">Manufacturing Focus</div>
@@ -191,21 +191,6 @@ include 'includes/header.php';
                 <p class="qp-text"><?php echo $check[2]; ?></p>
             </div>
             <?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-banner">
-    <div class="container">
-        <div class="cta-inner reveal">
-            <div class="eyebrow"><span class="label">Production Enquiry</span></div>
-            <h2 class="cta-title">Discuss your<br><em>zinc material requirement</em></h2>
-            <p class="cta-sub">Share your required grade, quantity, packing, and destination so our team can align recycling, manufacturing, and quality documentation with your order.</p>
-            <div class="cta-actions">
-                <a href="contact.php" class="btn btn--luxury-outline ">Request Manufacturing Details</a>
-                <a href="products.php" class="btn btn--luxury-solid">View Products</a>
-            </div>
         </div>
     </div>
 </section>

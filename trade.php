@@ -8,7 +8,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
-                <a href="index.php" class="breadcrumb-item">Home</a>
+                <a href="index" class="breadcrumb-item">Home</a>
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-item current">Trade &amp; Export</span>
             </div>
@@ -258,21 +258,6 @@ include 'includes/header.php';
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-banner">
-    <div class="container">
-        <div class="cta-inner reveal">
-            <div class="eyebrow"><span class="label">Start Trading</span></div>
-            <h2 class="cta-title">Ready to place<br>your <em>first order</em>?</h2>
-            <p class="cta-sub">Our trade desk is available Sunday–Thursday, 09:00–18:00 PKT. Enquiries received outside business hours are actioned the following morning.</p>
-            <div class="cta-actions">
-                <a href="contact.php" class="btn btn--luxury-outline">Contact Trade Desk</a>
-                <a href="products.php" class="btn btn--luxury-solid">Browse Products</a>
             </div>
         </div>
     </div>

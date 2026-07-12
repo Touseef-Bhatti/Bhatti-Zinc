@@ -13,7 +13,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
-                <a href="index.php" class="breadcrumb-item">Home</a>
+                <a href="index" class="breadcrumb-item">Home</a>
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-item current">Products</span>
             </div>
@@ -137,7 +137,7 @@ include 'includes/header.php';
                     </div>
                     <div class="product-card-footer">
                         <span class="product-card-purity"><?php echo htmlspecialchars($product['purity']); ?></span>
-                        <a href="product.php?p=<?php echo urlencode($product['slug']); ?>" class="product-card-link">Full Details</a>
+                        <a href="<?php echo htmlspecialchars($product['slug']); ?>" class="product-card-link">Full Details</a>
                     </div>
                 </div>
             </div>
@@ -172,21 +172,6 @@ include 'includes/header.php';
                     <p class="trade-card-text"><?php echo $pkg[1]; ?></p>
                 </div>
                 <?php endforeach; ?>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-banner">
-    <div class="container">
-        <div class="cta-inner reveal">
-            <div class="eyebrow"><span class="label">Inquire Now</span></div>
-            <h2 class="cta-title">Need a specific<br><em>grade or form</em>?</h2>
-            <p class="cta-sub">Our technical team can advise on the right zinc product, grade, and packaging for your application and supply chain.</p>
-            <div class="cta-actions">
-                <a href="contact.php" class="btn btn--luxury-outline ">Request a Quote</a>
-                <a href="trade.php" class="btn btn--luxury-solid">Trade Information</a>
             </div>
         </div>
     </div>
