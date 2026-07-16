@@ -19,14 +19,15 @@ AddType video/mp4 .mp4
     RewriteCond %{THE_REQUEST} \s/([^\s]+)\.php [NC]
     RewriteRule ^ /%1? [R=301,L]
 
-    # Rewrite product slugs to product.php
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^([a-z0-9-]+)$ product.php?p=$1 [L,QSA]
-
     # Rewrite no-extension URLs to .php files
     RewriteCond %{REQUEST_FILENAME}.php -f
     RewriteRule ^([a-z0-9-]+)$ $1.php [L,QSA]
+
+    # Rewrite remaining clean slugs to product.php
+    # Keep this after the page rule so /products resolves to products.php.
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([a-z0-9-]+)$ product.php?p=$1 [L,QSA]
 </IfModule>
 
 <IfModule mod_deflate.c>
