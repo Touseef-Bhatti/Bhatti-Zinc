@@ -1,11 +1,169 @@
 <?php
-$page_title = 'Careers';
-$meta_description = 'Join BhattiZinc: explore career opportunities, employee benefits, and the application process for our global zinc manufacturing and export business.';
+$page_title = 'Careers in Metallurgy, Engineering & Export | BhattiZinc Pakistan';
+$meta_description = 'Join BhattiZinc: explore engineering, metallurgy, quality control, and international export careers across our 18-acre industrial manufacturing complex in Gujranwala. Apply directly via WhatsApp.';
+$meta_keywords = 'BhattiZinc careers, metallurgy jobs Pakistan, chemical engineering jobs Gujranwala, zinc manufacturing careers, export sales jobs, quality control chemist jobs, zinc industry hiring';
+$canonical_url = 'https://bhattizinc.com/careers';
+$og_description = 'Join 300+ skilled professionals at BhattiZinc in Gujranwala. Opportunities across metallurgical engineering, laboratory quality analysis, and global maritime logistics.';
+
 include 'includes/header.php';
 ?>
 
+<!-- JSON-LD STRUCTURED DATA FOR SEARCH & AI ENGINES (SEO & GEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://bhattizinc.com/careers#webpage",
+      "url": "https://bhattizinc.com/careers",
+      "name": "Careers in Metallurgy, Engineering & Export — BhattiZinc Pakistan",
+      "description": "Explore career opportunities, workplace culture, and professional growth in non-ferrous metallurgy, chemical quality testing, and international export trade at BhattiZinc.",
+      "datePublished": "2024-01-15T08:00:00+05:00",
+      "dateModified": "2026-03-20T12:00:00+05:00",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://bhattizinc.com/careers#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://bhattizinc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://bhattizinc.com/careers"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://bhattizinc.com/#organization",
+      "name": "BhattiZinc",
+      "url": "https://bhattizinc.com/",
+      "logo": "https://bhattizinc.com/assets/images/logo.png",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 300
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gujranwala",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      }
+    },
+    {
+      "@type": "JobPosting",
+      "title": "Senior Metallurgical Process Engineer",
+      "description": "Lead zinc smelting furnace performance, pyrometallurgical recovery, molten alloy batching, and thermal-efficiency improvements at BhattiZinc's Gujranwala plant.",
+      "datePosted": "2026-09-20",
+      "validThrough": "2026-12-31T23:59:00+05:00",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": { "@id": "https://bhattizinc.com/#organization" },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gujranwala",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        }
+      }
+    },
+    {
+      "@type": "JobPosting",
+      "title": "Quality Assurance & Spectrometry Chemist",
+      "description": "Perform chemical assay and optical emission spectrometry testing for zinc ingots, alloys, and zinc oxide while maintaining ISO 9001:2015 quality documentation.",
+      "datePosted": "2026-09-20",
+      "validThrough": "2026-12-31T23:59:00+05:00",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": { "@id": "https://bhattizinc.com/#organization" },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gujranwala",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        }
+      }
+    },
+    {
+      "@type": "JobPosting",
+      "title": "International Export Sales Executive",
+      "description": "Manage B2B export enquiries for zinc ingots and zinc oxide, prepare FOB and CIF contracts, and support international buyers across global trade markets.",
+      "datePosted": "2026-09-20",
+      "validThrough": "2026-12-31T23:59:00+05:00",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": { "@id": "https://bhattizinc.com/#organization" },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gujranwala",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bhattizinc.com/careers#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What career opportunities are available at BhattiZinc's Gujranwala facility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BhattiZinc offers diverse roles spanning metallurgical process engineering, furnace pyrometallurgy, analytical chemical spectrometry (OES), zinc oxide chemical synthesis, ISO 9001 quality assurance, international export sales, and maritime supply chain logistics across our 18-acre industrial manufacturing complex in Gujranwala."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does BhattiZinc offer internships or graduate trainee programs for engineering students?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. BhattiZinc operates structured Graduate Trainee Engineer (GTE) and internship programs for recent graduates in Metallurgical & Materials Engineering, Chemical Engineering, and International Trade. Candidates receive hands-on mentorship across rotary furnace melting, laboratory spectrometry, and international export documentation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What workplace safety and occupational health standards are enforced at the plant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Safety is paramount at BhattiZinc. Our 18-acre facility enforces strict occupational health and safety (OHS) protocols, complete personal protective equipment (PPE), industrial dust extraction and baghouse air filtration systems, routine medical checkups, and continuous safety training across all 8 production lines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can international professionals or candidates in the UAE apply for export sales roles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While our primary refining complex and laboratories are located in Gujranwala, Pakistan, BhattiZinc maintains active trade desks in Gujranwala and Dubai to service 45+ export destinations. We welcome qualified candidates with experience in non-ferrous commodities trading, Letters of Credit (L/C), and maritime freight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the application and interview process work at BhattiZinc?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Candidates can apply directly through our website application form or submit their CV via our official WhatsApp recruitment desk (+92 309 4530100). Applications are reviewed by our HR and engineering panel within 48 hours. Shortlisted applicants undergo a technical assessment followed by a panel interview either in Gujranwala or via video conference."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- PAGE HERO -->
-<section class="page-hero">
+<section class="page-hero" style="padding-bottom:56px;">
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
@@ -13,165 +171,316 @@ include 'includes/header.php';
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-item current">Careers</span>
             </div>
-            <h1 class="page-hero-title">Build a career<br>with BhattiZinc</h1>
-            <p class="page-hero-sub">We are hiring professionals who value quality, reliability, and sustainable growth. Explore available roles, learn about our culture, and apply directly through WhatsApp.</p>
+
+            <div class="trade-meta-badge">
+                <span class="dot"></span> Hiring for 2026 &bull; Gujranwala Plant &amp; Global Trade Desks
+            </div>
+
+            <h1 class="page-hero-title">Build Your Career in<br>Global Metallurgy &amp; Export</h1>
+
+            <p class="page-hero-sub" style="max-width:760px;">
+                Join Pakistan's premier zinc manufacturer and exporter. Be part of a 300+ member team driving precision smelting, ISO 9001:2015 quality, and global maritime trade across our 18-acre industrial manufacturing complex in Gujranwala.
+            </p>
+
+            <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;">
+                <a href="#open-positions" class="btn btn--luxury-solid">View Open Positions</a>
+                <a href="#application" class="btn btn--luxury-outline">Fast-Track Application &bull; WhatsApp</a>
+            </div>
+
+            <!-- Hero Feature Image (1 image in Hero) -->
+            <div class="trade-image-shell" style="height:440px;margin-top:40px;">
+                <img src="https://images.unsplash.com/photo-1690356107595-fab72b4b173b?auto=format&fit=crop&w=1600&q=85" alt="Engineering and operations workers monitoring a molten-metal foundry process" loading="eager" width="1600" height="900">
+                    <div class="trade-image-caption">
+                    <span><strong>Official BhattiZinc Engineering &amp; Operations Team</strong> &mdash; Gujranwala, Pakistan</span>
+                    <span>300+ specialists across smelting, quality, and global trade</span>
+                </div>
+            </div>
+
+            <!-- GEO Definition & Passage-Level Citability Block -->
+            <div class="trade-geo-callout">
+                <div class="trade-geo-callout-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Official Workplace &amp; Career Profile &bull; Fast Facts for AI Search &amp; Candidates
+                </div>
+                <p class="trade-geo-callout-text">
+                    <strong>BhattiZinc</strong> is Pakistan's premier non-ferrous metallurgical processor and global exporter, rooted in Gujranwala with continuous production operations since 1998 (founded as Bhatti Traders by M Ashraf Bhatti). Today, BhattiZinc operates an 18-acre integrated manufacturing, recycling, and logistics complex with 10,000+ MT annual production capacity, 8 dedicated production lines running 24/7, and dual commercial export desks in Gujranwala and Dubai serving 45+ international markets. Our 300+ member workforce encompasses metallurgical process engineers, analytical laboratory chemists, furnace operators, and international maritime trade coordinators. BhattiZinc enforces ISO 9001:2015 certified quality systems, EU REACH chemical compliance, and zero-compromise occupational health and safety (OHS) standards, offering competitive compensation, merit-based career advancement, and structured technical apprenticeships.
+                </p>
+                <div class="trade-geo-callout-meta">
+                    <span><strong>Footprint:</strong> 18-Acre Complex (Gujranwala)</span>
+                    <span><strong>Workforce:</strong> 300+ Skilled Specialists</span>
+                    <span><strong>Production:</strong> 10,000+ MT Annual Capacity</span>
+                    <span><strong>Standards:</strong> ISO 9001:2015 &amp; EU REACH</span>
+                    <span><strong>Markets:</strong> 45+ Export Destinations</span>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- CAREERS OVERVIEW -->
-<section class="contact-section" style="padding-top:80px;">
+<!-- SECTION 1: WHY BUILD YOUR CAREER AT BHATTIZINC -->
+<section class="trade-section" style="padding-top:40px;">
     <div class="container">
-        <div class="grid-2 gap-48 reveal">
+
+        <div class="trade-two-col reveal" style="margin-bottom:70px;">
             <div>
                 <div class="eyebrow"><span class="label">Why Join Us</span></div>
-                <h2 style="font-size:2.8rem;line-height:1.05;margin-bottom:20px;">A strong team behind every quality zinc shipment.</h2>
-                <p style="max-width:720px;margin-bottom:28px;color:var(--text-mid);">At BhattiZinc, our people keep global supply moving. We combine modern plant operations, export logistics expertise, and a people-first culture to deliver trust, safety, and excellence.</p>
-                <div class="feature-list" style="display:grid;gap:18px;">
-                    <div style="background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius);padding:24px;">
-                        <h3 style="font-size:1.1rem;margin-bottom:10px;">Career growth</h3>
-                        <p style="color:var(--text-sm);line-height:1.8;">Training, performance reviews, and development plans for employees across manufacturing, logistics, sales, and quality.</p>
+                <h2 style="font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.15;margin-bottom:1.4rem;">
+                    Why Build Your Metallurgy &amp; Engineering Career at BhattiZinc?
+                </h2>
+                <div class="trade-intro-text">
+                    <p>
+                        At BhattiZinc, every ton of high-purity zinc ingot and zinc chemical dispatched across global sea routes is backed by skilled, passionate professionals. Founded over 25 years ago in Gujranwala, we have evolved from a regional trading company into a world-class metallurgical manufacturer with an 18-acre industrial footprint.
+                    </p>
+                    <p>
+                        Under the visionary leadership of Director Asees Bhatti, our guiding philosophy is <em>"Integrity in every ingot."</em> We believe that technological innovation and sustainable growth thrive only when people are respected, mentored, and empowered with modern metallurgical tools.
+                    </p>
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;">
+                    <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:20px 18px;">
+                        <h3 style="font-size:1.05rem;font-weight:600;margin-bottom:6px;color:var(--black);">Technical Mastery</h3>
+                        <p style="font-size:.82rem;color:var(--text-mid);line-height:1.6;margin:0;">Hands-on exposure to induction smelting, rotary dross processing, and OES spectrometry.</p>
                     </div>
-                    <div style="background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius);padding:24px;">
-                        <h3 style="font-size:1.1rem;margin-bottom:10px;">Competitive pay</h3>
-                        <p style="color:var(--text-sm);line-height:1.8;">We offer market-aligned compensation, bonus incentives, and support for employees in Pakistan and overseas operations.</p>
+                    <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:20px 18px;">
+                        <h3 style="font-size:1.05rem;font-weight:600;margin-bottom:6px;color:var(--black);">Competitive Pay</h3>
+                        <p style="font-size:.82rem;color:var(--text-mid);line-height:1.6;margin:0;">Market-leading salary packages, performance bonuses, and bi-annual festival rewards.</p>
                     </div>
-                    <div style="background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius);padding:24px;">
-                        <h3 style="font-size:1.1rem;margin-bottom:10px;">Safety & respect</h3>
-                        <p style="color:var(--text-sm);line-height:1.8;">A safe workplace, fair policies, and an inclusive environment where experience is valued.</p>
+                    <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:20px 18px;">
+                        <h3 style="font-size:1.05rem;font-weight:600;margin-bottom:6px;color:var(--black);">Safety First</h3>
+                        <p style="font-size:.82rem;color:var(--text-mid);line-height:1.6;margin:0;">Zero-compromise OHS environment, full personal protective gear, and certified medical care.</p>
+                    </div>
+                    <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:20px 18px;">
+                        <h3 style="font-size:1.05rem;font-weight:600;margin-bottom:6px;color:var(--black);">Global Exposure</h3>
+                        <p style="font-size:.82rem;color:var(--text-mid);line-height:1.6;margin:0;">Direct engagement with international procurement teams across 45+ export destinations.</p>
                     </div>
                 </div>
             </div>
+
             <div>
-                <div class="form-card" style="padding:32px 32px 26px;">
-                    <div style="margin-bottom:24px;">
-                        <h3 style="font-size:1.6rem;font-weight:400;margin-bottom:8px;">We are hiring</h3>
-                        <p style="color:var(--text-sm);line-height:1.75;">Submit your application with your preferred role and we will contact you on WhatsApp to discuss the next steps.</p>
+                <!-- On-Page Image 1: In-House Quality & Spectrometry Lab -->
+                <div class="trade-image-shell" style="height:320px;margin-bottom:20px;">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80" alt="BhattiZinc in-house quality control laboratory and analytical spectrometry facility" loading="lazy">
+                    <div class="trade-image-caption">
+                        <span>In-House Quality &amp; Spectrometry Lab</span>
+                        <span>ISO 9001:2015 Testing &bull; 12+ QC Parameters per Batch</span>
                     </div>
-                    <div style="display:grid;gap:16px;">
-                        <div style="display:flex;gap:14px;align-items:flex-start;">
-                            <span style="font-size:1.2rem;color:var(--gold);font-weight:700;">1</span>
-                            <div>
-                                <strong>Review open roles</strong>
-                                <p style="margin:4px 0 0;color:var(--text-sm);">See the positions below and choose what best matches your experience.</p>
-                            </div>
-                        </div>
-                        <div style="display:flex;gap:14px;align-items:flex-start;">
-                            <span style="font-size:1.2rem;color:var(--gold);font-weight:700;">2</span>
-                            <div>
-                                <strong>Apply quickly</strong>
-                                <p style="margin:4px 0 0;color:var(--text-sm);">Fill out the short form and send your details via WhatsApp.</p>
-                            </div>
-                        </div>
-                        <div style="display:flex;gap:14px;align-items:flex-start;">
-                            <span style="font-size:1.2rem;color:var(--gold);font-weight:700;">3</span>
-                            <div>
-                                <strong>Hear from us</strong>
-                                <p style="margin:4px 0 0;color:var(--text-sm);">Our recruitment team will connect with you to arrange an interview or share next steps.</p>
-                            </div>
-                        </div>
+                </div>
+
+                <!-- Workplace & Facility Facts Grid (From about.php) -->
+                <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;">
+                    <?php
+                    $workFacts = [
+                        ['18 Acres','Facility Area','Integrated plant in Gujranwala'],
+                        ['300+','Skilled Team','Engineers, chemists & operators'],
+                        ['10,000+','MT Annual','Combined zinc smelting capacity'],
+                        ['24/7','Operations','Continuous industrial production'],
+                        ['1998','Established','Over 25+ years of industry heritage'],
+                        ['45+','Export Ports','Global maritime shipping reach'],
+                    ];
+                    foreach($workFacts as $wf): ?>
+                    <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:16px 12px;text-align:center;">
+                        <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--black);line-height:1;margin-bottom:4px;"><?php echo $wf[0]; ?></div>
+                        <div style="font-family:var(--font-label);font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--zinc);"><?php echo $wf[1]; ?></div>
+                        <div style="font-size:.68rem;color:var(--text-xs);margin-top:2px;line-height:1.3;"><?php echo $wf[2]; ?></div>
                     </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
-<section class="contact-section" style="padding-top:60px;padding-bottom:60px;">
+<!-- SECTION 2: OPEN POSITIONS -->
+<section id="open-positions" style="padding:80px 0;background:var(--cream);border-top:1px solid var(--border);">
     <div class="container">
-        <div class="reveal" style="margin-bottom:34px;">
-            <div class="eyebrow"><span class="label">Open Positions</span></div>
-            <h2 style="font-size:2.4rem;line-height:1.1;">Current vacancies</h2>
+
+        <div class="text-center reveal" style="margin-bottom:30px;">
+            <div class="eyebrow" style="justify-content:center;"><span class="label">Current Opportunities</span></div>
+            <h2 style="max-width:700px;margin:0 auto;font-size:clamp(1.8rem,3vw,2.6rem);">Open Positions Across Metallurgy, Quality &amp; Trade</h2>
+            <p style="color:var(--text-mid);max-width:640px;margin:12px auto 0;font-size:.95rem;">Join our growing team in Gujranwala or our international export desk. We are looking for talented specialists to power our next chapter of growth.</p>
         </div>
 
-        <div class="career-grid">
-            <div class="career-card" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
-                <h3 style="font-size:1.1rem;margin-bottom:12px;">Export Sales Executive</h3>
-                <p style="color:var(--text-sm);line-height:1.75;margin-bottom:12px;">Manage international enquiries, prepare quotations, and coordinate shipments for global customers.</p>
-                <p style="font-size:.82rem;color:var(--text-mid);">Location: Gujranwala / Dubai</p>
-            </div>
-            <div class="career-card" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
-                <h3 style="font-size:1.1rem;margin-bottom:12px;">Quality Control Specialist</h3>
-                <p style="color:var(--text-sm);line-height:1.75;margin-bottom:12px;">Oversee laboratory testing, maintain product certificates, and ensure compliance with ISO and REACH standards.</p>
-                <p style="font-size:.82rem;color:var(--text-mid);">Location: Gujranwala</p>
-            </div>
-            <div class="career-card" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
-                <h3 style="font-size:1.1rem;margin-bottom:12px;">Logistics Coordinator</h3>
-                <p style="color:var(--text-sm);line-height:1.75;margin-bottom:12px;">Support shipping documentation, customs clearance, and export planning for ocean and air freight.</p>
-                <p style="font-size:.82rem;color:var(--text-mid);">Location: Gujranwala</p>
-            </div>
+        <div class="career-grid reveal">
+
+            <!-- Card 1: Metallurgical Process Engineer -->
+            <article class="career-card">
+                <div class="career-card-top">
+                    <div class="career-dept-pill">Engineering &bull; Smelting</div>
+                    <h3 class="career-title">Senior Metallurgical Process Engineer</h3>
+                    <div class="career-meta-row">
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Gujranwala Plant</span>
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Full-Time &bull; On-Site</span>
+                    </div>
+                    <p class="career-desc">
+                        Lead smelting furnace performance, dross pyrometallurgical recovery, and molten alloy batching. Monitor chemical yields and optimize thermal efficiency across rotary and crucible furnaces.
+                    </p>
+                    <ul class="career-reqs">
+                        <li>B.Sc. / M.Sc. in Metallurgical Engineering or Materials Science.</li>
+                        <li>3+ years in non-ferrous metal smelting, foundry casting, or secondary metal recycling.</li>
+                        <li>Strong knowledge of thermal recovery, slag chemistry, and pyrometallurgy.</li>
+                    </ul>
+                </div>
+                <div class="career-card-action">
+                    <button type="button" class="btn btn--luxury-outline" style="padding:10px 18px;font-size:.78rem;" onclick="selectPosition('Senior Metallurgical Process Engineer')">Apply for this Role &darr;</button>
+                    <span style="font-size:.76rem;color:var(--text-xs);">Job Ref: ENG-2026-01</span>
+                </div>
+            </article>
+
+            <!-- Card 2: Quality Control Chemist -->
+            <article class="career-card">
+                <div class="career-card-top">
+                    <div class="career-dept-pill">Quality Control &bull; Laboratory</div>
+                    <h3 class="career-title">Quality Assurance &amp; Spectrometry Chemist</h3>
+                    <div class="career-meta-row">
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> In-House Lab, Gujranwala</span>
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Full-Time</span>
+                    </div>
+                    <p class="career-desc">
+                        Perform daily chemical assay and optical emission spectrometry (OES) testing on SHG zinc ingots, alloys, and zinc oxide powders. Author official batch Certificates of Analysis (CoA).
+                    </p>
+                    <ul class="career-reqs">
+                        <li>B.Sc. / M.Sc. in Analytical Chemistry, Industrial Chemistry, or Metallurgy.</li>
+                        <li>Proven proficiency with Optical Emission Spectrometers (OES) and AAS instruments.</li>
+                        <li>Familiarity with ISO 9001:2015 laboratory standards and calibration procedures.</li>
+                    </ul>
+                </div>
+                <div class="career-card-action">
+                    <button type="button" class="btn btn--luxury-outline" style="padding:10px 18px;font-size:.78rem;" onclick="selectPosition('Quality Assurance & Spectrometry Chemist')">Apply for this Role &darr;</button>
+                    <span style="font-size:.76rem;color:var(--text-xs);">Job Ref: QC-2026-04</span>
+                </div>
+            </article>
+
+            <!-- Card 3: International Export Sales Executive -->
+            <article class="career-card">
+                <div class="career-card-top">
+                    <div class="career-dept-pill">Commercial &bull; Global Trade</div>
+                    <h3 class="career-title">International Export Sales Executive</h3>
+                    <div class="career-meta-row">
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Gujranwala / Dubai Desk</span>
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Full-Time &bull; Hybrid</span>
+                    </div>
+                    <p class="career-desc">
+                        Manage B2B enquiries for zinc ingots and zinc oxide across Middle Eastern, European, and Asian procurement accounts. Formulate FOB/CIF commercial contracts and negotiate Letters of Credit.
+                    </p>
+                    <ul class="career-reqs">
+                        <li>Bachelor's or Master's degree in Business, Economics, or Supply Chain.</li>
+                        <li>2+ years in international non-ferrous metals, raw materials, or chemical export sales.</li>
+                        <li>Expert understanding of Incoterms 2020 rules, L/C payment mechanisms, and trade finance.</li>
+                    </ul>
+                </div>
+                <div class="career-card-action">
+                    <button type="button" class="btn btn--luxury-outline" style="padding:10px 18px;font-size:.78rem;" onclick="selectPosition('International Export Sales Executive')">Apply for this Role &darr;</button>
+                    <span style="font-size:.76rem;color:var(--text-xs);">Job Ref: EXP-2026-02</span>
+                </div>
+            </article>
+
         </div>
+
     </div>
 </section>
 
-<section class="contact-section" id="application" style="padding-top:0;">
+<!-- SECTION 3: FAST-TRACK APPLICATION & WHATSAPP FORM -->
+<section class="contact-section" id="application" style="padding-top:80px;padding-bottom:80px;">
     <div class="container">
         <div class="contact-grid">
 
             <div class="reveal">
-                <h2 class="contact-info-title">What we look for</h2>
-                <p class="contact-info-sub">Strong candidates combine technical capability, clear communication, and an eagerness to support international trade. All professional applicants are welcome.</p>
+                <div class="eyebrow"><span class="label">Simple 3-Step Hiring</span></div>
+                <h2 class="contact-info-title">Fast-Track Your Application</h2>
+                <p class="contact-info-sub">
+                    We value your time. Apply in under 60 seconds through our online form or send your CV directly to our WhatsApp recruitment desk. Our HR panel responds within 48 hours.
+                </p>
 
-                <div class="contact-office" style="margin-bottom:24px;">
-                    <div class="contact-office-name">Preferred skills</div>
-                    <ul style="list-style:none;margin:16px 0 0;padding:0;color:var(--text-sm);line-height:1.8;">
-                        <li>• Export documentation, logistics, or supply chain experience</li>
-                        <li>• Metal industry, chemicals, or manufacturing exposure</li>
-                        <li>• Strong English communication, both written and spoken</li>
-                        <li>• Ability to work in a fast-paced trading environment</li>
-                    </ul>
+                <div class="feature-list" style="display:grid;gap:14px;margin-bottom:28px;">
+                    <div style="display:flex;gap:14px;align-items:flex-start;background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius);padding:16px;">
+                        <span style="font-size:1.1rem;color:var(--zinc);font-weight:700;background:var(--white);width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--border);flex-shrink:0;">1</span>
+                        <div>
+                            <strong style="font-size:.9rem;color:var(--black);">Submit Your Details</strong>
+                            <p style="margin:3px 0 0;font-size:.8rem;color:var(--text-sm);line-height:1.5;">Fill out the form with your current role, contact, and brief experience summary.</p>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:14px;align-items:flex-start;background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius);padding:16px;">
+                        <span style="font-size:1.1rem;color:var(--zinc);font-weight:700;background:var(--white);width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--border);flex-shrink:0;">2</span>
+                        <div>
+                            <strong style="font-size:.9rem;color:var(--black);">Interview &amp; Assessment</strong>
+                            <p style="margin:3px 0 0;font-size:.8rem;color:var(--text-sm);line-height:1.5;">Shortlisted candidates participate in a technical and culture interview (in-person or video call).</p>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:14px;align-items:flex-start;background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius);padding:16px;">
+                        <span style="font-size:1.1rem;color:var(--zinc);font-weight:700;background:var(--white);width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--border);flex-shrink:0;">3</span>
+                        <div>
+                            <strong style="font-size:.9rem;color:var(--black);">Offer &amp; Onboarding</strong>
+                            <p style="margin:3px 0 0;font-size:.8rem;color:var(--text-sm);line-height:1.5;">Receive a formal offer package, comprehensive safety gear allocation, and team mentorship.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="contact-office" style="background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius);padding:24px;">
-                    <div class="contact-office-name">Application process</div>
-                    <p style="margin-top:12px;color:var(--text-sm);line-height:1.75;">Send your details via WhatsApp. Our team will review your profile and reach out to schedule a screening call. Shortlisted candidates may be invited for an interview at our Gujranwala office or by video conference.</p>
+                <!-- On-Page Image 2: Team Collaboration / Trade Operations -->
+                <div class="trade-image-shell" style="height:240px;">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="BhattiZinc cross-functional operations and international trade strategy team" loading="lazy">
+                    <div class="trade-image-caption">
+                        <span>Global Trade &amp; Operations Desk</span>
+                        <span>Connecting Gujranwala to 45+ Export Markets</span>
+                    </div>
                 </div>
             </div>
 
             <div class="reveal reveal-delay-1">
                 <div class="form-card">
+                    <div style="margin-bottom:20px;">
+                        <h3 style="font-size:1.5rem;font-weight:600;margin-bottom:6px;color:var(--black);">Apply for Employment</h3>
+                        <p style="color:var(--text-sm);font-size:.86rem;line-height:1.6;margin:0;">Submit your application below. Your details will be instantly packaged and forwarded to our WhatsApp recruitment desk.</p>
+                    </div>
+
                     <form method="POST" action="careers#application" id="career-form" data-whatsapp-form>
                         <div class="form-row">
                             <div class="form-group">
-                                <label class="form-label" for="name">Full Name <span style="color:var(--gold);">*</span></label>
+                                <label class="form-label" for="name">Full Name <span style="color:var(--zinc);font-weight:bold;">*</span></label>
                                 <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="email">Email Address <span style="color:var(--gold);">*</span></label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="email@company.com" required>
+                                <label class="form-label" for="email">Email Address <span style="color:var(--zinc);font-weight:bold;">*</span></label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="email@domain.com" required>
                             </div>
                         </div>
+
                         <div class="form-row">
                             <div class="form-group">
-                                <label class="form-label" for="phone">Phone / WhatsApp <span style="color:var(--gold);">*</span></label>
-                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+92 309 4530100" required>
+                                <label class="form-label" for="phone">Phone / WhatsApp <span style="color:var(--zinc);font-weight:bold;">*</span></label>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+92 300 1234567" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="location">Current Location</label>
-                                <input type="text" id="location" name="location" class="form-control" placeholder="City, Country">
+                                <label class="form-label" for="location">Current City / Country</label>
+                                <input type="text" id="location" name="location" class="form-control" placeholder="Gujranwala, Lahore, Dubai...">
                             </div>
                         </div>
+
                         <div class="form-row">
                             <div class="form-group">
-                                <label class="form-label" for="position">Position Applying For <span style="color:var(--gold);">*</span></label>
-                                <input type="text" id="position" name="position" class="form-control" placeholder="Role title" required>
+                                <label class="form-label" for="position">Position Applying For <span style="color:var(--zinc);font-weight:bold;">*</span></label>
+                                <input type="text" id="position" name="position" class="form-control" placeholder="Select or type position" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="company">Current Company</label>
-                                <input type="text" id="company" name="company" class="form-control" placeholder="Current or most recent employer">
+                                <label class="form-label" for="company">Current / Previous Employer</label>
+                                <input type="text" id="company" name="company" class="form-control" placeholder="Company name or 'Fresh Graduate'">
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="form-label" for="linkedin">LinkedIn / Portfolio</label>
-                            <input type="text" id="linkedin" name="linkedin" class="form-control" placeholder="LinkedIn profile or portfolio link">
+                            <label class="form-label" for="linkedin">LinkedIn Profile / Portfolio Link</label>
+                            <input type="text" id="linkedin" name="linkedin" class="form-control" placeholder="https://linkedin.com/in/yourprofile">
                         </div>
+
                         <div class="form-group">
-                            <label class="form-label" for="message">Application message <span style="color:var(--gold);">*</span></label>
-                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us about your experience, strengths, and why you are a good fit." required></textarea>
+                            <label class="form-label" for="message">Application Message &amp; Experience Summary <span style="color:var(--zinc);font-weight:bold;">*</span></label>
+                            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Briefly introduce your qualifications, key metallurgical or trade strengths, and why you are excited to join BhattiZinc." required></textarea>
                         </div>
-                        <div class="form-submit-row">
-                            <span class="form-disclaimer">Your details will be used only to process your application. We will contact you by WhatsApp to confirm receipt.</span>
-                            <button type="submit" class="btn btn--luxury-solid">Apply </button>
+
+                        <div class="form-submit-row" style="margin-top:20px;">
+                            <span class="form-disclaimer">Your information is strictly protected and transmitted to our recruitment panel via verified WhatsApp.</span>
+                            <button type="submit" class="btn btn--luxury-solid">Submit Application &rarr;</button>
                         </div>
                     </form>
                 </div>
@@ -180,5 +489,80 @@ include 'includes/header.php';
         </div>
     </div>
 </section>
+
+<!-- SECTION 4: SEO & GEO FRIENDLY FAQ SECTION (AT THE END AS REQUESTED) -->
+<section class="faq-section" id="career-faq">
+    <div class="container">
+        <div class="text-center reveal" style="margin-bottom:30px;">
+            <div class="eyebrow" style="justify-content:center;"><span class="label">Career Knowledge Base</span></div>
+            <h2 style="max-width:700px;margin:0 auto;font-size:clamp(1.8rem,3vw,2.6rem);">Frequently Asked Questions (FAQ)</h2>
+            <p style="color:var(--text-mid);max-width:620px;margin:12px auto 0;font-size:.95rem;">Clear answers on job qualifications, workplace safety, internship programs, and the hiring timeline at BhattiZinc.</p>
+        </div>
+
+        <div class="faq-list">
+
+            <details class="faq-item reveal" open>
+                <summary>What career opportunities are available at BhattiZinc's Gujranwala facility?</summary>
+                <div class="faq-answer"><p>BhattiZinc offers career pathways across technical and commercial disciplines. Technical roles include Metallurgical Process Engineers, Furnace Pyrometallurgy Supervisors, Optical Emission Spectrometry (OES) QC Chemists, and Zinc Oxide Plant Operators across our 18-acre industrial manufacturing complex in Gujranwala. Commercial opportunities include International Export Sales Executives, Ocean Freight Forwarding Coordinators, and Trade Finance Officers working with 45+ export destinations worldwide.</p></div>
+            </details>
+
+            <details class="faq-item reveal reveal-delay-1">
+                <summary>Does BhattiZinc offer internships or graduate trainee programs for engineering students?</summary>
+                <div class="faq-answer"><p>Yes. We actively support metallurgical education in Pakistan through our structured Graduate Trainee Engineer (GTE) and 8-to-12 week summer internship programs. Students and recent graduates in Metallurgical &amp; Materials Engineering, Chemical Engineering, and International Trade gain hands-on training in continuous smelting, secondary zinc recovery, OES spectrometry, and international export documentation under seasoned mentors.</p></div>
+            </details>
+
+            <details class="faq-item reveal reveal-delay-2">
+                <summary>What workplace safety and occupational health standards are enforced at the plant?</summary>
+                <div class="faq-answer"><p>
+                    Occupational Health and Safety (OHS) is an absolute priority at BhattiZinc. All production zones feature automated baghouse dust-extraction systems, high-efficiency ventilation, and dedicated molten-metal safety containment. Every employee is issued certified personal protective equipment (PPE)—including heat-resistant apparel, respirators, and safety footwear. Continuous safety drills, first-aid training, and routine health screenings ensure a zero-compromise safety culture.
+                </p></div>
+            </details>
+
+            <details class="faq-item reveal">
+                <summary>Can international professionals or candidates in the UAE apply for export sales roles?</summary>
+                <div class="faq-answer"><p>
+                    Yes. In addition to our central metallurgical complex and corporate headquarters in Gujranwala, BhattiZinc operates an international trade presence in Dubai to manage Gulf and European maritime accounts. We welcome applicants with established experience in non-ferrous physical metals trading, LME-hedged contracts, and international commodity sales for both hybrid and Dubai-based positions.
+                </p></div>
+            </details>
+
+            <details class="faq-item reveal reveal-delay-1">
+                <summary>How does the application and interview process work at BhattiZinc?</summary>
+                <div class="faq-answer"><p>
+                    After submitting your application through our online form or WhatsApp portal (+92 309 4530100), our recruitment committee reviews your credentials within 48 hours. Shortlisted applicants are contacted for an initial phone screening, followed by a formal technical interview and culture discussion (in person at our Gujranwala complex or via Google Meet/Zoom). Final hiring decisions and formal offer letters are typically finalized within 7 to 10 working days.
+                </p></div>
+            </details>
+
+        </div>
+
+        <!-- SECTION 5: CAREER CTA BANNER -->
+        <div class="trade-cta-banner reveal">
+            <h2>Ready to Shape the Future of Sustainable Non-Ferrous Metallurgy?</h2>
+            <p>
+                Connect directly with our recruitment team via WhatsApp or submit your profile online. We welcome ambitious talent to our growing team.
+            </p>
+            <div class="trade-cta-actions">
+                <a href="#application" class="btn btn--luxury-dark" style="background:#FFFFFF;color:#14501E;font-weight:700;">Start Application Now</a>
+                <a href="https://wa.me/923094530100?text=Hello%20BhattiZinc%20HR%20Desk,%20I%20am%20interested%20in%20career%20opportunities." class="btn btn--luxury-outline" style="border-color:#FFFFFF;color:#FFFFFF;" target="_blank" rel="noopener">Chat with HR on WhatsApp</a>
+                <a href="about.php" class="btn btn--luxury-outline" style="border-color:rgba(255,255,255,0.4);color:#FFFFFF;">Learn About Our Story &rarr;</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- QUICK SCRIPT FOR POPULATING POSITION FIELD FROM JOB CARDS -->
+<script>
+function selectPosition(title) {
+    const posInput = document.getElementById('position');
+    if (posInput) {
+        posInput.value = title;
+        posInput.focus();
+    }
+    const appSection = document.getElementById('application');
+    if (appSection) {
+        appSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+</script>
 
 <?php include 'includes/footer.php'; ?>

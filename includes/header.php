@@ -35,10 +35,17 @@ if (!isset($assetBase)) {
     <?php endif; ?>
     <meta property="og:description" content="<?php echo htmlspecialchars($og_description ?? $meta_description ?? 'Premium zinc products for global industry. LME-grade quality, international delivery.'); ?>">
     <title><?php echo isset($page_title) ? $page_title . ' — BhattiZinc' : 'BhattiZinc — Global Zinc Solutions'; ?></title>
+    <!-- Favicons & App Icons -->
+    <link rel="icon" type="image/png" href="<?php echo htmlspecialchars($assetBase); ?>favicon/favicon-48x48.png" sizes="48x48">
+    <link rel="icon" type="image/svg+xml" href="<?php echo htmlspecialchars($assetBase); ?>favicon/favicon.svg">
+    <link rel="shortcut icon" href="<?php echo htmlspecialchars($assetBase); ?>favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo htmlspecialchars($assetBase); ?>favicon/apple-touch-icon.png">
+    <link rel="manifest" href="<?php echo htmlspecialchars($assetBase); ?>favicon/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo htmlspecialchars($assetBase); ?>css/main.css">
+    <link rel="stylesheet" href="<?php echo htmlspecialchars($assetBase); ?>css/header-legacy.css">
 </head>
 <body>
 
@@ -54,7 +61,7 @@ if (!isset($assetBase)) {
 <header id="site-header" class="<?php echo $current_page === 'index' ? 'header--transparent' : 'header--solid'; ?>">
     <div class="header-inner">
 
-        <a href="index" class="header-logo">
+        <a href="index" class="header-logo" aria-label="BhattiZinc — Global Zinc Solutions">
             <span class="logo-mark">BZ</span>
             <span class="logo-text">
                 <span class="logo-name">BhattiZinc</span>

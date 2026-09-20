@@ -1,0 +1,41 @@
+# Local agent and workspace tooling
+.agents/
+.codex/
+skills/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and local runtime output
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+cache/
+
+# Generated reports and build output
+coverage/
+dist/
+build/
+output/
+reports/
+
+# Dependency directories
+vendor/
+node_modules/
+
+# Local PHP/XAMPP artifacts
+php_errors.log
+error_log

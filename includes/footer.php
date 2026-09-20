@@ -4,10 +4,15 @@
             <div class="footer-grid">
 
                 <div class="footer-col footer-col--brand">
-                    <div class="footer-logo">
-                        <span class="logo-mark">BZ</span>
-                        <span class="logo-name">BhattiZinc</span>
-                    </div>
+                    <a href="index" class="footer-logo" aria-label="BhattiZinc — Home">
+                        <span class="footer-logo-badge">
+                            <img src="<?php echo htmlspecialchars($assetBase); ?>images/logo.png" alt="BhattiZinc Logo" class="footer-logo-img" width="42" height="42">
+                        </span>
+                        <div class="footer-logo-text">
+                            <span class="logo-name"><span class="logo-name-dark">Bhatti</span><span class="logo-name-accent-dark">Zinc</span></span>
+                            <span class="logo-tagline">Global Zinc Solutions</span>
+                        </div>
+                    </a>
                     <p class="footer-about">BhattiZinc is a premier manufacturer and global exporter of zinc products. Serving industries across four continents with uncompromising quality since 1998.</p>
                     
                 </div>

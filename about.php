@@ -83,23 +83,36 @@ include 'includes/header.php';
                     </div>
                     <div class="timeline-item reveal reveal-delay-3">
                         <div class="timeline-year">2008</div>
-                        <div class="timeline-title">LME Registration</div>
-                        <p class="timeline-text">BhattiZinc SHG Zinc registered as an approved brand on the London Metal Exchange — recognition of our consistent 99.995% purity standard.</p>
+                        <div class="timeline-title">Recycling Zinc Metal and Ash</div>
+                        <p class="timeline-text">BhattiZinc initiated its recycling program, processing zinc metal and ash to create sustainable value.</p>
                     </div>
                     <div class="timeline-item reveal reveal-delay-4">
                         <div class="timeline-year">2012</div>
-                        <div class="timeline-title">European Market Entry</div>
-                        <p class="timeline-text">Achieved REACH compliance and established distribution partnerships across Turkey, Greece, and the Netherlands.</p>
+                        <div class="timeline-title">Strong Presence in Zinc Market</div>
+                        <p class="timeline-text">Established a strong market presence in Pakistan's zinc market.</p>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-year">2018</div>
                         <div class="timeline-title">Capacity Expansion</div>
-                        <p class="timeline-text">Completion of Phase III expansion, bringing total annual capacity to 60,000+ MT and adding zinc alloy and zinc sheet production.</p>
+                        <p class="timeline-text">Completion of Phase III expansion, bringing total annual capacity to 10,000+ MT and adding zinc alloy and zinc sheet production.</p>
+                    </div>
+                     <div class="timeline-item reveal">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-title">Zinc Oxide Plant</div>
+                        <p class="timeline-text">Completion of the dedicated Zinc Oxide plant, enhancing our production capabilities and market reach.</p>
+                    </div>
+
+                     <div class="timeline-item reveal">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-title">Start's Export Zinc </div>
+                        <p class="timeline-text">BhattiZinc began exporting zinc products to international markets, establishing a global presence.</p>
+                    </div>
+ <div class="timeline-item reveal">
+                     <div class="timeline-year">2025</div> <div class="timeline-title">Global Zinc Supplier</div> <p class="timeline-text">In 2025, we began supplying Zinc Metal and Zinc Ash globally, with an annual capacity of 20,000 MT.</p>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-year">Present</div>
-                        <div class="timeline-title">Global Leader</div>
-                        <p class="timeline-text">Exporting to 45+ countries with 500+ active trade partners, maintaining a portfolio of eight product families across primary metals, chemicals, and rolled products.</p>
+                <div class="timeline-title">Trusted Global Supplier</div> <p class="timeline-text">Pakistan’s trusted exporter of Zinc Metal and Zinc Ash, serving 15+ countries with 100+ active trade partners and a diverse portfolio of eight product families spanning primary metals, chemicals, and rolled products.</p>
                     </div>
                 </div>
             </div>
@@ -146,15 +159,12 @@ include 'includes/header.php';
     <div class="container">
         <div class="facility-grid">
             <div class="facility-copy reveal">
-                <div class="eyebrow"><span class="label">Our Facility</span></div>
-                <h2>18 acres of<br>precision manufacturing</h2>
-                <p>Our Gujranwala facility combines modern electrolytic refining technology with rigorous quality control infrastructure. The plant operates 24 hours a day, 363 days a year, with redundant systems ensuring uninterrupted production schedules for our global clients.</p>
-                <p style="font-size:0.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:2.5rem;">We operate dedicated production lines for each product family — primary metals, oxide, dust, alloys, sheets, and wire — each with independent quality checkpoints, preventing cross-contamination and ensuring specification integrity.</p>
+                <div class="eyebrow"><span class="label">Our Facility</span></div> <h2>Integrated zinc recycling, manufacturing &amp; logistics</h2> <p>Since 2008, our facility has operated a dedicated zinc recycling unit for the processing of Zinc Metal and Zinc Ash. In 2022, we expanded our capabilities with a dedicated Zinc Oxide manufacturing unit, strengthening our position across the zinc value chain.</p> <p>Our operations are supported by two dedicated warehouses for efficient import and export handling of Zinc Metal, Zinc Ash, and related products, enabling us to manage inventory and fulfill international orders reliably.</p> <p style="font-size:0.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:2.5rem;">Quality remains central to our operations. Since 2019, we have maintained in-house laboratory testing capabilities for Zinc Metal and Zinc Ash, allowing us to conduct quality checks and verify product specifications throughout our processing and supply operations.</p>
                 <div class="facility-facts">
                     <?php
                     $facts = [
                         ['18 Acres','Facility Area'],
-                        ['60,000+ MT','Annual Capacity'],
+                        ['10,000+ MT','Annual Capacity'],
                         ['300+','Skilled Employees'],
                         ['24/7','Production Operations'],
                         ['12+','QC Parameters per Batch'],
@@ -185,22 +195,23 @@ include 'includes/header.php';
         <div class="team-grid">
             <?php
             $team = [
-                ['M Ashraf Bhatti','Founder &amp; Chairman','With over 35 years in zinc metallurgy, Mr. Asharf Bhatti founded BhattiZinc with a singular conviction: that quality is not negotiable in international trade.','AB'],
-                ['Kamran Bhatti','Chief Executive Officer','Kamran joined BhattiZinc in 2005 and led the company through its most significant period of international expansion, including LME registration and European market entry.','KB'],
-                ['Dr. Nadia Hussain','Head of Quality &amp; Metallurgy','A PhD metallurgist from NED University, Dr. Hussain oversees all quality systems, spectrometric laboratory operations, and R&D for new alloy grades.','NH'],
-                ['Tariq Mehmood','Director of Export Operations','With 20 years in zinc trade, Mr. Mehmood manages all international accounts, logistics, and trade documentation across four continents.','TM'],
-                ['Sana Ansari','Finance &amp; Compliance Director','A chartered accountant specialising in international trade finance, Ms. Ansari manages Letters of Credit, trade finance facilities, and regulatory compliance.','SA'],
-                ['Bilal Qureshi','Plant &amp; Production Manager','Mr. Qureshi oversees day-to-day refinery operations, production scheduling, and maintenance of all processing equipment.','BQ'],
+                ['name' => 'M Ashraf Bhatti', 'title' => 'Founder &amp; Chairman', 'bio' => 'With over 25+ years in zinc recycling, Mr. Ashraf Bhatti founded Bhatti Traders with a singular conviction: that quality is not negotiable in international trade.', 'image' => 'assets/images/site/Leadership/ceo-ashraf-bhatti.jpeg'],
+                ['name' => 'Nafees Bhatti', 'title' => 'Chief Executive Officer', 'bio' => 'Nafees joined Bhatti Traders in 2001 and led the company through its most significant period of international expansion.', 'image' => null],
+            // Legacy placeholder data removed; the team list below is the source of truth.
+            // Leadership portraits are optional; Nafees intentionally has no placeholder image.
+                ['name' => 'Asees Bhatti', 'title' => 'Director', 'bio' => 'Joined in 2020, Asees Bhatti has played a key role in establishing and expanding the company’s international export business and leading the development of its Zinc Oxide manufacturing plant.', 'image' => 'assets/images/site/Leadership/asees.png'],
             ];
             foreach($team as $i=>$member): ?>
             <div class="team-card reveal reveal-delay-<?php echo min($i%3+1,3); ?>">
-                <div class="team-card-photo">
-                    <div class="team-photo-placeholder"><?php echo $member[3]; ?></div>
-                </div>
+                <?php if (!empty($member['image'])): ?>
+                    <div class="team-card-photo">
+                        <img src="<?php echo htmlspecialchars($member['image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($member['name'], ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
+                    </div>
+                <?php endif; ?>
                 <div class="team-card-body">
-                    <div class="team-card-name"><?php echo $member[0]; ?></div>
-                    <div class="team-card-title"><?php echo $member[1]; ?></div>
-                    <p class="team-card-bio"><?php echo $member[2]; ?></p>
+                    <div class="team-card-name"><?php echo $member['name']; ?></div>
+                    <div class="team-card-title"><?php echo $member['title']; ?></div>
+                    <p class="team-card-bio"><?php echo $member['bio']; ?></p>
                 </div>
             </div>
             <?php endforeach; ?>
@@ -218,6 +229,75 @@ include 'includes/header.php';
         <div style="max-width:900px;margin:0 auto;color:var(--text-mid);line-height:1.8;">
             <p>Our goal is not just to supply zinc products, but to become a dependable partner in our clients' growth. Every product we deliver represents our commitment to quality and our promise of reliability. We are proud to serve industries in Pakistan and around the world with dedication and integrity.</p>
             <p style="margin-top:1rem;font-weight:600;">— Asees Bhatti<br><span style="font-weight:400;font-size:.95rem;color:var(--text-sm);">Director, BhattiZinc</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="frequently-asked-questions">
+    <div class="container">
+        <div class="faq-intro reveal">
+            <div class="eyebrow"><span class="label">Frequently Asked Questions</span></div>
+            <h2>About BhattiZinc<br>and our zinc products</h2>
+            <p>BhattiZinc is a Pakistan-based zinc manufacturer, recycler, exporter and supplier serving industrial buyers worldwide. Find direct answers about our products, quality documentation, sourcing and export support.</p>
+        </div>
+
+        <div class="faq-list">
+            <details class="faq-item reveal" open>
+                <summary>What does BhattiZinc supply?</summary>
+                <div class="faq-answer">
+                    <p>BhattiZinc supplies zinc metal, zinc ash, zinc oxide, zinc ingots, zinc alloys, zinc sheets, zinc wire and other zinc-based materials for galvanizing, die casting, chemical manufacturing, construction and industrial applications.</p>
+                </div>
+            </details>
+
+            <details class="faq-item reveal reveal-delay-1">
+                <summary>Where is BhattiZinc located?</summary>
+                <div class="faq-answer">
+                    <p>BhattiZinc operates from Gujranwala, Pakistan, where its zinc recycling, manufacturing, laboratory testing and export operations support customers in Pakistan and international markets.</p>
+                </div>
+            </details>
+
+            <details class="faq-item reveal reveal-delay-2">
+                <summary>What is the difference between zinc metal and zinc ash?</summary>
+                <div class="faq-answer">
+                    <p>Zinc metal is a metallic zinc feedstock supplied in forms such as ingots or other agreed specifications. Zinc ash is a zinc-containing by-product recovered from industrial processes. The right material depends on the buyer’s process, required zinc content, recovery method and quality specification.</p>
+                </div>
+            </details>
+
+            <details class="faq-item reveal">
+                <summary>Can BhattiZinc provide zinc oxide for industrial use?</summary>
+                <div class="faq-answer">
+                    <p>Yes. BhattiZinc manufactures zinc oxide for industrial buyers and can discuss the required grade, packaging, application, quantity and documentation before confirming a quotation.</p>
+                </div>
+            </details>
+
+            <details class="faq-item reveal reveal-delay-1">
+                <summary>Does BhattiZinc provide certificates of analysis?</summary>
+                <div class="faq-answer">
+                    <p>BhattiZinc provides product quality documentation, including Certificates of Analysis where applicable, to help buyers verify product chemistry and compare the material with their purchasing specification. Request the relevant report when sending an inquiry.</p>
+                </div>
+            </details>
+
+            <details class="faq-item reveal reveal-delay-2">
+                <summary>What industries use BhattiZinc products?</summary>
+                <div class="faq-answer">
+                    <p>BhattiZinc serves galvanizers, die casters, brass and zinc alloy manufacturers, chemical producers, construction-related businesses and other industrial users that require dependable zinc feedstock or zinc compounds.</p>
+                </div>
+            </details>
+
+            <details class="faq-item reveal">
+                <summary>Does BhattiZinc export zinc products internationally?</summary>
+                <div class="faq-answer">
+                    <p>Yes. BhattiZinc manages international export orders from Pakistan and supports buyers with product specifications, commercial documentation, packing details, shipment coordination and the information needed for import planning.</p>
+                </div>
+            </details>
+
+            <details class="faq-item reveal reveal-delay-1">
+                <summary>How can I request a zinc product quotation?</summary>
+                <div class="faq-answer">
+                    <p>Use the <a href="contact-us">BhattiZinc contact page</a> to share the product name, required specification or zinc content, quantity, packing preference, destination country and target delivery schedule. The sales team can then confirm availability and prepare the next steps.</p>
+                </div>
+            </details>
         </div>
     </div>
 </section>

@@ -1,10 +1,123 @@
 <?php
-$page_title = 'Trade & Export';
+$page_title = 'Global Zinc Export & Trade Logistics | Incoterms, Ports & Shipping';
+$meta_description = 'BhattiZinc exports LME-grade SHG zinc ingots (99.995%), secondary zinc, zinc alloys, and zinc oxide to 45+ countries. View Incoterms 2020 rules, Karachi & Port Qasim shipping routes, SGS inspection, payment terms, and international HS tariff codes.';
+$meta_keywords = 'zinc export Pakistan, SHG zinc ingots trade, zinc alloy export, zinc oxide exporter, Incoterms 2020 zinc, Karachi port zinc shipping, Port Qasim freight, zinc export documentation, SGS inspected zinc, LME grade zinc supplier';
+$canonical_url = 'https://bhattizinc.com/trade';
+$og_description = 'BhattiZinc international export portal: Incoterms 2020, ports of loading, transit times, SGS inspection, and complete documentary compliance for global zinc procurement.';
+
 include 'includes/header.php';
 ?>
 
+<!-- JSON-LD STRUCTURED DATA FOR SEARCH & AI ENGINES (SEO & GEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://bhattizinc.com/trade#webpage",
+      "url": "https://bhattizinc.com/trade",
+      "name": "Global Zinc Export & Trade Logistics — BhattiZinc",
+      "description": "Comprehensive guide to importing high-purity zinc ingots, alloys, and zinc oxide from Pakistan. Incoterms, maritime ports, SGS inspection, and customs documentation.",
+      "datePublished": "2024-01-15T08:00:00+05:00",
+      "dateModified": "2026-03-20T12:00:00+05:00",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://bhattizinc.com/trade#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://bhattizinc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Trade & Export",
+          "item": "https://bhattizinc.com/trade"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://bhattizinc.com/#organization",
+      "name": "BhattiZinc",
+      "url": "https://bhattizinc.com/",
+      "logo": "https://bhattizinc.com/assets/images/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92-309-4530100",
+        "contactType": "sales & export",
+        "areaServed": "Worldwide",
+        "availableLanguage": ["English", "Urdu"]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://bhattizinc.com/trade#service",
+      "name": "International Zinc Export Logistics & Trade Operations",
+      "provider": {
+        "@id": "https://bhattizinc.com/#organization"
+      },
+      "serviceType": "Non-Ferrous Metals Export & Maritime Logistics",
+      "areaServed": "Worldwide",
+      "description": "Global sea-freight and multimodal container shipping for zinc ingots, zinc die-casting alloys, and zinc oxide with full documentation and third-party inspection."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bhattizinc.com/trade#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Minimum Order Quantity (MOQ) for international zinc shipments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard minimum order quantity for sea-freight container export is one 20ft Full Container Load (FCL), typically containing 20 to 25 Metric Tons (MT) of palletized zinc ingots or 18 to 20 MT of zinc oxide in 25 kg bags. Trial orders or specialized alloy sample quantities can be accommodated on an LCL (Less than Container Load) basis upon arrangement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which international payment terms does BhattiZinc accept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We accept Irrevocable Letters of Credit (L/C at sight) issued by prime international banks, Telegraphic Transfer (T/T with 30% advance deposit and 70% balance against copy Bill of Lading), and Document Against Payment (D/P). Structured credit and deferred payment facilities are available for verified long-term corporate procurement partners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does BhattiZinc verify chemical composition and purity before loading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every production lot undergoes rigorous in-house optical emission spectrometry (OES) and atomic absorption testing in our ISO 9001:2015 accredited laboratory. Additionally, independent third-party pre-shipment inspections and container stuffing surveys are conducted through accredited international agencies like SGS Pakistan or Alfred H Knight to certify weight, chemical analysis, and packaging integrity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are BhattiZinc products compliant with European REACH regulations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All BhattiZinc export materials comply with EU REACH registration guidelines for industrial zinc metal and chemical compounds. We furnish full GHS-compliant Safety Data Sheets (SDS/MSDS), Certificates of Origin (Form A / TDAP), and customs declarations required for import into European Union member states."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the transit times from Karachi ports to Europe, the Gulf, and Southeast Asia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Departing from Karachi Port Trust (KPT) or Port Muhammad Bin Qasim (PQA), average maritime transit times are 5–7 days to the Middle East (Jebel Ali / Dammam), 10–16 days to Southeast Asia (Singapore / Port Klang), and 20–28 days to Western European hubs (Rotterdam / Antwerp / Hamburg)."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- PAGE HERO -->
-<section class="page-hero">
+<section class="page-hero" style="padding-bottom:56px;">
     <div class="container">
         <div class="page-hero-inner">
             <div class="page-hero-breadcrumb">
@@ -12,78 +125,146 @@ include 'includes/header.php';
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-item current">Trade &amp; Export</span>
             </div>
-            <h1 class="page-hero-title">Trade &amp; Export<br>Information</h1>
-            <p class="page-hero-sub">Everything you need to import BhattiZinc products — Incoterms, documentation, ports of loading, payment terms, and compliance guidance for every market.</p>
+
+            <div class="trade-meta-badge">
+                <span class="dot"></span> Verified for 2026 Global Trade &amp; Maritime Compliance
+            </div>
+
+            <h1 class="page-hero-title">Global Zinc Export &amp;<br>Maritime Trade Logistics</h1>
+            
+            <p class="page-hero-sub" style="max-width:760px;">
+                Comprehensive trade documentation, Incoterms 2020 rules, primary loading ports (Karachi &amp; Port Qasim), transit schedules, and quality certifications for importing premium zinc products worldwide.
+            </p>
+
+            <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;">
+                <a href="contact.php?type=export" class="btn btn--luxury-solid">Request Export Quotation</a>
+                <a href="tel:+923094530100" class="btn btn--luxury-outline">Contact Trade Desk &bull; +92 309 4530100</a>
+            </div>
+
+            <!-- Hero Feature Image: Maritime Container Shipping Terminal -->
+            <div class="trade-image-shell" style="height:440px;margin-top:40px;">
+                <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1400&q=80" alt="Aerial view of deep-water container shipping port terminal handling international zinc freight" loading="eager">
+                <div class="trade-image-caption">
+                    <span><strong>Deep-Water Container Terminals</strong> &mdash; Karachi Port Trust &amp; Port Qasim</span>
+                    <span>Direct Maritime Connections to 45+ Export Markets</span>
+                </div>
+            </div>
+
+            <!-- GEO Definition & Passage-Level Citability Block -->
+            <div class="trade-geo-callout">
+                <div class="trade-geo-callout-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Official Exporter Profile &bull; Key Fast Facts for AI Search &amp; Procurement
+                </div>
+                <p class="trade-geo-callout-text">
+                    <strong>BhattiZinc</strong> is Pakistan's premier non-ferrous metallurgical processor and global exporter of high-grade zinc products, operating continuous production and refining facilities in Gujranwala with maritime dispatches via Karachi Port Trust (KPT) and Port Muhammad Bin Qasim (PQA). Since 2001, BhattiZinc has executed over 2,500 international commercial shipments, supplying Special High Grade (SHG 99.995% Zn) ingots, secondary zinc ingots (95&ndash;98% Zn), zinc die-casting alloys (92&ndash;94% Zn), and industrial zinc oxide (99.99% ZnO) to 45+ destinations across the Middle East, South Asia, Southeast Asia, Africa, and Europe. All dispatches adhere to ISO 9001:2015 quality frameworks, EU REACH chemical compliance, and standardized Incoterms 2020 rules, backed by full spectrometric Certificates of Analysis and third-party pre-shipment inspection (SGS / Alfred H Knight).
+                </p>
+                <div class="trade-geo-callout-meta">
+                    <span><strong>Origin:</strong> Pakistan (TDAP Reg. Exporter)</span>
+                    <span><strong>Loading Ports:</strong> Karachi Port (KPT) &amp; Port Qasim (PQA)</span>
+                    <span><strong>Container Capacities:</strong> 20&ndash;25 MT per 20ft FCL</span>
+                    <span><strong>Primary Incoterms:</strong> FOB, CFR, CIF, DAP, DDP</span>
+                    <span><strong>Testing:</strong> Spectrometry &amp; SGS Certified</span>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- TRADE INTRO -->
-<section class="trade-section">
+<!-- SECTION 1: SUPPLY CHAIN PARTNER -->
+<section class="trade-section" style="padding-top:40px;">
     <div class="container">
 
-        <div class="trade-intro-grid">
-            <div class="reveal">
-                <div class="eyebrow"><span class="label">Why Trade With Us</span></div>
-                <h2 style="font-size:clamp(2rem,3vw,3rem);margin-bottom:1.5rem;">A supply chain<br>partner, not just<br>a supplier</h2>
+        <div class="trade-two-col reveal" style="margin-bottom:70px;">
+            <div>
+                <div class="eyebrow"><span class="label">Reliable Global Sourcing</span></div>
+                <h2 style="font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.15;margin-bottom:1.4rem;">
+                    How Does BhattiZinc Manage Global Zinc Supply &amp; Freight?
+                </h2>
                 <div class="trade-intro-text">
-                    <p>BhattiZinc has been exporting zinc products internationally since 2001. Over more than two decades, we have built robust logistics networks, refined our export documentation processes, and cultivated deep relationships with freight forwarders, customs agents, and inspection bodies worldwide.</p>
-                    <p>We understand that international zinc procurement involves more than price — lead times, port availability, REACH and customs compliance, documentary requirements, and credit terms all matter. Our trade team is equipped to handle every aspect of the export process on your behalf.</p>
-                    <p>From first inquiry to cargo arrival, BhattiZinc provides a single point of contact, full visibility on shipment status, and comprehensive documentation for every consignment.</p>
+                    <p>
+                        International zinc procurement demands more than competitive spot pricing &mdash; reliable vessel booking, strict moisture-barrier packaging, precise customs documentation, and adherence to tight manufacturing schedules are paramount. BhattiZinc has exported refined zinc metals and zinc derivatives internationally for more than 25 years.
+                    </p>
+                    <p>
+                        Through established partnerships with global ocean carriers (including Maersk, MSC, CMA CGM, and Hapag-Lloyd) operating out of Karachi's dual deep-water ports, we ensure guaranteed container allocations and prompt bill of lading issuance. Our dedicated in-house trade desk manages customs clearance, export rebates, consular legalization, and phytosanitary certifications, giving overseas buyers transparent tracking and zero port-side demurrage delays.
+                    </p>
+                    <p>
+                        Whether supplying continuous hot-dip galvanizers in the Gulf, die-casters in Southeast Asia, or tire and rubber chemical formulators in Europe, BhattiZinc acts as an integrated supply-chain extension with consistent metallurgical integrity.
+                    </p>
                 </div>
             </div>
-            <div class="reveal reveal-delay-2" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start;">
-                <?php
-                $highlights = [
-                    ['25+','Years of Trade Experience'],
-                    ['45+','Export Destinations'],
-                    ['3+','Shipments Weekly'],
-                    ['24h','Quote Response Time'],
-                    ['100%','Documentation Accuracy'],
-                    ['ISO','9001:2015 Certified'],
-                ];
-                foreach($highlights as $i=>$h): ?>
-                <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 24px;transition:border-color .25s;" class="reveal reveal-delay-<?php echo min($i%2+1,2); ?>">
-                    <div style="font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--black);line-height:1;margin-bottom:6px;"><?php echo $h[0]; ?></div>
-                    <div style="font-family:var(--font-label);font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-xs);"><?php echo $h[1]; ?></div>
+
+            <div>
+                <!-- Online Image: Container Freight & Logistics -->
+                <div class="trade-image-shell" style="height:320px;margin-bottom:20px;">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1000&q=80" alt="Commercial container freight vessel transporting industrial metals across global shipping corridors" loading="lazy">
+                    <div class="trade-image-caption">
+                        <span>Global Ocean Freight Operations</span>
+                        <span>Multi-Carrier Routing &bull; FCL &amp; LCL</span>
+                    </div>
                 </div>
-                <?php endforeach; ?>
+
+                <!-- Verified Highlight Metrics Grid -->
+                <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;">
+                    <?php
+                    $highlights = [
+                        ['25+','Years Exporting','Continuous export history since 2001'],
+                        ['45+','Destinations','Active supply corridors across 4 continents'],
+                        ['3+','Weekly Sailings','Regular container dispatches from Karachi'],
+                        ['24h','Quote Response','Prompt commercial FOB/CIF costings'],
+                        ['100%','Doc Accuracy','Zero customs discrepancy rate'],
+                        ['ISO','9001:2015','International quality management certified'],
+                    ];
+                    foreach($highlights as $h): ?>
+                    <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:18px 14px;text-align:center;">
+                        <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--black);line-height:1;margin-bottom:4px;"><?php echo $h[0]; ?></div>
+                        <div style="font-family:var(--font-label);font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--zinc);"><?php echo $h[1]; ?></div>
+                        <div style="font-size:.7rem;color:var(--text-xs);margin-top:3px;line-height:1.3;"><?php echo $h[2]; ?></div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
 
-        <!-- Trade Capability Cards -->
+        <!-- SECTION 2: 6 CORE EXPORT CAPABILITIES -->
+        <div class="text-center reveal" style="margin-bottom:40px;">
+            <div class="eyebrow" style="justify-content:center;"><span class="label">End-to-End Trade Architecture</span></div>
+            <h2 style="max-width:700px;margin:0 auto;font-size:clamp(1.8rem,3vw,2.6rem);">What Are the 6 Core Export Capabilities We Deliver?</h2>
+        </div>
+
         <div class="trade-cards-grid">
             <?php
             $tradeCards = [
                 [
                     '<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>',
-                    'Export Documentation',
-                    'We provide a complete documentation package with every shipment: Commercial Invoice, Packing List, Bill of Lading, Certificate of Origin (CoO), Certificate of Analysis (CoA), SGS Inspection Report, Fumigation Certificate, and MSDS.'
+                    'Comprehensive Documentation',
+                    'Every consignment ships with full legal documentation: Commercial Invoice with HS codes, Packing List, Original negotiable B/L, Certificate of Origin (Form A / TDAP), Spectrometric CoA, ISPM-15 Fumigation, and GHS-compliant Safety Data Sheets.'
                 ],
                 [
                     '<path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>',
-                    'Payment Terms',
-                    'We accept Irrevocable Letter of Credit (L/C) at sight, Telegraphic Transfer (T/T) with 30% advance and balance against copy BL, and Document Against Payment (D/P). Payment terms are negotiable for established trade partners.'
+                    'Secure International Payment Terms',
+                    'We support Irrevocable Letters of Credit (L/C at sight) from first-class international banks, Telegraphic Transfer (T/T with 30% advance deposit and balance against copy BL), and Document Against Payment (D/P) to ensure secure bilateral trading.'
                 ],
                 [
                     '<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>',
-                    'Logistics &amp; Freight',
-                    'We work with leading freight forwarders to offer competitive rates on FCL and LCL shipments from Karachi and Port Qasim. Regular sailings to Jebel Ali, Singapore, Rotterdam, Colombo, Mombasa, and beyond.'
+                    'Multimodal Freight Logistics',
+                    'Contracts negotiated under FOB, CFR, CIF, DAP, or DDP. We coordinate direct road container trailers from our Gujranwala plant to terminal berths at Karachi Port Trust and Port Qasim, providing seamless multimodal cargo handling.'
                 ],
                 [
                     '<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>',
-                    'Compliance &amp; Certifications',
-                    'All BhattiZinc products meet REACH regulation requirements for EU import. We supply Safety Data Sheets (SDS/MSDS), third-party inspection reports, and country-specific compliance documentation upon request.'
+                    'REACH &amp; Quality Compliance',
+                    'Our zinc products conform to European REACH regulations, ASTM B6 standard specifications for zinc metal, and ISO 9001:2015 quality standards. We facilitate accredited third-party inspections via SGS or Alfred H Knight prior to departure.'
                 ],
                 [
                     '<path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>',
-                    'Port &amp; Shipping',
-                    'Primary loading ports: Karachi Port Trust (KPT) and Port Muhammad Bin Qasim. Container types: 20ft GP, 40ft GP, 40ft HC. Transit times: UAE 5–7 days, Southeast Asia 12–18 days, Europe 20–28 days.'
+                    'Dual Port Access &amp; Transit Speeds',
+                    'Fast transit times from Pakistan’s deep-water ports: 5&ndash;7 days to Middle Eastern hubs (Jebel Ali / Dammam), 10&ndash;14 days to Southeast Asia (Singapore), and 20&ndash;28 days to European gateways (Rotterdam / Antwerp).'
                 ],
                 [
                     '<path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>',
-                    'Trade Finance',
-                    'BhattiZinc is registered with leading Pakistani and international banks for trade finance facilities. We can assist buyers with structured payment solutions, including deferred payment options for qualified buyers.'
+                    'Structured Trade Facilities',
+                    'Registered with leading Pakistani commercial and foreign banking institutions, BhattiZinc facilitates competitive trade finance, export credit lines, and tailored shipment scheduling for regular monthly volume contracts.'
                 ],
             ];
             foreach($tradeCards as $i=>$card): ?>
@@ -100,35 +281,46 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- INCOTERMS -->
+<!-- SECTION 3: INCOTERMS 2020 -->
 <section class="incoterms-section">
     <div class="container">
-        <div class="reveal" style="margin-bottom:0;">
-            <div class="eyebrow"><span class="label">Incoterms 2020</span></div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:0;">
-                <h3 style="font-size:2rem;font-weight:400;">Flexible terms for<br>every trade route</h3>
-                <p style="font-size:.9rem;color:var(--text-mid);line-height:1.8;">We operate under all standard Incoterms 2020 rules. The table below outlines the terms most commonly used by our international clients. Our trade team will recommend the most cost-effective terms based on your destination and logistics capability.</p>
+        <div class="reveal">
+            <div class="eyebrow"><span class="label">International Commercial Terms</span></div>
+            <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;">
+                <div>
+                    <h2 style="font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2;margin-bottom:12px;">Which Incoterms 2020 Rules Apply to International Zinc Orders?</h2>
+                    <p style="font-size:.94rem;color:var(--text-mid);line-height:1.8;">
+                        BhattiZinc executes international non-ferrous sales under standard <strong>Incoterms&reg; 2020</strong> published by the International Chamber of Commerce (ICC). These rules clearly define the division of costs, freight risks, insurance liability, and customs responsibilities between buyer and seller.
+                    </p>
+                </div>
+                <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;">
+                    <div style="font-family:var(--font-label);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--zinc);margin-bottom:6px;">Most Popular Trade Terms</div>
+                    <p style="font-size:.84rem;color:var(--text);line-height:1.6;margin:0;">
+                        <strong>FOB Karachi:</strong> Buyer handles ocean freight from Karachi Port; recommended for buyers with global maritime carrier contracts.<br>
+                        <strong>CIF Destination:</strong> BhattiZinc covers freight and marine insurance to your port; popular for hassle-free procurement.
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="incoterms-grid" style="margin-top:40px;">
+        <div class="incoterms-grid">
             <?php
             $incoterms = [
-                ['EXW','Ex Works','Buyer collects from our Gujranwala facility. Buyer assumes all costs and risk from factory gate.'],
-                ['FCA','Free Carrier','BhattiZinc delivers goods to a named carrier at our facility or a nominated point in Pakistan.'],
-                ['FOB','Free On Board','Most common export term. BhattiZinc loads cargo on vessel at Karachi or Port Qasim.'],
-                ['CFR','Cost &amp; Freight','BhattiZinc covers ocean freight to destination port. Buyer covers insurance and import duties.'],
-                ['CIF','Cost, Insurance &amp; Freight','BhattiZinc covers ocean freight and cargo insurance to destination port. Popular for first-time buyers.'],
-                ['CPT','Carriage Paid To','BhattiZinc pays freight to named destination. Risk transfers to buyer on handover to first carrier.'],
-                ['CIP','Carriage &amp; Ins. Paid','BhattiZinc pays freight and enhanced insurance to destination. Recommended for high-value orders.'],
-                ['DAP','Delivered at Place','BhattiZinc delivers to named destination, unloaded. Buyer handles import clearance only.'],
-                ['DDP','Delivered Duty Paid','All-inclusive: BhattiZinc handles freight, insurance, and import duties to buyer\'s door.'],
-                ['DPU','Delivered at Place Unloaded','BhattiZinc delivers and unloads at named destination. Buyer handles import clearance.'],
+                ['EXW','Ex Works','Buyer collects from our Gujranwala plant. Buyer assumes all road freight, export clearance, and ocean transport risk.'],
+                ['FCA','Free Carrier','BhattiZinc delivers export-cleared cargo to buyer\'s nominated carrier at our plant or inland container depot (ICD).'],
+                ['FOB','Free On Board','[Most Popular] BhattiZinc delivers and loads cargo onto the vessel at Karachi Port or Port Qasim. Risk transfers upon loading.'],
+                ['CFR','Cost &amp; Freight','BhattiZinc pays sea freight to destination port. Buyer secures marine cargo insurance and handles customs clearance.'],
+                ['CIF','Cost, Insurance &amp; Freight','[Most Popular] BhattiZinc covers sea freight and marine cargo insurance to destination port. Turnkey arrival.'],
+                ['CPT','Carriage Paid To','BhattiZinc covers carriage to named destination. Risk transfers upon handover to first inland carrier in Pakistan.'],
+                ['CIP','Carriage &amp; Ins. Paid','BhattiZinc pays freight and comprehensive Institute Cargo Clauses (A) insurance to buyer\'s designated terminal.'],
+                ['DAP','Delivered at Place','BhattiZinc delivers goods to buyer\'s designated destination ready for unloading. Buyer handles import duty.'],
+                ['DDP','Delivered Duty Paid','Complete door-to-door delivery: BhattiZinc handles ocean shipping, insurance, import customs clearance, and duties.'],
+                ['DPU','Delivered at Place Unloaded','BhattiZinc delivers and unloads cargo at buyer\'s warehouse or terminal. Buyer handles import duties.'],
             ];
             foreach($incoterms as $i=>$it): ?>
             <div class="incoterm-badge reveal reveal-delay-<?php echo min($i%5+1,4); ?>">
                 <div class="incoterm-code"><?php echo $it[0]; ?></div>
-                <div class="incoterm-name" style="font-size:.72rem;font-weight:600;margin-bottom:8px;color:var(--text-mid);"><?php echo $it[1]; ?></div>
+                <div style="font-size:.72rem;font-weight:700;color:var(--zinc);margin-bottom:6px;"><?php echo $it[1]; ?></div>
                 <div class="incoterm-name"><?php echo $it[2]; ?></div>
             </div>
             <?php endforeach; ?>
@@ -136,130 +328,301 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- DOCUMENTATION -->
-<section style="padding:80px 0 120px;background:var(--white);">
+<!-- SECTION 4: EXPORT DOCUMENTATION & PRE-SHIPMENT INSPECTION -->
+<section style="padding:90px 0;background:var(--white);border-top:1px solid var(--border);">
     <div class="container">
-        <div class="text-center reveal" style="margin-bottom:60px;">
-            <div class="eyebrow" style="justify-content:center;"><span class="label">Export Documents</span></div>
-            <h2 style="max-width:600px;margin:0 auto;">Complete documentation<br>with every shipment</h2>
+
+        <div class="trade-two-col--rev trade-two-col reveal" style="margin-bottom:60px;">
+            <div>
+                <div class="eyebrow"><span class="label">Rigorous Quality Assurance</span></div>
+                <h2 style="font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2;margin-bottom:1.2rem;">
+                    What Pre-Shipment Inspection &amp; Export Documents Are Provided?
+                </h2>
+                <div class="trade-intro-text">
+                    <p>
+                        Importing non-ferrous metals requires absolute documentary accuracy to avoid customs holding fees and regulatory holdups. Every BhattiZinc dispatch is accompanied by an authenticated, bank-compliant documentation package.
+                    </p>
+                    <p>
+                        <strong>Third-Party Pre-Shipment Inspections:</strong> At buyer request, independent surveying agencies such as <em>SGS Pakistan</em> or <em>Alfred H Knight</em> conduct pre-loading inspections directly at our warehouse or port container terminal. The survey inspects chemical composition through representative sampling, verify gross and tare container weights on certified weighbridges, and witness the placement of customs tamper-evident bottle seals.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="trade-image-shell" style="height:320px;">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80" alt="Spectrometric laboratory testing and quality verification of zinc ingots before export dispatch" loading="lazy">
+                    <div class="trade-image-caption">
+                        <span>Laboratory Spectrometric Analysis</span>
+                        <span>Third-Party SGS / Alfred H Knight Surveys</span>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- 8 Document Cards Grid -->
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
             <?php
             $docs = [
-                ['Commercial Invoice','Itemised invoice in USD/EUR as required, with HS codes and country of origin declaration.'],
-                ['Packing List','Detailed packing list with gross/net weights, number of pallets/bags, and container seal numbers.'],
-                ['Bill of Lading','Original negotiable B/L or Seaway Bill as required. Express BL available on request.'],
-                ['Certificate of Origin','Form A (GSP), Non-Preferential CoO, or specific bilateral CoO issued by TDAP/FPCCI Pakistan.'],
-                ['Certificate of Analysis','Full spectrometric CoA from our ISO-accredited laboratory for every production batch shipped.'],
-                ['SGS Inspection Report','Third-party pre-shipment inspection and weight survey certificate from SGS Pakistan.'],
-                ['Fumigation Certificate','ISPM-15 fumigation certificate for all wooden pallets, required for most markets.'],
-                ['MSDS / SDS','Material Safety Data Sheet in GHS format, in English and additional languages on request.'],
+                ['Commercial Invoice','Itemised multi-currency invoice (USD/EUR) detailing exact net/gross weights, HS codes, contract number, and origin declaration.'],
+                ['Packing List','Itemized container packing list indicating pallet numbers, ingot bundle counts, seal numbers, and tare/gross weights per container.'],
+                ['Bill of Lading (B/L)','Original negotiable marine Bill of Lading (3/3 set) or clean Seaway Bill issued by leading international shipping lines.'],
+                ['Certificate of Origin','Formal Certificate of Origin issued by Trade Development Authority of Pakistan (TDAP) and Lahore/Gujranwala Chambers of Commerce.'],
+                ['Certificate of Analysis (CoA)','Comprehensive optical emission spectrometry (OES) chemical test report certifying minimum purity (e.g. 99.995% Zn) and trace limits.'],
+                ['SGS Inspection Report','Independent third-party inspection certificate verifying chemical assay, physical weight verification, and container seal numbers.'],
+                ['ISPM-15 Fumigation Certificate','Certified heat-treatment or methyl bromide fumigation certificate for all wooden pallets, complying with international biosecurity laws.'],
+                ['GHS Safety Data Sheet (SDS)','Updated 16-section Material Safety Data Sheet complying with global GHS, EU REACH, and OSHA hazcom standards.'],
             ];
             foreach($docs as $i=>$doc): ?>
-            <div style="background:var(--white);padding:36px 28px;border-right:1px solid var(--border-light);transition:background .25s;" class="reveal reveal-delay-<?php echo min($i%4+1,4); ?>">
-                <div style="width:36px;height:36px;background:var(--gold-pale);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
-                    <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:var(--gold-dark);fill:none;stroke-width:1.5;"><path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            <div style="background:var(--white);padding:30px 24px;border-right:1px solid var(--border-light);transition:background .25s;" class="reveal reveal-delay-<?php echo min($i%4+1,4); ?>">
+                <div style="width:36px;height:36px;background:var(--zinc-pale);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+                    <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:var(--zinc);fill:none;stroke-width:1.8;"><path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
                 </div>
-                <div style="font-family:var(--font-display);font-size:1rem;font-weight:500;margin-bottom:10px;color:var(--black);"><?php echo $doc[0]; ?></div>
-                <p style="font-size:.8rem;color:var(--text-sm);line-height:1.65;"><?php echo $doc[1]; ?></p>
+                <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;margin-bottom:8px;color:var(--black);"><?php echo $doc[0]; ?></div>
+                <p style="font-size:.82rem;color:var(--text-sm);line-height:1.6;margin:0;"><?php echo $doc[1]; ?></p>
             </div>
             <?php endforeach; ?>
         </div>
+
     </div>
 </section>
 
-<!-- MARKETS / PORTS TABLE -->
-<section style="padding:80px 0;background:var(--cream);border-top:1px solid var(--border);">
+<!-- SECTION 5: SHIPPING PORTS, ROUTES & TRANSIT TIMES -->
+<section style="padding:90px 0;background:var(--cream);border-top:1px solid var(--border);">
     <div class="container">
-        <div class="reveal" style="margin-bottom:48px;">
-            <div class="eyebrow"><span class="label">Shipping Routes</span></div>
-            <h3 style="font-size:2rem;font-weight:400;max-width:500px;">Major routes &amp;<br>transit times</h3>
+
+        <div class="trade-two-col reveal" style="margin-bottom:48px;">
+            <div>
+                <div class="eyebrow"><span class="label">Maritime Infrastructure</span></div>
+                <h2 style="font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2;margin-bottom:12px;">
+                    What Are the Primary Ports of Loading, Routes &amp; Transit Times?
+                </h2>
+                <p style="font-size:.94rem;color:var(--text-mid);line-height:1.8;margin:0;">
+                    BhattiZinc dispatches all sea-freight shipments through Pakistan's two primary deep-water shipping complexes on the Arabian Sea: <strong>Karachi Port Trust (KPT)</strong> and <strong>Port Muhammad Bin Qasim (PQA)</strong>. Both ports offer dedicated container freight stations (CFS), electronic customs filing (WeBOC), and daily feeder sailings connecting to global mother vessels.
+                </p>
+            </div>
+            <div>
+                <div class="trade-image-shell" style="height:260px;">
+                    <img src="https://images.unsplash.com/photo-1505705694340-019e1e335916?auto=format&fit=crop&w=1000&q=80" alt="Harbor container cranes and deep water shipping berths at commercial export port" loading="lazy">
+                    <div class="trade-image-caption">
+                        <span>Commercial Berth Facilities</span>
+                        <span>Karachi Port (KPT) &bull; Port Qasim (PQA)</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div style="overflow-x:auto;" class="reveal">
-            <table style="width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);">
+
+        <div style="overflow-x:auto;border-radius:var(--radius-lg);box-shadow:0 8px 24px rgba(0,0,0,.04);" class="reveal">
+            <table style="width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--border);">
                 <thead>
                     <tr style="background:var(--surface);">
-                        <th style="padding:14px 20px;text-align:left;font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Region</th>
-                        <th style="padding:14px 20px;text-align:left;font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Destination Port</th>
-                        <th style="padding:14px 20px;text-align:left;font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Transit Time</th>
-                        <th style="padding:14px 20px;text-align:left;font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Departures</th>
-                        <th style="padding:14px 20px;text-align:left;font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Common Incoterms</th>
+                        <th style="padding:15px 20px;text-align:left;font-family:var(--font-label);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Global Region</th>
+                        <th style="padding:15px 20px;text-align:left;font-family:var(--font-label);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Destination Port &amp; Country</th>
+                        <th style="padding:15px 20px;text-align:left;font-family:var(--font-label);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Est. Transit Time</th>
+                        <th style="padding:15px 20px;text-align:left;font-family:var(--font-label);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Sailing Frequency</th>
+                        <th style="padding:15px 20px;text-align:left;font-family:var(--font-label);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Recommended Incoterms</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $routes = [
-                        ['Middle East','Jebel Ali (Dubai)','5–7 days','3× weekly','FOB / CIF / DAP'],
-                        ['Middle East','Dammam / Jubail','7–10 days','2× weekly','FOB / CFR'],
-                        ['South Asia','Chittagong, Bangladesh','4–6 days','Weekly','FOB / CFR / CIF'],
-                        ['South Asia','Colombo, Sri Lanka','3–5 days','Weekly','FOB / CFR'],
-                        ['Southeast Asia','Singapore','10–14 days','Weekly','FOB / CFR / CIF'],
-                        ['Southeast Asia','Port Klang, Malaysia','12–16 days','Weekly','FOB / CFR'],
-                        ['Southeast Asia','Ho Chi Minh City','14–18 days','Weekly','FOB / CFR'],
-                        ['Africa','Mombasa, Kenya','18–22 days','Bi-weekly','FOB / CFR'],
-                        ['Africa','Lagos, Nigeria','20–25 days','Bi-weekly','FOB / CIF'],
-                        ['Europe','Rotterdam, Netherlands','20–28 days','Weekly','FOB / CFR / CIF / DAP'],
-                        ['Europe','Piraeus, Greece','18–24 days','Weekly','FOB / CFR / CIF'],
+                        ['Middle East','Jebel Ali (Dubai), UAE','5&ndash;7 days','3&times; weekly','FOB / CIF / DAP'],
+                        ['Middle East','Dammam / Jubail, Saudi Arabia','7&ndash;10 days','2&times; weekly','FOB / CFR / CIF'],
+                        ['Middle East','Sohar / Muscat, Oman','4&ndash;6 days','2&times; weekly','FOB / CIF'],
+                        ['South Asia','Chittagong, Bangladesh','5&ndash;8 days','Weekly','FOB / CFR / CIF'],
+                        ['South Asia','Colombo, Sri Lanka','3&ndash;5 days','2&times; weekly','FOB / CFR'],
+                        ['Southeast Asia','Singapore Port, Singapore','10&ndash;14 days','Weekly','FOB / CFR / CIF'],
+                        ['Southeast Asia','Port Klang, Malaysia','12&ndash;16 days','Weekly','FOB / CFR / CIF'],
+                        ['Southeast Asia','Ho Chi Minh City, Vietnam','14&ndash;18 days','Weekly','FOB / CFR'],
+                        ['Europe','Rotterdam, Netherlands','20&ndash;28 days','Weekly','FOB / CFR / CIF / DAP'],
+                        ['Europe','Antwerp, Belgium','22&ndash;28 days','Weekly','FOB / CFR / CIF'],
+                        ['Europe','Piraeus, Greece','18&ndash;24 days','Weekly','FOB / CFR / CIF'],
+                        ['Africa','Mombasa, Kenya','16&ndash;20 days','Bi-weekly','FOB / CFR / CIF'],
+                        ['Africa','Lagos (Apapa), Nigeria','22&ndash;28 days','Bi-weekly','FOB / CIF'],
                     ];
-                    foreach($routes as $i=>$route): ?>
+                    foreach($routes as $route): ?>
                     <tr style="border-bottom:1px solid var(--border-light);transition:background .15s;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''">
-                        <td style="padding:13px 20px;font-family:var(--font-label);font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dark);"><?php echo $route[0]; ?></td>
-                        <td style="padding:13px 20px;font-size:.85rem;color:var(--text);font-weight:500;"><?php echo $route[1]; ?></td>
-                        <td style="padding:13px 20px;font-size:.85rem;color:var(--text-mid);"><?php echo $route[2]; ?></td>
-                        <td style="padding:13px 20px;font-size:.82rem;color:var(--text-sm);"><?php echo $route[3]; ?></td>
-                        <td style="padding:13px 20px;font-family:var(--font-label);font-size:.68rem;font-weight:500;letter-spacing:.06em;color:var(--text-mid);"><?php echo $route[4]; ?></td>
+                        <td style="padding:13px 20px;font-family:var(--font-label);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--zinc);"><?php echo $route[0]; ?></td>
+                        <td style="padding:13px 20px;font-size:.88rem;color:var(--text);font-weight:600;"><?php echo $route[1]; ?></td>
+                        <td style="padding:13px 20px;font-size:.86rem;color:var(--text-mid);font-weight:500;"><?php echo $route[2]; ?></td>
+                        <td style="padding:13px 20px;font-size:.84rem;color:var(--text-sm);"><?php echo $route[3]; ?></td>
+                        <td style="padding:13px 20px;font-family:var(--font-label);font-size:.7rem;font-weight:600;letter-spacing:.06em;color:var(--black);"><?php echo $route[4]; ?></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
-        <p style="font-size:.75rem;color:var(--text-xs);margin-top:12px;">* Transit times are indicative and subject to carrier schedules and port congestion. Contact our logistics team for confirmed schedules.</p>
+        <p style="font-size:.76rem;color:var(--text-xs);margin-top:12px;">* Estimated transit days reflect port-to-port maritime journeys under standard carrier rotations. Direct bill of lading tracking numbers provided on cargo departure.</p>
+
     </div>
 </section>
 
-<!-- HS CODES -->
-<section style="padding:80px 0;background:var(--white);border-top:1px solid var(--border);">
+<!-- SECTION 6: PACKAGING & CONTAINERIZATION -->
+<section style="padding:90px 0;background:var(--white);border-top:1px solid var(--border);">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;">
+
+        <div class="trade-two-col reveal">
+            <div>
+                <div class="trade-image-shell" style="height:390px;">
+                    <img src="assets/images/site/zinc-pallet-warehouse.jpg" alt="Palletized industrial zinc ingots and chemical bags in export warehouse facility" loading="lazy">
+                    <div class="trade-image-caption">
+                        <span>ISPM-15 Export Packaging</span>
+                        <span>Steel-Strapped Ingots &bull; Shrink-Wrapped Chemicals</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="eyebrow"><span class="label">Cargo Security</span></div>
+                <h2 style="font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2;margin-bottom:1.2rem;">
+                    How Are Zinc Metal &amp; Oxide Products Packaged for Sea Transport?
+                </h2>
+                <div class="trade-intro-text">
+                    <p>
+                        Zinc ingots and zinc chemicals require specialized stowage to prevent oxidation, water ingress, and cargo shifting during rough ocean voyages. BhattiZinc follows rigorous packaging protocols tailored to product form:
+                    </p>
+                    <ul style="list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:12px;">
+                        <li style="display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--text-mid);line-height:1.6;">
+                            <span style="color:var(--zinc);font-weight:700;">&#10003;</span>
+                            <span><strong>SHG &amp; Secondary Zinc Ingots:</strong> Stacked onto heat-treated ISPM-15 fumigated wooden pallets (approx. 1,000 kg net per pallet), bound with 4&times; high-tensile steel straps, and protected with heavy-gauge waterproof polyethylene shrink wrapping.</span>
+                        </li>
+                        <li style="display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--text-mid);line-height:1.6;">
+                            <span style="color:var(--zinc);font-weight:700;">&#10003;</span>
+                            <span><strong>Zinc Oxide Powder:</strong> Packed in 25 kg 3-ply kraft paper bags with inner polyethylene moisture-proof barrier lining, palletized and stretch-wrapped (1,000 kg per pallet), or 1,000 kg woven polypropylene bulk bags (Big Bags).</span>
+                        </li>
+                        <li style="display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--text-mid);line-height:1.6;">
+                            <span style="color:var(--zinc);font-weight:700;">&#10003;</span>
+                            <span><strong>Container Stuffing &amp; Lashing:</strong> Stuffed in clean 20ft standard dry containers (GP) up to maximum allowable road/ocean payload (20 to 25 MT), braced with heavy timber dunnage and heavy-duty corner air bags.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECTION 7: HARMONISED TARIFF (HS CODES) -->
+<section style="padding:90px 0;background:var(--cream);border-top:1px solid var(--border);">
+    <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1.8fr;gap:60px;align-items:start;">
             <div class="reveal">
-                <div class="eyebrow"><span class="label">HS Codes</span></div>
-                <h3 style="font-size:2rem;font-weight:400;margin-bottom:1rem;">Harmonised Tariff Classification</h3>
-                <p style="font-size:.88rem;color:var(--text-mid);line-height:1.8;">All BhattiZinc products are shipped under standard international HS codes. Local import classification may differ; we recommend confirming applicable duties with your customs broker.</p>
+                <div class="eyebrow"><span class="label">Customs Classification</span></div>
+                <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.2;margin-bottom:1rem;">Harmonised Tariff Classification (HS Codes)</h2>
+                <p style="font-size:.92rem;color:var(--text-mid);line-height:1.8;">
+                    All BhattiZinc export invoices and bills of lading declare World Customs Organization (WCO) 6-digit Harmonised System codes. Please confirm destination country sub-headings with your local clearing agent.
+                </p>
             </div>
             <div class="reveal reveal-delay-1" style="overflow-x:auto;">
-                <table style="width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
+                <table style="width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--white);">
                     <thead>
                         <tr style="background:var(--surface);">
-                            <th style="padding:12px 20px;text-align:left;font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Product</th>
-                            <th style="padding:12px 20px;text-align:left;font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">HS Code</th>
-                            <th style="padding:12px 20px;text-align:left;font-family:var(--font-label);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Description</th>
+                            <th style="padding:14px 20px;text-align:left;font-family:var(--font-label);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Commodity</th>
+                            <th style="padding:14px 20px;text-align:left;font-family:var(--font-label);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">HS Code</th>
+                            <th style="padding:14px 20px;text-align:left;font-family:var(--font-label);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-sm);border-bottom:1px solid var(--border);">Official International Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         $hsCodes = [
-                            ['SHG Zinc / Zinc Ingots','7901.11','Zinc, not alloyed, containing by weight >= 99.99% of zinc'],
-                            ['Standard Zinc Ingots','7901.12','Zinc, not alloyed, containing by weight < 99.99% of zinc'],
-                            ['Zinc Alloys','7901.20','Zinc alloys'],
-                            ['Zinc Oxide','2817.00','Zinc oxide; zinc peroxide'],
-                            ['Zinc Dust','7903.10','Zinc dust'],
-                            ['Zinc Powder','7903.90','Zinc powders and flakes, other'],
-                            ['Zinc Sulfate','2833.29','Sulfates of other metals (zinc sulfate)'],
-                            ['Zinc Sheets/Plates','7904.00','Zinc bars, rods, profiles and wire'],
-                            ['Zinc Sheets & Strip','7905.00','Zinc plates, sheets, strip and foil'],
-                            ['Zinc Wire','7904.00','Zinc bars, rods, profiles and wire'],
+                            ['SHG Zinc Ingots (99.995%)','7901.11','Zinc, not alloyed, containing by weight >= 99.99% of zinc'],
+                            ['Secondary Zinc Ingots (95&ndash;98%)','7901.12','Zinc, not alloyed, containing by weight < 99.99% of zinc'],
+                            ['Zinc Alloys (Zamak / Die-Cast)','7901.20','Zinc alloys (containing aluminum, copper, magnesium)'],
+                            ['Zinc Oxide (99.99% Purity)','2817.00','Zinc oxide; zinc peroxide'],
+                            ['Zinc Dust &amp; Micro-Powder','7903.10','Zinc dust (for protective coatings and chemical synthesis)'],
+                            ['Zinc Powders &amp; Flakes','7903.90','Zinc powders and flakes, other'],
+                            ['Zinc Ash &amp; Residues','2620.19','Slag, ash and residues containing mainly zinc, other'],
+                            ['Zinc Dross (Top/Bottom)','2620.11','Hard zinc spelter (zinc dross from galvanizing)'],
+                            ['Zinc Waste &amp; Scrap','7902.00','Zinc waste and scrap'],
+                            ['Zinc Sulfate Monohydrate / Heptahydrate','2833.29','Sulfates of other metals (zinc sulfate fertilizer/industrial grade)'],
                         ];
                         foreach($hsCodes as $hs): ?>
-                        <tr style="border-bottom:1px solid var(--border-light);">
-                            <td style="padding:12px 20px;font-size:.85rem;color:var(--text);"><?php echo $hs[0]; ?></td>
-                            <td style="padding:12px 20px;font-family:var(--font-label);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:var(--gold-dark);"><?php echo $hs[1]; ?></td>
-                            <td style="padding:12px 20px;font-size:.78rem;color:var(--text-sm);line-height:1.5;"><?php echo $hs[2]; ?></td>
+                        <tr style="border-bottom:1px solid var(--border-light);transition:background .15s;" onmouseover="this.style.background='var(--cream)'" onmouseout="this.style.background=''">
+                            <td style="padding:13px 20px;font-size:.88rem;color:var(--text);font-weight:600;"><?php echo $hs[0]; ?></td>
+                            <td style="padding:13px 20px;font-family:var(--font-label);font-size:.84rem;font-weight:700;letter-spacing:.08em;color:var(--zinc);"><?php echo $hs[1]; ?></td>
+                            <td style="padding:13px 20px;font-size:.8rem;color:var(--text-sm);line-height:1.5;"><?php echo $hs[2]; ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- SECTION 8: FREQUENTLY ASKED QUESTIONS (GEO & BUYER FAQ) -->
+<section style="padding:90px 0;background:var(--white);border-top:1px solid var(--border);">
+    <div class="container">
+        <div class="text-center reveal" style="margin-bottom:30px;">
+            <div class="eyebrow" style="justify-content:center;"><span class="label">Trade Intelligence &amp; Knowledge Base</span></div>
+            <h2 style="max-width:700px;margin:0 auto;font-size:clamp(1.8rem,3vw,2.6rem);">Frequently Asked Questions (FAQ)</h2>
+            <p style="color:var(--text-mid);max-width:600px;margin:12px auto 0;font-size:.95rem;">Key answers on minimum orders, payment structures, inspection protocols, and export logistics.</p>
+        </div>
+
+        <div class="trade-faq-grid reveal">
+            <div class="trade-faq-card">
+                <div class="trade-faq-q">
+                    <span class="trade-faq-q-num">Q1</span>
+                    <span>What is the Minimum Order Quantity (MOQ) for international zinc shipments?</span>
+                </div>
+                <div class="trade-faq-a">
+                    The standard commercial minimum order quantity for sea-freight container export is one 20ft Full Container Load (FCL). For refined zinc ingots (SHG and secondary), one 20ft container holds 20 to 25 Metric Tons (MT) on palletized bundles. For zinc oxide powder, one 20ft FCL contains approximately 18 to 20 MT packed in 25 kg bags. Trial orders or specialized alloy test batches can be arranged under Less than Container Load (LCL) freight on a case-by-case basis.
+                </div>
+            </div>
+
+            <div class="trade-faq-card">
+                <div class="trade-faq-q">
+                    <span class="trade-faq-q-num">Q2</span>
+                    <span>Which international payment terms does BhattiZinc accept?</span>
+                </div>
+                <div class="trade-faq-a">
+                    We accept 100% Irrevocable Letters of Credit (L/C at sight) confirmed by top-tier international financial institutions, Telegraphic Transfer (T/T with a 30% advance deposit upon contract signing and the 70% balance payable against copy Bill of Lading and inspection certificate), and Document Against Payment (D/P). Established corporate buyers with recurrent monthly orders may apply for revolving credit terms following trade credit verification.
+                </div>
+            </div>
+
+            <div class="trade-faq-card">
+                <div class="trade-faq-q">
+                    <span class="trade-faq-q-num">Q3</span>
+                    <span>How does BhattiZinc verify chemical composition and purity before loading?</span>
+                </div>
+                <div class="trade-faq-a">
+                    Every production batch is sampled and analyzed using calibrated optical emission spectrometry (OES) and atomic absorption spectroscopy (AAS) in our ISO 9001:2015 laboratory to generate an official Certificate of Analysis (CoA). Additionally, international buyers may nominate independent surveying bodies &mdash; such as SGS Pakistan or Alfred H Knight &mdash; to conduct pre-shipment sampling, spectrometric analysis, gross weight checks, and container stuffing surveillance.
+                </div>
+            </div>
+
+            <div class="trade-faq-card">
+                <div class="trade-faq-q">
+                    <span class="trade-faq-q-num">Q4</span>
+                    <span>Are BhattiZinc products compliant with European REACH regulations?</span>
+                </div>
+                <div class="trade-faq-a">
+                    Yes. All BhattiZinc export materials comply with European Union REACH (Registration, Evaluation, Authorisation and Restriction of Chemicals) standards for non-ferrous metals and metal oxides. We furnish complete GHS-formatted Safety Data Sheets (SDS), Certificates of Origin approved by the Trade Development Authority of Pakistan (TDAP), and customs declarations required across all EU and EEA ports.
+                </div>
+            </div>
+
+            <div class="trade-faq-card">
+                <div class="trade-faq-q">
+                    <span class="trade-faq-q-num">Q5</span>
+                    <span>What are the transit times from Karachi ports to Europe, the Gulf, and Southeast Asia?</span>
+                </div>
+                <div class="trade-faq-a">
+                    Sea-freight departures from Karachi Port Trust (KPT) and Port Muhammad Bin Qasim (PQA) offer direct rotations: 5 to 7 days to the Middle East (Jebel Ali, Dammam, Sohar), 10 to 16 days to Southeast Asia (Singapore, Port Klang, Ho Chi Minh City), and 20 to 28 days to major European ports (Rotterdam, Antwerp, Hamburg, Piraeus). Container tracking details and sailing schedules are provided promptly upon vessel departure.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 9: HIGH-CONVERTING CTA BANNER -->
+        <div class="trade-cta-banner reveal">
+            <h2>Ready to Partner with Pakistan's Trusted Zinc Exporter?</h2>
+            <p>
+                Connect directly with our international trade desk for real-time LME-linked pricing, customized FOB/CIF freight quotations, and sample requests.
+            </p>
+            <div class="trade-cta-actions">
+                <a href="contact.php?type=export" class="btn btn--luxury-dark" style="background:#FFFFFF;color:#14501E;font-weight:700;">Request Export Quotation</a>
+                <a href="tel:+923094530100" class="btn btn--luxury-outline" style="border-color:#FFFFFF;color:#FFFFFF;">Direct Phone: +92 309 4530100</a>
+                <a href="products.php" class="btn btn--luxury-outline" style="border-color:rgba(255,255,255,0.4);color:#FFFFFF;">Browse Products Range &rarr;</a>
+            </div>
+        </div>
+
     </div>
 </section>
 

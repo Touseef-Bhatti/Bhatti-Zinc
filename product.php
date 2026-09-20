@@ -18,7 +18,7 @@ $heroSeo = $product['hero_seo'] ?? [
     'highlights' => $product['applications'],
 ];
 $seoBlog = $product['seo_blog'] ?? null;
-$labReportImage = trim($product['lab_report_image'] ?? '');
+$labReportFile = trim($product['lab_report_image'] ?? $product['lab_report_pdf'] ?? '');
 
 // Get related products: prefer same category, then fill with random others — limit to 3
 $relatedSame = array_values(array_filter($products, function($p) use ($product) {
@@ -160,11 +160,9 @@ include 'includes/header.php';
                     </div>
                 </div>
 
-                <div class="product-actions">
+                    <div class="product-actions">
                     <a href="contact.php?product=<?php echo urlencode($product['name']); ?>" class="btn btn--luxury-solid">Request a Quote</a>
-                    <?php if ($labReportImage !== ''): ?>
                     <button type="button" class="btn btn--product-report" data-lab-report-open>View Lab Report</button>
-                    <?php endif; ?>
                     <a href="contact.php?product=<?php echo urlencode($product['name']); ?>&type=sample" class="btn btn--product-sample">Request Sample</a>
                     <a href="trade.php" class="btn btn--product-trade">Trade &amp; Shipping</a>
                 </div>
@@ -356,6 +354,54 @@ include 'includes/header.php';
 </section>
 <?php endif; ?>
 
+<?php
+$productInsightImages = [
+    'zinc-oxide-99-99' => 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1400&q=82',
+    'zinc-ash-65-70' => 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1400&q=82',
+    'zinc-skimming-30-40' => 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1400&q=82',
+    'apcd-zinc-ash-50-60' => 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=82',
+    'zinc-die-cast-scrap' => 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1400&q=82',
+];
+$productInsightImage = $productInsightImages[$product['slug']] ?? 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1400&q=82';
+$productName = $product['name'];
+$productCategory = strtolower($product['category']);
+$marketPosition = 'supplier and exporter in Pakistan';
+if (strpos($productCategory, 'imported') !== false) {
+    $marketPosition = 'importer, supplier and exporter in Pakistan';
+} elseif (strpos($productCategory, 'recycling') !== false || strpos($productCategory, 'scrap') !== false) {
+    $marketPosition = 'recycler, recovery supplier and exporter in Pakistan';
+} elseif (strpos($productCategory, 'chemical') !== false || strpos($productCategory, 'alloy') !== false) {
+    $marketPosition = 'manufacturer, supplier and exporter in Pakistan';
+}
+$reportAnswer = $labReportFile !== ''
+    ? 'A product lab report is available on this page for review, and the full document can be opened from the report viewer.'
+    : 'A product-specific lab report can be requested from the BhattiZinc team with your quotation or sample enquiry.';
+?>
+
+<!-- PRODUCT SEO & GEO PROFILE -->
+<section class="product-geo-section" aria-labelledby="product-market-profile">
+    <div class="container">
+        <div class="product-geo-grid">
+            <div class="product-geo-copy reveal">
+                <div class="eyebrow"><span class="label">Pakistan product profile</span></div>
+                <h2 id="product-market-profile"><?php echo htmlspecialchars($productName); ?> in Pakistan: <?php echo htmlspecialchars(ucwords($marketPosition)); ?></h2>
+                <p><strong><?php echo htmlspecialchars($productName); ?></strong> is listed by BhattiZinc for industrial buyers comparing product quality, availability and documentation in Pakistan. We provide practical support for procurement teams looking for a dependable <?php echo htmlspecialchars($product['category']); ?> <?php echo htmlspecialchars(strtolower($product['short_name'])); ?> source, including specifications, packaging, quantity planning and export coordination.</p>
+                <p>For customers in Pakistan and international markets, BhattiZinc connects product supply with manufacturing, importing, exporting and recycling expertise across the zinc value chain. Availability, grade and commercial terms depend on the requested <?php echo htmlspecialchars(strtolower($product['form'])); ?>, <?php echo htmlspecialchars(strtolower($product['purity'])); ?> requirement, destination and batch documentation.</p>
+                <div class="product-geo-facts">
+                    <span><strong>Product:</strong> <?php echo htmlspecialchars($productName); ?></span>
+                    <span><strong>Grade:</strong> <?php echo htmlspecialchars($product['grade']); ?></span>
+                    <span><strong>Form:</strong> <?php echo htmlspecialchars($product['form']); ?></span>
+                    <span><strong>Market:</strong> Pakistan and export destinations</span>
+                </div>
+            </div>
+            <figure class="product-geo-media reveal reveal-delay-1">
+                <img src="<?php echo htmlspecialchars($productInsightImage); ?>" alt="<?php echo htmlspecialchars($productName); ?> industrial supply and handling in Pakistan" loading="lazy" width="1400" height="900">
+                <figcaption><?php echo htmlspecialchars($productName); ?> supply, handling and quality context</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
 <!-- PRODUCT INSIGHT -->
 <?php if (!empty($seoBlog)): ?>
 <section class="product-blog-section">
@@ -392,23 +438,66 @@ include 'includes/header.php';
 </section>
 <?php endif; ?>
 
+<!-- PRODUCT FAQ -->
+<section class="faq-section product-faq-section" id="product-faq">
+    <div class="container">
+        <div class="faq-intro reveal">
+            <div class="eyebrow"><span class="label">Product questions</span></div>
+            <h2><?php echo htmlspecialchars($productName); ?> supplier and buyer FAQ</h2>
+            <p>Clear answers for buyers researching <?php echo htmlspecialchars(strtolower($productName)); ?> in Pakistan, including applications, supply, export support, quality documents and ordering.</p>
+        </div>
+        <div class="faq-list">
+            <details class="faq-item reveal" open>
+                <summary>What is <?php echo htmlspecialchars($productName); ?> used for?</summary>
+                <div class="faq-answer"><p><?php echo htmlspecialchars($product['description']); ?> Common applications include <?php echo htmlspecialchars(implode(', ', array_slice($product['applications'], 0, 4))); ?>.</p></div>
+            </details>
+            <details class="faq-item reveal reveal-delay-1">
+                <summary>Can I buy <?php echo htmlspecialchars($productName); ?> from a supplier in Pakistan?</summary>
+                <div class="faq-answer"><p>Yes. BhattiZinc supports industrial buyers seeking <?php echo htmlspecialchars(strtolower($productName)); ?> supply in Pakistan. Share your required quantity, specification, packing and delivery location so the team can confirm current availability and commercial terms.</p></div>
+            </details>
+            <details class="faq-item reveal reveal-delay-2">
+                <summary>Does BhattiZinc manufacture, import, recycle or export <?php echo htmlspecialchars($productName); ?>?</summary>
+                <div class="faq-answer"><p>BhattiZinc operates across the zinc value chain as a <?php echo htmlspecialchars($marketPosition); ?> Product handling depends on the material category and requested batch, with support for technical specifications, commercial documentation and shipment coordination.</p></div>
+            </details>
+            <details class="faq-item reveal">
+                <summary>Can I request a lab report or Certificate of Analysis?</summary>
+                <div class="faq-answer"><p><?php echo htmlspecialchars($reportAnswer); ?> Buyers can also request product specifications and shipment documentation before confirming an order.</p></div>
+            </details>
+            <details class="faq-item reveal reveal-delay-1">
+                <summary>How do I request a quote or sample for <?php echo htmlspecialchars($productName); ?>?</summary>
+                <div class="faq-answer"><p>Use the Request a Quote or Request Sample button on this page and include your quantity, destination, application, grade, packing preference and target delivery schedule. The export team can then advise on availability, pricing and next steps.</p></div>
+            </details>
+        </div>
+    </div>
+</section>
+
 <!-- LAB REPORT MODAL -->
-<?php if ($labReportImage !== ''): ?>
 <div class="lab-report-modal" id="lab-report-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lab-report-title">
     <button type="button" class="lab-report-modal-backdrop" data-lab-report-close aria-label="Close lab report"></button>
     <div class="lab-report-modal-panel">
         <div class="lab-report-modal-head">
             <div>
                 <div class="label">Quality Document</div>
-                <h3 id="lab-report-title">Lab Report - <?php echo htmlspecialchars($product['name']); ?></h3>
+                <h3 id="lab-report-title">Lab Report &mdash; <?php echo htmlspecialchars($product['name']); ?></h3>
             </div>
+            <?php if ($labReportFile !== ''): ?>
+            <a href="<?php echo htmlspecialchars($labReportFile); ?>" class="lab-report-open-link" target="_blank" rel="noopener" aria-label="Open the full lab report for <?php echo htmlspecialchars($product['name']); ?>">Open full report</a>
+            <?php endif; ?>
             <button type="button" class="lab-report-modal-close" data-lab-report-close aria-label="Close lab report">&times;</button>
         </div>
-        <div class="lab-report-image-shell">
-            <img src="<?php echo htmlspecialchars($labReportImage); ?>" alt="Lab report for <?php echo htmlspecialchars($product['name']); ?>" loading="lazy">
+        <?php if ($labReportFile !== ''): ?>
+        <div class="lab-report-image-shell lab-report-frame-shell">
+            <iframe src="<?php echo htmlspecialchars($labReportFile); ?>#toolbar=1&amp;navpanes=0&amp;scrollbar=1" title="Lab Report for <?php echo htmlspecialchars($product['name']); ?>" class="lab-report-iframe" loading="lazy"></iframe>
         </div>
+        <?php else: ?>
+        <div class="lab-report-request-state">
+            <div class="label">Quality document</div>
+            <h4>Lab report available on request</h4>
+            <p>The current report for <?php echo htmlspecialchars($product['name']); ?> is available from our quality team. Contact BhattiZinc with your required batch, quantity and destination.</p>
+            <a href="contact.php?product=<?php echo urlencode($product['name']); ?>&type=lab-report" class="btn btn--luxury-solid">Request this report</a>
+        </div>
+        <?php endif; ?>
     </div>
 </div>
-<?php endif; ?>
 
 <?php include 'includes/footer.php'; ?>

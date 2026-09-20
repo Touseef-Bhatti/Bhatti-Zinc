@@ -120,16 +120,39 @@
         const targets = document.querySelectorAll('.reveal');
         if (!targets.length) return;
 
+        const reveal = function(el) {
+            el.classList.add('revealed');
+        };
+
+        // Never leave content hidden when motion is disabled or IntersectionObserver
+        // is unavailable (older browsers, embedded previews, or blocked observers).
+        const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reducedMotion || !('IntersectionObserver' in window)) {
+            targets.forEach(reveal);
+            return;
+        }
+
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
+                    reveal(entry.target);
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.01, rootMargin: '0px 0px -8% 0px' });
 
         targets.forEach(function(el) { observer.observe(el); });
+
+        // Catch elements already in view when the page finishes laying out.
+        requestAnimationFrame(function() {
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            targets.forEach(function(el) {
+                if (el.getBoundingClientRect().top < viewportHeight * 0.92) {
+                    reveal(el);
+                    observer.unobserve(el);
+                }
+            });
+        });
     }
 
     initReveal();
