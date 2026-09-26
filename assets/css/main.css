@@ -6946,3 +6946,253 @@ select.form-control {
         padding-right: 18px;
     }
 }
+
+/* Shared FAQ presentation: one visual language across company, trade,
+   contact, careers and product pages. */
+.trade-faq-section {
+    padding-top: 96px !important;
+    padding-bottom: 120px !important;
+    background: var(--white) !important;
+    border-top: 1px solid var(--border);
+}
+
+.trade-faq-list {
+    margin-top: 0;
+}
+
+.trade-faq-list .trade-faq-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0;
+    transition: border-color var(--trans-fast), box-shadow var(--trans-fast), background var(--trans-fast);
+}
+
+.trade-faq-list .trade-faq-card:hover {
+    background: var(--white);
+    border-color: rgba(46, 139, 61, 0.35);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+.trade-faq-list .trade-faq-q {
+    padding: 22px 56px 22px 24px;
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.trade-faq-list .trade-faq-q::after {
+    top: 18px;
+    right: 24px;
+}
+
+.trade-faq-list .trade-faq-a {
+    padding: 0 56px 24px 24px;
+    color: var(--text-mid);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* The procurement FAQ lives on a dark product-information panel; retain its
+   placement while matching the shared card proportions and typography. */
+.product-blog-faq-item {
+    border-color: rgba(255, 255, 255, 0.16);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.product-blog-faq-item h3 {
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .trade-faq-list .trade-faq-q,
+    .trade-faq-list .trade-faq-a {
+        padding-left: 20px;
+        padding-right: 48px;
+    }
+}
+
+/* Match the footer brand lockup to the always-on header logo treatment. */
+.footer-logo {
+    width: max-content;
+    padding: 5px 14px 5px 6px;
+    border: 1px solid rgba(20, 80, 30, 0.32);
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--zinc) 0%, var(--zinc-dark) 52%, var(--zinc-deep) 100%);
+    box-shadow: 0 8px 24px rgba(20, 80, 30, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.footer-logo-badge {
+    background: #FFFFFF;
+    border-color: rgba(20, 80, 30, 0.28);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.24), 0 0 0 1.5px rgba(255, 255, 255, 0.95);
+    transform: scale(1.03);
+}
+
+.footer-logo .logo-name-main {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+.footer-logo .logo-name-accent {
+    color: #A7F3D0 !important;
+    text-shadow: 0 0 18px rgba(167, 243, 208, 0.7), 0 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+.footer-logo .logo-tagline {
+    color: #FFFFFF !important;
+    opacity: 1;
+}
+
+/* Contact delivery choice popup */
+body.contact-popup-open {
+    overflow: hidden;
+}
+
+.contact-popup-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(8, 24, 14, .72);
+    backdrop-filter: blur(8px);
+}
+
+.contact-popup {
+    position: relative;
+    width: min(100%, 520px);
+    padding: clamp(28px, 5vw, 48px);
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: 22px;
+    background: var(--white, #fff);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .3);
+}
+
+.contact-popup-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    color: var(--text, #1c241f);
+    background: var(--cream, #f4f1e9);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.contact-popup-eyebrow {
+    margin-bottom: 10px;
+    color: var(--gold-dark, #8a6d17);
+    font-family: var(--font-label, sans-serif);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.contact-popup h2 {
+    max-width: 380px;
+    margin: 0 40px 12px 0;
+    color: var(--black, #111);
+    font-family: var(--font-display, Georgia, serif);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.contact-popup-intro,
+.contact-popup-note {
+    color: var(--text-mid, #667067);
+    font-size: .9rem;
+    line-height: 1.65;
+}
+
+.contact-popup-actions {
+    display: grid;
+    gap: 12px;
+    margin: 26px 0 18px;
+}
+
+.contact-popup-action {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 68px;
+    padding: 12px 16px;
+    border: 1px solid var(--border, #dde3dd);
+    border-radius: 14px;
+    color: var(--black, #111);
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.contact-popup-action:hover,
+.contact-popup-action:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--gold-light, #c9ad51);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+}
+
+.contact-popup-action--whatsapp .contact-popup-action-icon {
+    background: #25D366;
+}
+
+.contact-popup-action--email .contact-popup-action-icon {
+    background: var(--zinc, #14501e);
+}
+
+.contact-popup-action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: var(--font-label, sans-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.contact-popup-action strong,
+.contact-popup-action small {
+    display: block;
+}
+
+.contact-popup-action strong {
+    margin-bottom: 3px;
+    font-size: .95rem;
+}
+
+.contact-popup-action small {
+    color: var(--text-mid, #667067);
+    font-size: .78rem;
+}
+
+.contact-popup-note {
+    margin: 0;
+    font-size: .78rem;
+}
+
+@media (max-width: 480px) {
+    .contact-popup-backdrop {
+        align-items: flex-end;
+        padding: 12px;
+    }
+
+    .contact-popup {
+        padding: 30px 22px 24px;
+        border-radius: 20px;
+    }
+}

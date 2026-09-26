@@ -6,7 +6,7 @@
                 <div class="footer-col footer-col--brand">
                     <a href="index" class="footer-logo" aria-label="BhattiZinc — Home">
                         <span class="footer-logo-badge">
-                            <img src="<?php echo htmlspecialchars($assetBase); ?>images/logo.png" alt="BhattiZinc Logo" class="footer-logo-img" width="42" height="42">
+                            <img src="<?php echo htmlspecialchars($assetBase); ?>images/logo.svg" alt="BhattiZinc Logo" class="footer-logo-img" width="42" height="42">
                         </span>
                         <div class="footer-logo-text">
                             <span class="logo-name"><span class="logo-name-dark">Bhatti</span><span class="logo-name-accent-dark">Zinc</span></span>
@@ -86,7 +86,7 @@
                 <nav class="footer-legal">
                     <a href="privacy-policy">Privacy Policy</a>
                     <a href="terms-of-sale">Terms of Sale</a>
-                    <a href="#">Sitemap</a>
+                    <a href="sitemap.xml">Sitemap</a>
                 </nav>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Products';
+$page_title = 'Zinc Products | SHG Ingots, Zinc Oxide & Recycled Zinc';
 require_once 'includes/products-data.php';
 $heroProducts = getHeroProducts($products);
 include 'includes/header.php';

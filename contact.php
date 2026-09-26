@@ -1,5 +1,24 @@
 <?php
-$page_title = 'Contact Us';
+$page_title = 'Contact BhattiZinc | Zinc Quotes, Samples & Export Terms';
+$meta_description = 'Request zinc prices, samples, specifications or export terms from BhattiZinc, a Pakistan-based industrial zinc supplier and exporter.';
+$meta_keywords = 'zinc quote Pakistan, zinc supplier contact, SHG zinc price, zinc sample request, zinc export enquiry';
+$page_schema = [
+    [
+        '@type' => 'ContactPage',
+        '@id' => 'https://bhattizinc.com/contact#contactpage',
+        'url' => 'https://bhattizinc.com/contact',
+        'name' => 'Contact BhattiZinc for Zinc Quotes and Export Enquiries',
+        'mainEntity' => ['@id' => 'https://bhattizinc.com/#organization']
+    ],
+    [
+        '@type' => 'BreadcrumbList',
+        '@id' => 'https://bhattizinc.com/contact#breadcrumb',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => 'https://bhattizinc.com/'],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Contact', 'item' => 'https://bhattizinc.com/contact']
+        ]
+    ]
+];
 
 // Handle form submission
 $success = false;
@@ -49,9 +68,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'X-Mailer: PHP/' . phpversion(),
         ];
 
-        if (mail($mailTo, $safeSubject, $mailBody, implode("\r\n", $headers))) {
+        // XAMPP commonly has SMTP set to localhost without a mail service. Avoid
+        // calling mail() in that environment; the client-side popup provides the
+        // WhatsApp and email delivery choices instead.
+        $smtpHost = strtolower(trim((string) ini_get('SMTP')));
+        $smtpPort = (int) ini_get('smtp_port');
+        $localSmtpUnavailable = $smtpHost === '' || in_array($smtpHost, ['localhost', '127.0.0.1', '::1'], true) || $smtpPort <= 0;
+
+        if (!$localSmtpUnavailable && @mail($mailTo, $safeSubject, $mailBody, implode("\r\n", $headers))) {
             $success = true;
             $_POST = [];
+        } elseif ($localSmtpUnavailable) {
+            $errors[] = 'Server email delivery is not configured in this environment. Please use the WhatsApp or email option in the enquiry popup.';
         } else {
             $errors[] = 'Your enquiry could not be sent right now. Please email us directly at info@bhattizinc.com.';
         }
@@ -71,6 +99,7 @@ include 'includes/header.php';
 
             <!-- Info -->
             <div class="reveal">
+                <h1 style="font-family:var(--font-display);font-size:clamp(2.2rem,4vw,4rem);font-weight:400;line-height:1.05;margin:0 0 18px;color:var(--black);">Contact BhattiZinc for Zinc Supply &amp; Export Enquiries</h1>
                 <h2 class="label">Get in touch</h2>
                 <p class="contact-info-sub">Whether you are a first-time buyer or a long-standing partner, use the form to reach us. We also welcome direct calls and emails to the contacts below.</p>
 
@@ -241,13 +270,14 @@ include 'includes/header.php';
 
 
 <!-- FAQ QUICK -->
-<section style="padding:80px 0;background:var(--cream);border-top:1px solid var(--border);">
+<section class="faq-section contact-faq-section" id="contact-faq">
     <div class="container">
-        <div class="reveal" style="margin-bottom:48px;">
+        <div class="faq-intro reveal">
             <div class="eyebrow"><span class="label">Common Questions</span></div>
-            <h3 style="font-size:2rem;font-weight:400;">Frequently Asked</h3>
+            <h2>Frequently Asked Questions for Zinc Buyers</h2>
+            <p>Direct answers about minimum orders, shipping, payment terms, samples, compliance and custom zinc alloy supply from BhattiZinc.</p>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="faq-list contact-faq-list">
             <?php
             $faqs = [
                 ['What is your minimum order quantity?','MOQ varies by product. For SHG Zinc ingots, the minimum is typically 1 MT (one pallet). For chemical products like Zinc Oxide, minimum orders start from 1,000 kg. Contact us for specific MOQs per product.'],
@@ -258,10 +288,10 @@ include 'includes/header.php';
                 ['Can you supply custom alloy grades?','Yes. We offer custom zinc alloy formulations based on customer specifications. Minimum quantities apply for custom alloy production. Contact our technical team for a feasibility review.'],
             ];
             foreach($faqs as $i=>$faq): ?>
-            <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;transition:border-color .25s,box-shadow .25s;" class="reveal reveal-delay-<?php echo min($i%2+1,2); ?>" onmouseover="this.style.borderColor='var(--gold-light)';this.style.boxShadow='var(--shadow-sm)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
-                <div style="font-family:var(--font-display);font-size:1rem;font-weight:500;color:var(--black);margin-bottom:10px;"><?php echo $faq[0]; ?></div>
-                <p style="font-size:.83rem;color:var(--text-sm);line-height:1.75;"><?php echo $faq[1]; ?></p>
-            </div>
+            <details class="faq-item reveal reveal-delay-<?php echo min($i%2+1,2); ?>" <?php echo $i === 0 ? 'open' : ''; ?>>
+                <summary><?php echo htmlspecialchars($faq[0]); ?></summary>
+                <div class="faq-answer"><p><?php echo htmlspecialchars($faq[1]); ?></p></div>
+            </details>
             <?php endforeach; ?>
         </div>
     </div>

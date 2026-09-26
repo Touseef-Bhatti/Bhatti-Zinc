@@ -550,15 +550,15 @@ include 'includes/header.php';
 </section>
 
 <!-- SECTION 8: FREQUENTLY ASKED QUESTIONS (GEO & BUYER FAQ) -->
-<section style="padding:90px 0;background:var(--white);border-top:1px solid var(--border);">
+<section class="faq-section trade-faq-section" id="trade-faq">
     <div class="container">
-        <div class="text-center reveal" style="margin-bottom:30px;">
-            <div class="eyebrow" style="justify-content:center;"><span class="label">Trade Intelligence &amp; Knowledge Base</span></div>
-            <h2 style="max-width:700px;margin:0 auto;font-size:clamp(1.8rem,3vw,2.6rem);">Frequently Asked Questions (FAQ)</h2>
-            <p style="color:var(--text-mid);max-width:600px;margin:12px auto 0;font-size:.95rem;">Key answers on minimum orders, payment structures, inspection protocols, and export logistics.</p>
+        <div class="faq-intro reveal">
+            <div class="eyebrow"><span class="label">Trade Intelligence &amp; Knowledge Base</span></div>
+            <h2>Frequently Asked Questions for Zinc Export Buyers</h2>
+            <p>Key answers on minimum orders, payment structures, inspection protocols and export logistics from Pakistan.</p>
         </div>
 
-        <div class="trade-faq-grid reveal">
+        <div class="faq-list trade-faq-list reveal">
             <div class="trade-faq-card">
                 <div class="trade-faq-q">
                     <span class="trade-faq-q-num">Q1</span>

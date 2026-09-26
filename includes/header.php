@@ -5,6 +5,92 @@ if (!isset($assetBase)) {
     $basePath = trim(dirname($scriptName), '/');
     $assetBase = ($basePath === '' || $basePath === '.') ? '/assets/' : '/' . $basePath . '/assets/';
 }
+$siteUrl = 'https://bhattizinc.com';
+$pageSeoDefaults = [
+    'index' => [
+        'description' => 'BhattiZinc manufactures, recycles and exports SHG zinc, zinc oxide, zinc alloys and recycled zinc products from Pakistan to industrial buyers worldwide.',
+        'keywords' => 'zinc manufacturer Pakistan, zinc exporter, SHG zinc, zinc oxide, zinc alloys, zinc recycling'
+    ],
+    'about' => [
+        'description' => 'Learn how BhattiZinc manufactures, recycles and exports zinc products from Gujranwala, Pakistan with documented quality and dependable industrial supply.',
+        'keywords' => 'about BhattiZinc, zinc manufacturer Gujranwala, zinc supplier Pakistan, zinc recycling company'
+    ],
+    'products' => [
+        'description' => 'Compare BhattiZinc zinc products: SHG ingots, secondary zinc, alloys, zinc oxide, zinc ash, dross and die-cast scrap for industry.',
+        'keywords' => 'zinc products Pakistan, SHG zinc ingots, zinc oxide supplier, zinc alloy supplier, zinc ash exporter'
+    ],
+    'contact' => [
+        'description' => 'Request zinc prices, samples, specifications or export terms from BhattiZinc, a Pakistan-based industrial zinc supplier and exporter.',
+        'keywords' => 'contact zinc supplier, zinc quotation Pakistan, zinc export inquiry, BhattiZinc contact'
+    ],
+    'quality' => [
+        'description' => 'See how BhattiZinc recycles zinc, processes zinc ash and manufactures zinc oxide with documented quality control in Pakistan.',
+        'keywords' => 'zinc quality control, zinc ash recycling, zinc oxide manufacturing Pakistan, zinc recovery process'
+    ]
+];
+if (isset($pageSeoDefaults[$current_page])) {
+    $meta_description = $meta_description ?? $pageSeoDefaults[$current_page]['description'];
+    $meta_keywords = $meta_keywords ?? $pageSeoDefaults[$current_page]['keywords'];
+}
+$canonicalUrl = $canonical_url ?? ($current_page === 'index'
+    ? $siteUrl . '/'
+    : ($current_page === 'product' && !empty($_GET['p'])
+        ? $siteUrl . '/' . rawurlencode(trim($_GET['p']))
+        : $siteUrl . '/' . $current_page));
+$resolvedTitle = $page_title ?? 'BhattiZinc — Global Zinc Solutions';
+$resolvedDescription = $meta_description ?? 'BhattiZinc manufactures, recycles and exports zinc products from Pakistan for industrial buyers worldwide.';
+$schemaGraph = [
+    [
+        '@type' => 'Organization',
+        '@id' => $siteUrl . '/#organization',
+        'name' => 'BhattiZinc Industries (Pvt) Ltd.',
+        'alternateName' => 'BhattiZinc',
+        'url' => $siteUrl . '/',
+        'logo' => $siteUrl . '/assets/images/logo.png',
+        'description' => 'Pakistan-based manufacturer, recycler, importer and exporter of zinc products for industrial buyers.',
+        'telephone' => '+92-309-4530100',
+        'email' => 'info@bhattizinc.com',
+        'contactPoint' => [
+            '@type' => 'ContactPoint',
+            'telephone' => '+92-309-4530100',
+            'email' => 'info@bhattizinc.com',
+            'contactType' => 'sales and export enquiries',
+            'areaServed' => 'Worldwide',
+            'availableLanguage' => ['English', 'Urdu']
+        ],
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Industrial Estate, Main G.T Road',
+            'addressLocality' => 'Gujranwala',
+            'addressRegion' => 'Punjab',
+            'postalCode' => '54000',
+            'addressCountry' => 'PK'
+        ],
+        'areaServed' => 'Worldwide',
+        'knowsAbout' => ['Zinc ingots', 'Zinc oxide', 'Zinc alloys', 'Zinc recycling', 'Zinc export logistics']
+    ],
+    [
+        '@type' => 'WebSite',
+        '@id' => $siteUrl . '/#website',
+        'url' => $siteUrl . '/',
+        'name' => 'BhattiZinc',
+        'publisher' => ['@id' => $siteUrl . '/#organization'],
+        'inLanguage' => 'en'
+    ],
+    [
+        '@type' => 'WebPage',
+        '@id' => $canonicalUrl . '#webpage',
+        'url' => $canonicalUrl,
+        'name' => $resolvedTitle,
+        'description' => $resolvedDescription,
+        'isPartOf' => ['@id' => $siteUrl . '/#website'],
+        'about' => ['@id' => $siteUrl . '/#organization'],
+        'inLanguage' => 'en'
+    ]
+];
+if (!empty($page_schema) && is_array($page_schema)) {
+    $schemaGraph = array_merge($schemaGraph, $page_schema);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,22 +105,32 @@ if (!isset($assetBase)) {
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php if (isset($meta_description)): ?>
-    <meta name="description" content="<?php echo htmlspecialchars($meta_description); ?>">
-    <?php endif; ?>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="<?php echo htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="description" content="<?php echo htmlspecialchars($resolvedDescription, ENT_QUOTES, 'UTF-8'); ?>">
     <?php if (isset($meta_keywords)): ?>
     <meta name="keywords" content="<?php echo htmlspecialchars($meta_keywords); ?>">
     <?php endif; ?>
-    <?php if (isset($page_title)): ?>
-    <meta property="og:title" content="<?php echo htmlspecialchars($page_title . ' - BhattiZinc'); ?>">
-    <?php endif; ?>
-    <?php if (!isset($meta_description)): ?>
+    <meta property="og:title" content="<?php echo htmlspecialchars($resolvedTitle, ENT_QUOTES, 'UTF-8'); ?>">
+    <?php if (false): ?>
     <meta name="description" content="BhattiZinc — Premium zinc products manufacturer and global exporter. SHG Zinc, Zinc Oxide, Zinc Alloys, and specialty zinc chemicals.">
     <meta name="keywords" content="zinc ingots, zinc oxide, SHG zinc, zinc alloys, zinc exporter, zinc manufacturer Pakistan">
     <meta property="og:title" content="BhattiZinc — Global Zinc Solutions">
     <?php endif; ?>
-    <meta property="og:description" content="<?php echo htmlspecialchars($og_description ?? $meta_description ?? 'Premium zinc products for global industry. LME-grade quality, international delivery.'); ?>">
-    <title><?php echo isset($page_title) ? $page_title . ' — BhattiZinc' : 'BhattiZinc — Global Zinc Solutions'; ?></title>
+    <meta property="og:description" content="<?php echo htmlspecialchars($og_description ?? $resolvedDescription, ENT_QUOTES, 'UTF-8'); ?>">
+    <title><?php echo htmlspecialchars($resolvedTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+    <meta property="og:url" content="<?php echo htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="<?php echo htmlspecialchars($siteUrl . '/assets/images/logo.png', ENT_QUOTES, 'UTF-8'); ?>">
+    <meta property="og:image:alt" content="BhattiZinc - Global Zinc Manufacturer and Exporter">
+    <meta property="og:site_name" content="BhattiZinc">
+    <meta property="og:locale" content="en_PK">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="<?php echo htmlspecialchars($resolvedTitle, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="twitter:description" content="<?php echo htmlspecialchars($resolvedDescription, ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="twitter:image" content="<?php echo htmlspecialchars($siteUrl . '/assets/images/logo.png', ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="twitter:image:alt" content="BhattiZinc - Global Zinc Manufacturer and Exporter">
+    <script type="application/ld+json"><?php echo json_encode(['@context' => 'https://schema.org', '@graph' => $schemaGraph], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?></script>
     <!-- Favicons & App Icons -->
     <link rel="icon" type="image/png" href="<?php echo htmlspecialchars($assetBase); ?>favicon/favicon-48x48.png" sizes="48x48">
     <link rel="icon" type="image/svg+xml" href="<?php echo htmlspecialchars($assetBase); ?>favicon/favicon.svg">
@@ -52,7 +148,12 @@ if (!isset($assetBase)) {
 <!-- Site Loader -->
 <div id="site-loader">
     <div class="loader-inner">
-        <div class="loader-logo">BhattiZinc</div>
+        <div class="loader-logo" aria-label="BhattiZinc">
+            <span class="loader-logo-badge">
+                <img class="loader-logo-img" src="<?php echo htmlspecialchars($assetBase); ?>images/logo.svg" alt="">
+            </span>
+            <span class="loader-logo-text">BhattiZinc</span>
+        </div>
         <div class="loader-bar"><span></span></div>
     </div>
 </div>
@@ -62,9 +163,13 @@ if (!isset($assetBase)) {
     <div class="header-inner">
 
         <a href="index" class="header-logo" aria-label="BhattiZinc — Global Zinc Solutions">
-            <span class="logo-mark">BZ</span>
+            <span class="header-logo-badge">
+                <img class="header-logo-img" src="<?php echo htmlspecialchars($assetBase); ?>images/logo.svg" alt="BhattiZinc logo">
+            </span>
             <span class="logo-text">
-                <span class="logo-name">BhattiZinc</span>
+                <span class="logo-name">
+                    <span class="logo-name-main">Bhatti</span><span class="logo-name-accent">Zinc</span>
+                </span>
                 <span class="logo-tagline">Global Zinc Solutions</span>
             </span>
         </a>
@@ -156,7 +261,15 @@ if (!isset($assetBase)) {
 <!-- Mobile Nav Overlay -->
 <div class="mobile-nav-overlay" id="mobile-overlay" role="dialog" aria-modal="true" aria-label="Site navigation">
     <div class="mobile-nav-inner">
-        <div class="mobile-nav-logo">BhattiZinc</div>
+        <div class="mobile-nav-logo">
+            <span class="mobile-logo-badge">
+                <img class="mobile-logo-img" src="<?php echo htmlspecialchars($assetBase); ?>images/logo.svg" alt="BhattiZinc logo">
+            </span>
+            <span class="mobile-logo-text">
+                <span class="mobile-logo-name">BhattiZinc</span>
+                <span class="mobile-logo-tagline">Global Zinc Solutions</span>
+            </span>
+        </div>
         <ul class="mobile-nav-list">
             <li><a href="index">Home</a></li>
             <li><a href="about">About</a></li>

@@ -9,7 +9,7 @@ if (!$product) {
     exit;
 }
 
-$page_title = $product['name'];
+$page_title = $product['name'] . ' Supplier in Pakistan | BhattiZinc';
 $meta_description = $product['meta_description'] ?? $product['description'];
 $meta_keywords = isset($product['seo_keywords']) ? implode(', ', $product['seo_keywords']) : 'zinc products, zinc supplier, zinc manufacturer Pakistan';
 $heroSeo = $product['hero_seo'] ?? [
@@ -19,6 +19,41 @@ $heroSeo = $product['hero_seo'] ?? [
 ];
 $seoBlog = $product['seo_blog'] ?? null;
 $labReportFile = trim($product['lab_report_image'] ?? $product['lab_report_pdf'] ?? '');
+
+// Server-rendered product and breadcrumb schema for search engines and AI retrieval.
+$schemaSiteUrl = 'https://bhattizinc.com';
+$productUrl = $schemaSiteUrl . '/' . rawurlencode($product['slug']);
+$productImageUrl = $schemaSiteUrl . '/' . str_replace(' ', '%20', ltrim($product['image'], '/'));
+$page_schema = [
+    [
+        '@type' => 'Product',
+        '@id' => $productUrl . '#product',
+        'name' => $product['name'],
+        'url' => $productUrl,
+        'description' => $product['description'],
+        'image' => [$productImageUrl],
+        'sku' => $product['slug'],
+        'category' => $product['category'],
+        'brand' => ['@type' => 'Brand', 'name' => 'BhattiZinc'],
+        'manufacturer' => ['@id' => $schemaSiteUrl . '/#organization'],
+        'material' => 'Zinc',
+        'additionalProperty' => [
+            ['@type' => 'PropertyValue', 'name' => 'Purity or grade', 'value' => $product['purity']],
+            ['@type' => 'PropertyValue', 'name' => 'Form', 'value' => $product['form']],
+            ['@type' => 'PropertyValue', 'name' => 'Standard', 'value' => $product['standard']],
+            ['@type' => 'PropertyValue', 'name' => 'Packaging', 'value' => $product['packaging']]
+        ]
+    ],
+    [
+        '@type' => 'BreadcrumbList',
+        '@id' => $productUrl . '#breadcrumb',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $schemaSiteUrl . '/'],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Products', 'item' => $schemaSiteUrl . '/products'],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => $product['name'], 'item' => $productUrl]
+        ]
+    ]
+];
 
 // Get related products: prefer same category, then fill with random others — limit to 3
 $relatedSame = array_values(array_filter($products, function($p) use ($product) {
@@ -137,7 +172,7 @@ include 'includes/header.php';
             <!-- Info Column -->
             <div class="product-detail-info reveal reveal-delay-1">
                 <div class="product-detail-cat"><?php echo htmlspecialchars($product['category']); ?></div>
-                <h1 class="product-detail-name"><?php echo htmlspecialchars($product['name']); ?></h1>
+                <h2 class="product-detail-name"><?php echo htmlspecialchars($product['name']); ?></h2>
                 <div class="product-detail-tagline"><?php echo htmlspecialchars($product['tagline']); ?></div>
 
 
@@ -356,6 +391,7 @@ include 'includes/header.php';
 
 <?php
 $productInsightImages = [
+    'secondary-zinc-ingots' => 'assets/images/products/secondry-zinc-ingot.png',
     'zinc-oxide-99-99' => 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1400&q=82',
     'zinc-ash-65-70' => 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1400&q=82',
     'zinc-skimming-30-40' => 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1400&q=82',

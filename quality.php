@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Recycling & Manufacturing';
+$page_title = 'Zinc Recycling & Manufacturing | BhattiZinc Pakistan';
 $meta_description = 'BhattiZinc recycling and manufacturing capabilities for zinc metal recovery, zinc ash processing, zinc oxide production, and documented quality control.';
 $meta_keywords = 'zinc recycling Pakistan, zinc ash recycling, zinc metal recycling, zinc oxide manufacturing, BhattiZinc manufacturing';
 include 'includes/header.php';

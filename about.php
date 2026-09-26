@@ -1,5 +1,5 @@
 <?php
-$page_title = 'About Us';
+$page_title = 'About BhattiZinc | Zinc Manufacturer in Pakistan';
 include 'includes/header.php';
 ?>
 
