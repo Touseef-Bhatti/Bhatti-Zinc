@@ -14,8 +14,8 @@
     --border-light: #E8E8E8;
 
     /* Text — deep blacks & grays */
-    --text-xs: #999999;
-    --text-sm: #777777;
+    --text-xs: #6D6D6D;
+    --text-sm: #6F6F6F;
     --text-mid: #555555;
     --text: #222222;
     --black: #0A0A0A;
@@ -4874,6 +4874,43 @@ select.form-control {
     gap: 16px;
 }
 
+.careers-cta-banner .career-cta-primary {
+    background: #FFFFFF;
+    color: #14501E;
+    border-color: #FFFFFF;
+    font-weight: 700;
+}
+
+.careers-cta-banner .career-cta-primary:hover {
+    background: #EAF5EC;
+    color: #14501E;
+    border-color: #FFFFFF;
+}
+
+.careers-cta-banner .career-cta-whatsapp {
+    background: #128C4A;
+    color: #FFFFFF;
+    border-color: #128C4A;
+}
+
+.careers-cta-banner .career-cta-whatsapp:hover {
+    background: #0F713C;
+    color: #FFFFFF;
+    border-color: #0F713C;
+}
+
+.careers-cta-banner .career-cta-about {
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.55);
+}
+
+.careers-cta-banner .career-cta-about:hover {
+    background: #FFFFFF;
+    color: #14501E;
+    border-color: #FFFFFF;
+}
+
 @media (max-width: 900px) {
     .trade-two-col,
     .trade-two-col--rev {
@@ -5489,7 +5526,7 @@ select.form-control {
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.50);
+    color: rgba(0, 0, 0, 0.55);
     flex-shrink: 0;
 }
 
@@ -5521,7 +5558,7 @@ select.form-control {
 
 .footer-copy {
     font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.50);
+    color: rgba(0, 0, 0, 0.55);
     width: 100%;
 }
 
@@ -5536,7 +5573,7 @@ select.form-control {
     font-size: 0.85rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.50);
+    color: rgba(0, 0, 0, 0.55);
     transition: color var(--trans-fast);
 }
 

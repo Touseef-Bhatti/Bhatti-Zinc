@@ -1,4 +1,4 @@
-DirectoryIndex index.php
+DirectoryIndex index.html
 
 AddType image/webp .webp
 AddType video/mp4 .mp4
@@ -11,23 +11,30 @@ AddType video/mp4 .mp4
     RewriteCond %{HTTP_HOST} ^127\.0\.0\.1$
     RewriteRule ^google1a3dd3610a73998a\.html$ - [F,L]
 
-    # Redirect old product URLs (product.php?p=slug) to new clean URLs (/slug)
-    RewriteCond %{THE_REQUEST} \s/product\.php\?p=([^\s&]+) [NC]
-    RewriteRule ^ /%1? [R=301,L]
+    # Keep the existing clean URLs while serving static HTML files.
+    # Redirect requests for the former PHP product route to the matching static page.
+    RewriteCond %{THE_REQUEST} \s/+product\.php\?p=([^\s&]+) [NC]
+    RewriteRule ^product\.php$ /%1? [R=301,L]
 
-    # Redirect .php URLs to no-extension URLs
-    RewriteCond %{THE_REQUEST} \s/([^\s]+)\.php [NC]
-    RewriteRule ^ /%1? [R=301,L]
+    # Redirect former PHP page URLs to their extensionless public URLs.
+    RewriteCond %{THE_REQUEST} \s/+([a-z0-9-]+)\.php(?:[?\s]) [NC]
+    RewriteRule ^([a-z0-9-]+)\.php$ /$1 [R=301,L]
 
-    # Rewrite no-extension URLs to .php files
-    RewriteCond %{REQUEST_FILENAME}.php -f
-    RewriteRule ^([a-z0-9-]+)$ $1.php [L,QSA]
-
-    # Rewrite remaining clean slugs to product.php
-    # Keep this after the page rule so /products resolves to products.php.
+    # Normalize non-directory clean routes so canonical URLs have no trailing slash.
     RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([a-z0-9-]+)/$ /$1 [R=301,L]
+
+    # Serve an extensionless route from its corresponding static HTML file.
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^([a-z0-9-]+)$ product.php?p=$1 [L,QSA]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^([a-z0-9-]+)/?$ $1.html [L]
+
+    # Previously, unknown clean slugs reached the product template and returned to the catalog.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html !-f
+    RewriteRule ^([a-z0-9-]+)/?$ /products [R=302,L]
 </IfModule>
 
 <IfModule mod_deflate.c>

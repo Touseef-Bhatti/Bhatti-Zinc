@@ -4,6 +4,9 @@
 (function() {
     'use strict';
 
+    const copyrightYear = document.getElementById('copyright-year');
+    if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
+
     /* ----------------------------------------
        Site Loader
     ---------------------------------------- */
@@ -416,7 +419,7 @@
             if (img) { img.src = product.image; img.alt = product.name; }
             if (nameEl) nameEl.textContent = product.name;
             if (gradeEl) gradeEl.textContent = product.grade;
-            el.href = 'product.php?p=' + encodeURIComponent(product.slug);
+            el.href = product.slug;
         }
 
         // Render the 3 cards based on current index

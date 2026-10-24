@@ -97,9 +97,9 @@
 .nav-list { gap: 0; }
 
 .nav-list>li>a {
-    font-size: 0.68rem;
+    font-size: 0.9rem;
     letter-spacing: 0.045em;
-    padding: 6px 7px;
+    padding: 6px 8px;
     gap: 3px;
 }
 
@@ -127,6 +127,14 @@
 
 @media (max-width: 1024px) {
     .header-inner { padding: 0 32px; }
+}
+
+@media (max-width: 1240px) and (min-width: 1025px) {
+    .nav-list>li>a {
+        font-size: 0.82rem;
+        padding: 5px 6px;
+        letter-spacing: 0.025em;
+    }
 }
 
 @media (max-width: 768px) {

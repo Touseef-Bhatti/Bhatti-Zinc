@@ -1,34 +1,28 @@
-# BhattiZinc sitemap
+# BhattiZinc static website
 
-Production sitemap: https://bhattizinc.com/sitemap.xml
+This project is a static website built with HTML, CSS and JavaScript. It has no PHP runtime, database or server-side page templates.
 
-## Coverage
+## Pages
 
-- Company and catalog: `/`, `/about`, `/products`, `/quality`, `/trade`, `/contact`, `/careers`.
-- Legal: `/privacy-policy`, `/terms-of-sale`.
-- Products: all 10 slugs in `includes/products-data.php`, each with its existing primary product image.
-- Total: 19 unique page URLs and 10 image references (9 distinct image files).
+- `index.html` is the home page.
+- Company pages: `about.html`, `careers.html`, `contact.html`, `quality.html` and `trade.html`.
+- Catalog page: `products.html`.
+- Product detail pages are static HTML files named for each product slug.
+- Legal pages: `privacy-policy.html` and `terms-of-sale.html`.
 
-## Conventions
+Apache serves `index.html` at the site root. The `.htaccess` rules keep the existing extensionless public URLs and map them to the matching `.html` files. Previous `.php` page URLs redirect to their clean routes.
 
-The UTF-8 XML uses the Sitemaps 0.9 namespace and Google image extension. All URLs use the production HTTPS host, clean extensionless routes, and encoded image paths. Only the homepage has a trailing slash.
+## Assets and behavior
 
-The sitemap excludes duplicate `/index`, `.php` URLs, query parameters, fragments, template files, verification files, internal tooling and standalone lab PDFs. Reports remain discoverable through their product pages.
+- `assets/css/` contains the existing stylesheets.
+- `assets/js/main.js` handles site navigation and page interactions.
+- `assets/js/contact-submit.js` validates the contact and career forms, then offers WhatsApp and email delivery.
+- Images, videos, PDF lab reports, favicon files, `robots.txt` and `sitemap.xml` remain under their existing paths.
 
-`lastmod` is deliberately omitted: local file timestamps can reflect a checkout or deployment, not a substantive content change. Add it only when a reliable publication workflow records real content updates. `priority` and `changefreq` are omitted because Google ignores them.
+## Deployment
 
-No alternate-language annotations are included because this project contains only English pages. International audiences do not require invented country or language variants.
+Upload the project files to an Apache document root with `mod_rewrite` enabled. Hosting without `.htaccess` support needs equivalent clean URL rewrites or links updated to use the `.html` filenames.
 
-## Maintenance and deployment
+## Local preview
 
-1. Update `sitemap.xml` whenever a public route or catalog slug is added, removed or changed. Keep product-image URLs aligned with `includes/products-data.php`.
-2. Deploy `sitemap.xml` and `robots.txt` to the production document root. No PHP or Apache rewrite changes are needed to serve these static files.
-3. Confirm the sitemap and each listed URL return HTTP 200 on production, without redirects, noindex directives or authentication. Confirm each page canonical points to the corresponding sitemap URL; the current shared header does not emit canonical tags, so that remains a separate SEO follow-up.
-4. Submit `https://bhattizinc.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools. Submission and production deployment are not performed by this change.
-5. Keep the existing root robots.txt rules when merging into a server with a different robots.txt. Robots directives are not access controls.
-
-## Search and AI discovery
-
-The sitemap helps participating search engines discover the same public pages used for search and AI-grounded answers. It does not guarantee indexing, rankings or AI citations, and there is no separate GEO sitemap protocol.
-
-References: [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), [Google image sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps), [Bing AI search discovery](https://blogs.bing.com/webmaster/July-2025/Keeping-Content-Discoverable-with-Sitemaps-in-AI-Powered-Search).
+Run `node serve.mjs` from the project folder, then open `http://127.0.0.1:8090`. The local preview serves static files and maps clean page URLs to their `.html` files.
