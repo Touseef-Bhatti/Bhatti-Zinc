@@ -1,6 +1,8 @@
 (function() {
     'use strict';
 
+    function initializeForms() {
+
     const WHATSAPP_NUMBER = '923094530100';
     const EMAIL_ADDRESS = 'info@bhattizinc.com';
     const forms = document.querySelectorAll('form[data-validate], form[data-whatsapp-form]');
@@ -88,4 +90,8 @@
             showPopup(buildMessage(form), form.id === 'career-form');
         });
     });
+    }
+
+    if (window.siteComponentsReady) initializeForms();
+    else document.addEventListener('site:components-ready', initializeForms, { once: true });
 })();

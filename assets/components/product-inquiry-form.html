@@ -1,0 +1,50 @@
+<form method="POST" action="/contact" data-validate id="contact-form">
+                    <input type="hidden" name="product" value="__PRODUCT_NAME__">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Full Name <span style="color:var(--gold)">*</span></label>
+                            <input type="text" id="name" name="name" autocomplete="name" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="company">Company Name <span style="color:var(--gold)">*</span></label>
+                            <input type="text" id="company" name="company" autocomplete="organization" class="form-control" placeholder="Your company" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address <span style="color:var(--gold)">*</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" class="form-control" placeholder="email@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" class="form-control" placeholder="+1 234 567 8900">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="country">Country <span style="color:var(--gold)">*</span></label>
+                            <input type="text" id="country" name="country" autocomplete="country-name" class="form-control" placeholder="Your country" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="inquiry-type">Request Type</label>
+                            <select id="inquiry-type" name="inquiry_type" class="form-control">
+                                <option value="quote">Price Quotation</option>
+                                <option value="sample">Sample Request</option>
+                                <option value="spec">Technical Specification</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="quantity">Estimated Quantity</label>
+                        <input type="text" id="quantity" name="quantity" class="form-control" placeholder="e.g. 20 MT / month, 1 x 20ft FCL">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message / Requirements</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Describe your requirements, destination port, preferred Incoterms, or any technical questions..."></textarea>
+                    </div>
+                    <div class="form-submit-row">
+                        <span class="form-disclaimer">Your information is kept confidential and used only to respond to your inquiry.</span>
+                        <button type="submit" class="btn btn--gold">Send Inquiry</button>
+                    </div>
+                </form>

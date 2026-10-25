@@ -4,20 +4,24 @@
 (function() {
     'use strict';
 
+    function initializeSite() {
+
     const copyrightYear = document.getElementById('copyright-year');
     if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
 
     /* ----------------------------------------
        Site Loader
     ---------------------------------------- */
-    window.addEventListener('load', function() {
+    function revealLoader() {
         const loader = document.getElementById('site-loader');
         if (loader) {
             setTimeout(function() {
                 loader.classList.add('loaded');
             }, 1200);
         }
-    });
+    }
+    if (document.readyState === 'complete') revealLoader();
+    else window.addEventListener('load', revealLoader, { once: true });
 
     /* ----------------------------------------
        Header Scroll Behavior
@@ -553,5 +557,8 @@
 
         setTimeout(startAuto, 3000);
     }
+    }
 
+    if (window.siteComponentsReady) initializeSite();
+    else document.addEventListener('site:components-ready', initializeSite, { once: true });
 })();
